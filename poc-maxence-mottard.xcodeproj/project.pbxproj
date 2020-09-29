@@ -14,6 +14,7 @@
 		87A6E49525234F380037566C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E49325234F380037566C /* LaunchScreen.storyboard */; };
 		87A6E4A025234F390037566C /* poc_maxence_mottardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E49F25234F390037566C /* poc_maxence_mottardTests.swift */; };
 		87A6E4AB25234F390037566C /* poc_maxence_mottardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4AA25234F390037566C /* poc_maxence_mottardUITests.swift */; };
+		87A6E4D4252358DC0037566C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4D3252358DC0037566C /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		87A6E4A625234F390037566C /* poc-maxence-mottardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "poc-maxence-mottardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A6E4AA25234F390037566C /* poc_maxence_mottardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_maxence_mottardUITests.swift; sourceTree = "<group>"; };
 		87A6E4AC25234F390037566C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87A6E4D3252358DC0037566C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,14 @@
 				87A6E49625234F380037566C /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87A6E4D2252358CD0037566C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				87A6E4D3252358DC0037566C /* Movie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +285,7 @@
 			files = (
 				87A6E48925234F370037566C /* AppDelegate.swift in Sources */,
 				87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */,
+				87A6E4D4252358DC0037566C /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
