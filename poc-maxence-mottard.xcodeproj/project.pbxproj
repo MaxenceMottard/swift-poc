@@ -19,6 +19,7 @@
 		87A6E4DB25235A200037566C /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4D925235A200037566C /* ListTableViewCell.swift */; };
 		87A6E4DC25235A200037566C /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E4DA25235A200037566C /* ListTableViewCell.xib */; };
 		87A6E4E625235DEA0037566C /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4E525235DEA0037566C /* ReusableView.swift */; };
+		87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBA6D25237579009D2FC6 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		87A6E4D925235A200037566C /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		87A6E4DA25235A200037566C /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		87A6E4E525235DEA0037566C /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		87CDBA6D25237579009D2FC6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 		87A6E4E325235DD30037566C /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				87CDBA6C2523756D009D2FC6 /* Extensions */,
 				87A6E4E425235DDA0037566C /* Protocols */,
 			);
 			path = Additions;
@@ -202,6 +205,14 @@
 				87A6E4E525235DEA0037566C /* ReusableView.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		87CDBA6C2523756D009D2FC6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				87CDBA6D25237579009D2FC6 /* UIImageView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +348,7 @@
 			files = (
 				87A6E48925234F370037566C /* AppDelegate.swift in Sources */,
 				87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */,
+				87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */,
 				87A6E4D4252358DC0037566C /* Movie.swift in Sources */,
 				87A6E4E625235DEA0037566C /* ReusableView.swift in Sources */,
 				87A6E4CE252358610037566C /* ListViewController.swift in Sources */,
