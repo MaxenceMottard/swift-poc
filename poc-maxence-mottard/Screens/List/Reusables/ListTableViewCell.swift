@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListTableViewCell: UITableViewCell {
+class ListTableViewCell: UITableViewCell, ReusableView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
