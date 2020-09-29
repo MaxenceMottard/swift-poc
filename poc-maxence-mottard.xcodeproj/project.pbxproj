@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		87A6E48925234F370037566C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48825234F370037566C /* AppDelegate.swift */; };
 		87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48A25234F370037566C /* SceneDelegate.swift */; };
-		87A6E48D25234F370037566C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48C25234F370037566C /* ViewController.swift */; };
 		87A6E49025234F370037566C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E48E25234F370037566C /* Main.storyboard */; };
 		87A6E49225234F380037566C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E49125234F380037566C /* Assets.xcassets */; };
 		87A6E49525234F380037566C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E49325234F380037566C /* LaunchScreen.storyboard */; };
@@ -38,7 +37,6 @@
 		87A6E48525234F370037566C /* poc-maxence-mottard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poc-maxence-mottard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A6E48825234F370037566C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87A6E48A25234F370037566C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		87A6E48C25234F370037566C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		87A6E48F25234F370037566C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87A6E49125234F380037566C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87A6E49425234F380037566C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,13 +97,7 @@
 		87A6E48725234F370037566C /* poc-maxence-mottard */ = {
 			isa = PBXGroup;
 			children = (
-				87A6E48825234F370037566C /* AppDelegate.swift */,
-				87A6E48A25234F370037566C /* SceneDelegate.swift */,
-				87A6E48C25234F370037566C /* ViewController.swift */,
-				87A6E48E25234F370037566C /* Main.storyboard */,
-				87A6E49125234F380037566C /* Assets.xcassets */,
-				87A6E49325234F380037566C /* LaunchScreen.storyboard */,
-				87A6E49625234F380037566C /* Info.plist */,
+				87A6E4BB252354EA0037566C /* Application */,
 			);
 			path = "poc-maxence-mottard";
 			sourceTree = "<group>";
@@ -126,6 +118,27 @@
 				87A6E4AC25234F390037566C /* Info.plist */,
 			);
 			path = "poc-maxence-mottardUITests";
+			sourceTree = "<group>";
+		};
+		87A6E4BB252354EA0037566C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				87A6E4BC252355020037566C /* Supporting Files */,
+				87A6E48E25234F370037566C /* Main.storyboard */,
+				87A6E49325234F380037566C /* LaunchScreen.storyboard */,
+				87A6E48825234F370037566C /* AppDelegate.swift */,
+				87A6E48A25234F370037566C /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		87A6E4BC252355020037566C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				87A6E49125234F380037566C /* Assets.xcassets */,
+				87A6E49625234F380037566C /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +271,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87A6E48D25234F370037566C /* ViewController.swift in Sources */,
 				87A6E48925234F370037566C /* AppDelegate.swift in Sources */,
 				87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */,
 			);
@@ -438,7 +450,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S4J5D3N22R;
-				INFOPLIST_FILE = "poc-maxence-mottard/Info.plist";
+				INFOPLIST_FILE = "poc-maxence-mottard/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +469,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S4J5D3N22R;
-				INFOPLIST_FILE = "poc-maxence-mottard/Info.plist";
+				INFOPLIST_FILE = "poc-maxence-mottard/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
