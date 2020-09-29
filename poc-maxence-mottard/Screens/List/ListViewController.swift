@@ -21,6 +21,7 @@ class ListViewController: UITableViewController {
 
         dataTableView.delegate = self
         dataTableView.dataSource = self
+        dataTableView.register(UINib(nibName: ListTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseIdentifier)
     }
 
     // MARK: - Table view data source
@@ -36,7 +37,7 @@ class ListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath)
 
         cell.textLabel?.text = "Row \(indexPath.row)"
 
