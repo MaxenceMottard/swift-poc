@@ -98,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				87A6E4BB252354EA0037566C /* Application */,
+				87A6E4D2252358CD0037566C /* Models */,
+				87A6E4BD252355EA0037566C /* Screens */,
 			);
 			path = "poc-maxence-mottard";
 			sourceTree = "<group>";
