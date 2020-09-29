@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87A6E48925234F370037566C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48825234F370037566C /* AppDelegate.swift */; };
+		87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48A25234F370037566C /* SceneDelegate.swift */; };
+		87A6E48D25234F370037566C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48C25234F370037566C /* ViewController.swift */; };
+		87A6E49025234F370037566C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E48E25234F370037566C /* Main.storyboard */; };
+		87A6E49225234F380037566C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E49125234F380037566C /* Assets.xcassets */; };
+		87A6E49525234F380037566C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E49325234F380037566C /* LaunchScreen.storyboard */; };
+		87A6E4A025234F390037566C /* poc_maxence_mottardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E49F25234F390037566C /* poc_maxence_mottardTests.swift */; };
+		87A6E4AB25234F390037566C /* poc_maxence_mottardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4AA25234F390037566C /* poc_maxence_mottardUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		87A6E49C25234F390037566C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87A6E47D25234F370037566C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87A6E48425234F370037566C;
+			remoteInfo = "poc-maxence-mottard";
+		};
+		87A6E4A725234F390037566C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87A6E47D25234F370037566C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87A6E48425234F370037566C;
+			remoteInfo = "poc-maxence-mottard";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		87A6E48525234F370037566C /* poc-maxence-mottard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poc-maxence-mottard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87A6E48825234F370037566C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		87A6E48A25234F370037566C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		87A6E48C25234F370037566C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		87A6E48F25234F370037566C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87A6E49125234F380037566C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87A6E49425234F380037566C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87A6E49625234F380037566C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87A6E49B25234F390037566C /* poc-maxence-mottardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "poc-maxence-mottardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87A6E49F25234F390037566C /* poc_maxence_mottardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_maxence_mottardTests.swift; sourceTree = "<group>"; };
+		87A6E4A125234F390037566C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87A6E4A625234F390037566C /* poc-maxence-mottardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "poc-maxence-mottardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87A6E4AA25234F390037566C /* poc_maxence_mottardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_maxence_mottardUITests.swift; sourceTree = "<group>"; };
+		87A6E4AC25234F390037566C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87A6E48225234F370037566C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A6E49825234F390037566C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A6E4A325234F390037566C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87A6E47C25234F370037566C = {
+			isa = PBXGroup;
+			children = (
+				87A6E48725234F370037566C /* poc-maxence-mottard */,
+				87A6E49E25234F390037566C /* poc-maxence-mottardTests */,
+				87A6E4A925234F390037566C /* poc-maxence-mottardUITests */,
+				87A6E48625234F370037566C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87A6E48625234F370037566C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87A6E48525234F370037566C /* poc-maxence-mottard.app */,
+				87A6E49B25234F390037566C /* poc-maxence-mottardTests.xctest */,
+				87A6E4A625234F390037566C /* poc-maxence-mottardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87A6E48725234F370037566C /* poc-maxence-mottard */ = {
+			isa = PBXGroup;
+			children = (
+				87A6E48825234F370037566C /* AppDelegate.swift */,
+				87A6E48A25234F370037566C /* SceneDelegate.swift */,
+				87A6E48C25234F370037566C /* ViewController.swift */,
+				87A6E48E25234F370037566C /* Main.storyboard */,
+				87A6E49125234F380037566C /* Assets.xcassets */,
+				87A6E49325234F380037566C /* LaunchScreen.storyboard */,
+				87A6E49625234F380037566C /* Info.plist */,
+			);
+			path = "poc-maxence-mottard";
+			sourceTree = "<group>";
+		};
+		87A6E49E25234F390037566C /* poc-maxence-mottardTests */ = {
+			isa = PBXGroup;
+			children = (
+				87A6E49F25234F390037566C /* poc_maxence_mottardTests.swift */,
+				87A6E4A125234F390037566C /* Info.plist */,
+			);
+			path = "poc-maxence-mottardTests";
+			sourceTree = "<group>";
+		};
+		87A6E4A925234F390037566C /* poc-maxence-mottardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				87A6E4AA25234F390037566C /* poc_maxence_mottardUITests.swift */,
+				87A6E4AC25234F390037566C /* Info.plist */,
+			);
+			path = "poc-maxence-mottardUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87A6E48425234F370037566C /* poc-maxence-mottard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87A6E4AF25234F390037566C /* Build configuration list for PBXNativeTarget "poc-maxence-mottard" */;
+			buildPhases = (
+				87A6E48125234F370037566C /* Sources */,
+				87A6E48225234F370037566C /* Frameworks */,
+				87A6E48325234F370037566C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "poc-maxence-mottard";
+			productName = "poc-maxence-mottard";
+			productReference = 87A6E48525234F370037566C /* poc-maxence-mottard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		87A6E49A25234F390037566C /* poc-maxence-mottardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87A6E4B225234F390037566C /* Build configuration list for PBXNativeTarget "poc-maxence-mottardTests" */;
+			buildPhases = (
+				87A6E49725234F390037566C /* Sources */,
+				87A6E49825234F390037566C /* Frameworks */,
+				87A6E49925234F390037566C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87A6E49D25234F390037566C /* PBXTargetDependency */,
+			);
+			name = "poc-maxence-mottardTests";
+			productName = "poc-maxence-mottardTests";
+			productReference = 87A6E49B25234F390037566C /* poc-maxence-mottardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		87A6E4A525234F390037566C /* poc-maxence-mottardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87A6E4B525234F390037566C /* Build configuration list for PBXNativeTarget "poc-maxence-mottardUITests" */;
+			buildPhases = (
+				87A6E4A225234F390037566C /* Sources */,
+				87A6E4A325234F390037566C /* Frameworks */,
+				87A6E4A425234F390037566C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87A6E4A825234F390037566C /* PBXTargetDependency */,
+			);
+			name = "poc-maxence-mottardUITests";
+			productName = "poc-maxence-mottardUITests";
+			productReference = 87A6E4A625234F390037566C /* poc-maxence-mottardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87A6E47D25234F370037566C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					87A6E48425234F370037566C = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					87A6E49A25234F390037566C = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 87A6E48425234F370037566C;
+					};
+					87A6E4A525234F390037566C = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 87A6E48425234F370037566C;
+					};
+				};
+			};
+			buildConfigurationList = 87A6E48025234F370037566C /* Build configuration list for PBXProject "poc-maxence-mottard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87A6E47C25234F370037566C;
+			productRefGroup = 87A6E48625234F370037566C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87A6E48425234F370037566C /* poc-maxence-mottard */,
+				87A6E49A25234F390037566C /* poc-maxence-mottardTests */,
+				87A6E4A525234F390037566C /* poc-maxence-mottardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87A6E48325234F370037566C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A6E49525234F380037566C /* LaunchScreen.storyboard in Resources */,
+				87A6E49225234F380037566C /* Assets.xcassets in Resources */,
+				87A6E49025234F370037566C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A6E49925234F390037566C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A6E4A425234F390037566C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87A6E48125234F370037566C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A6E48D25234F370037566C /* ViewController.swift in Sources */,
+				87A6E48925234F370037566C /* AppDelegate.swift in Sources */,
+				87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A6E49725234F390037566C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A6E4A025234F390037566C /* poc_maxence_mottardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A6E4A225234F390037566C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A6E4AB25234F390037566C /* poc_maxence_mottardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87A6E49D25234F390037566C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87A6E48425234F370037566C /* poc-maxence-mottard */;
+			targetProxy = 87A6E49C25234F390037566C /* PBXContainerItemProxy */;
+		};
+		87A6E4A825234F390037566C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87A6E48425234F370037566C /* poc-maxence-mottard */;
+			targetProxy = 87A6E4A725234F390037566C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		87A6E48E25234F370037566C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87A6E48F25234F370037566C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		87A6E49325234F380037566C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87A6E49425234F380037566C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87A6E4AD25234F390037566C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		87A6E4AE25234F390037566C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87A6E4B025234F390037566C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4J5D3N22R;
+				INFOPLIST_FILE = "poc-maxence-mottard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mm.poc-maxence-mottard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87A6E4B125234F390037566C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4J5D3N22R;
+				INFOPLIST_FILE = "poc-maxence-mottard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mm.poc-maxence-mottard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		87A6E4B325234F390037566C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4J5D3N22R;
+				INFOPLIST_FILE = "poc-maxence-mottardTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mm.poc-maxence-mottardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/poc-maxence-mottard.app/poc-maxence-mottard";
+			};
+			name = Debug;
+		};
+		87A6E4B425234F390037566C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4J5D3N22R;
+				INFOPLIST_FILE = "poc-maxence-mottardTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mm.poc-maxence-mottardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/poc-maxence-mottard.app/poc-maxence-mottard";
+			};
+			name = Release;
+		};
+		87A6E4B625234F390037566C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4J5D3N22R;
+				INFOPLIST_FILE = "poc-maxence-mottardUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mm.poc-maxence-mottardUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "poc-maxence-mottard";
+			};
+			name = Debug;
+		};
+		87A6E4B725234F390037566C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4J5D3N22R;
+				INFOPLIST_FILE = "poc-maxence-mottardUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mm.poc-maxence-mottardUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "poc-maxence-mottard";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87A6E48025234F370037566C /* Build configuration list for PBXProject "poc-maxence-mottard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87A6E4AD25234F390037566C /* Debug */,
+				87A6E4AE25234F390037566C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87A6E4AF25234F390037566C /* Build configuration list for PBXNativeTarget "poc-maxence-mottard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87A6E4B025234F390037566C /* Debug */,
+				87A6E4B125234F390037566C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87A6E4B225234F390037566C /* Build configuration list for PBXNativeTarget "poc-maxence-mottardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87A6E4B325234F390037566C /* Debug */,
+				87A6E4B425234F390037566C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87A6E4B525234F390037566C /* Build configuration list for PBXNativeTarget "poc-maxence-mottardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87A6E4B625234F390037566C /* Debug */,
+				87A6E4B725234F390037566C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 87A6E47D25234F370037566C /* Project object */;
+}
