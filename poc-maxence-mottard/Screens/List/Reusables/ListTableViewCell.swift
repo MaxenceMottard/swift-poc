@@ -20,7 +20,7 @@ class ListTableViewCell: UITableViewCell, ReusableView {
                 self.titleLabel.text = strongMovie.title
                 self.descriptionLabel.text = strongMovie.overview
                 
-                let imageUrl = MovieDBApi.getImageUrl(posterPath: strongMovie.poster_path, size: .w185)
+                let imageUrl = MovieDBApi.getImageUrl(posterPath: strongMovie.posterPath, size: .w185)
                 
                 if let url = imageUrl {
                     self.movieImageView.load(url: url)
