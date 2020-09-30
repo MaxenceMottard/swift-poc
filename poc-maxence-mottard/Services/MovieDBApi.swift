@@ -10,10 +10,6 @@ import Alamofire
 
 class MovieDBApi {
     
-    static let apiKey = "c5e559ac2b3964e6b8ddcc8b60df9bee"
-    static let baseUrl = "https://api.themoviedb.org/3"
-    
-    
     enum PosterSizes {
         case w92, w154, w185, w342, w500, w780, original
     }
@@ -25,7 +21,7 @@ class MovieDBApi {
     static func getMovies(completion: @escaping (Result<[Movie], Error>) -> Void) -> Void {
         let language = Locale.current.languageCode == "fr" ? "fr-FR" : "en-US"
         
-        AF.request("\(MovieDBApi.baseUrl)/movie/popular?language=\(language)&api_key=\(MovieDBApi.apiKey)").response { response in
+        AF.request("\(Constant.TMDBBaseUrl)/movie/popular?language=\(language)&api_key=\(Constant.TMDBApiKey)").response { response in
             
             do {
                 if let data = response.value {
