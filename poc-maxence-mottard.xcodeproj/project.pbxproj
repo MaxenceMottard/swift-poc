@@ -20,6 +20,10 @@
 		87A6E4DB25235A200037566C /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4D925235A200037566C /* ListTableViewCell.swift */; };
 		87A6E4DC25235A200037566C /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E4DA25235A200037566C /* ListTableViewCell.xib */; };
 		87A6E4E625235DEA0037566C /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4E525235DEA0037566C /* ReusableView.swift */; };
+		87B0DD272524AA6A00CC0DAC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B0DD252524AA6A00CC0DAC /* Alamofire.framework */; };
+		87B0DD282524AA6A00CC0DAC /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87B0DD252524AA6A00CC0DAC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87B0DD292524AA6A00CC0DAC /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B0DD262524AA6A00CC0DAC /* RxSwift.framework */; };
+		87B0DD2A2524AA6A00CC0DAC /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87B0DD262524AA6A00CC0DAC /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBA6D25237579009D2FC6 /* UIImageView.swift */; };
 		87CDBAA5252466E9009D2FC6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87CDBAA7252466E9009D2FC6 /* Localizable.strings */; };
 		87CDBABE25246B4B009D2FC6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBABD25246B4B009D2FC6 /* String.swift */; };
@@ -42,6 +46,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		87B0DD2B2524AA6A00CC0DAC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				87B0DD2A2524AA6A00CC0DAC /* RxSwift.framework in Embed Frameworks */,
+				87B0DD282524AA6A00CC0DAC /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8795792C25246EEB0000A99D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		87A6E48525234F370037566C /* poc-maxence-mottard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poc-maxence-mottard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +79,8 @@
 		87A6E4D925235A200037566C /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		87A6E4DA25235A200037566C /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		87A6E4E525235DEA0037566C /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		87B0DD252524AA6A00CC0DAC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		87B0DD262524AA6A00CC0DAC /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		87CDBA6D25237579009D2FC6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		87CDBA93252466A9009D2FC6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87CDBA97252466AA009D2FC6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87B0DD292524AA6A00CC0DAC /* RxSwift.framework in Frameworks */,
+				87B0DD272524AA6A00CC0DAC /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +133,7 @@
 				87A6E49E25234F390037566C /* poc-maxence-mottardTests */,
 				87A6E4A925234F390037566C /* poc-maxence-mottardUITests */,
 				87A6E48625234F370037566C /* Products */,
+				87B0DD242524AA6A00CC0DAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,6 +250,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		87B0DD242524AA6A00CC0DAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87B0DD252524AA6A00CC0DAC /* Alamofire.framework */,
+				87B0DD262524AA6A00CC0DAC /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		87CDBA6C2523756D009D2FC6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +278,8 @@
 				87A6E48125234F370037566C /* Sources */,
 				87A6E48225234F370037566C /* Frameworks */,
 				87A6E48325234F370037566C /* Resources */,
+				87B0DD2B2524AA6A00CC0DAC /* Embed Frameworks */,
+				87B0DD2E2524AA8B00CC0DAC /* Carthage Script */,
 			);
 			buildRules = (
 			);
@@ -361,6 +396,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		87B0DD2E2524AA8B00CC0DAC /* Carthage Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RwSwift.framework",
+			);
+			name = "Carthage Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		87A6E48125234F370037566C /* Sources */ = {
@@ -566,6 +626,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S4J5D3N22R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "poc-maxence-mottard/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -585,6 +649,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S4J5D3N22R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "poc-maxence-mottard/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
