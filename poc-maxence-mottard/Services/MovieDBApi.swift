@@ -23,7 +23,9 @@ class MovieDBApi {
     }
     
     static func getMovies(completion: @escaping (Result<[Movie], Error>) -> Void) -> Void {
-        AF.request("\(MovieDBApi.baseUrl)/movie/popular?api_key=\(MovieDBApi.apiKey)").response { response in
+        let language = Locale.current.languageCode == "fr" ? "fr-FR" : "en-US"
+        
+        AF.request("\(MovieDBApi.baseUrl)/movie/popular?language=\(language)&api_key=\(MovieDBApi.apiKey)").response { response in
             
             do {
                 if let data = response.value {
