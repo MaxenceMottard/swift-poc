@@ -25,7 +25,10 @@ class DetailViewController: UIViewController {
                 self.dateLabel.text = strongMovie.release_date
                 
                 let imageUrl = MovieDBApi.getImageUrl(posterPath: strongMovie.poster_path, size: .w185)
-                let backgroundImageUrl = MovieDBApi.getImageUrl(backdropPath: strongMovie.backdrop_path, size: .w300)
+                
+                // Get image with different size according to device type
+                let backdropSize = UIDevice.current.userInterfaceIdiom == .pad ? MovieDBApi.BackdropSize.w780 : MovieDBApi.BackdropSize.w1280
+                let backgroundImageUrl = MovieDBApi.getImageUrl(backdropPath: strongMovie.backdrop_path, size: backdropSize)
                 
                 if let url = imageUrl {
                     self.movieImageView.load(url: url)
