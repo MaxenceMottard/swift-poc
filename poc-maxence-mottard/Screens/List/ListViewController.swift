@@ -30,6 +30,8 @@ class ListViewController: UIViewController {
         dataTableView.delegate = self
         dataTableView.dataSource = self
         dataTableView.register(UINib(nibName: ListTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseIdentifier)
+        
+        navigationController?.navigationBar.topItem?.title = "listViewTitle".localize()
     }
 }
 
