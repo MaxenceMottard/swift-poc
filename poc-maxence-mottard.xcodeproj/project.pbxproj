@@ -60,10 +60,10 @@
 		87CDBA6D25237579009D2FC6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		87CDBA93252466A9009D2FC6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87CDBA97252466AA009D2FC6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		87CDBAA0252466D7009D2FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		87CDBAA1252466D7009D2FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87CDBAA6252466E9009D2FC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		87CDBAAB252466ED009D2FC6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		87CDBAB525246ABD009D2FC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87CDBAB625246ABD009D2FC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,7 +306,6 @@
 			knownRegions = (
 				en,
 				fr,
-				Base,
 			);
 			mainGroup = 87A6E47C25234F370037566C;
 			productRefGroup = 87A6E48625234F370037566C /* Products */;
@@ -400,7 +399,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				87CDBA93252466A9009D2FC6 /* fr */,
-				87CDBAA0252466D7009D2FC6 /* Base */,
+				87CDBAB625246ABD009D2FC6 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -409,7 +408,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				87CDBA97252466AA009D2FC6 /* fr */,
-				87CDBAA1252466D7009D2FC6 /* Base */,
+				87CDBAB525246ABD009D2FC6 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
