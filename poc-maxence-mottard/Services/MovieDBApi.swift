@@ -20,7 +20,7 @@ class MovieDBApi {
     
     static func getMovies(completion: @escaping (Result<[Movie], Error>) -> Void) -> Void {
         let language = Locale.current.languageCode == "fr" ? "fr-FR" : "en-US"
-        AF.request("\(Constant.TMDBBaseUrl)/movie/popular?language=\(language)&api_key=\(Constant.TMDBApiKey)").response { response in
+        AF.request("\(Constant.TMDBBaseUrl.rawValue)/movie/popular?language=\(language)&api_key=\(Constant.TMDBApiKey.rawValue)").response { response in
             
             do {
                 if let data = response.value {
@@ -37,11 +37,11 @@ class MovieDBApi {
     }
     
     static func getImageUrl(posterPath: String, size: PosterSizes = .original) -> URL? {
-        return URL(string: "https://image.tmdb.org/t/p/\(size)\(posterPath)")
+        return URL(string: "\(Constant.TMDBImageBaseUrl.rawValue)\(size)\(posterPath)")
     }
     
     static func getImageUrl(backdropPath: String, size: BackdropSize = .original) -> URL? {
-        return URL(string: "https://image.tmdb.org/t/p/\(size)\(backdropPath)")
+        return URL(string: "\(Constant.TMDBImageBaseUrl.rawValue)\(size)\(backdropPath)")
     }
     
 }
