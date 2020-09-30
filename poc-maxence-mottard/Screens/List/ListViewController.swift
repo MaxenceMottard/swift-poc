@@ -45,5 +45,14 @@ class ListViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie = data[indexPath.row]
+        
+        let detailViewController = storyboard?.instantiateViewController(identifier: "detailViewController") as! DetailViewController
+        detailViewController.movie = movie
+        
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
 
 }
