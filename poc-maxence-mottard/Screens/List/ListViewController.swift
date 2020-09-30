@@ -26,6 +26,8 @@ class ListViewController: UITableViewController {
         dataTableView.delegate = self
         dataTableView.dataSource = self
         dataTableView.register(UINib(nibName: ListTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseIdentifier)
+        
+        navigationController?.navigationBar.topItem?.title = NSLocalizedString("listViewTitle", comment: "")
     }
 
     // MARK: - Table view data source
