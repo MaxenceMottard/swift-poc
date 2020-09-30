@@ -18,9 +18,9 @@ class ListTableViewCell: UITableViewCell, ReusableView {
             DispatchQueue.main.async {
                 guard let strongMovie = self.movie else { return }
                 self.titleLabel.text = strongMovie.title
-                self.descriptionLabel.text = strongMovie.description
+                self.descriptionLabel.text = strongMovie.overview
                 
-                let imageUrl = URL(string: strongMovie.imageUrl)
+                let imageUrl = MovieDBApi.getImageUrl(posterPath: strongMovie.poster_path, size: .w185)
                 
                 if let url = imageUrl {
                     self.movieImageView.load(url: url)
