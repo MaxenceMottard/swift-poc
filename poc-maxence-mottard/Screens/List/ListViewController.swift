@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListViewController: UITableViewController {
+class ListViewController: UIViewController {
     
     let data: [Movie] = [
         Movie(title: "Joker",
@@ -31,32 +31,29 @@ class ListViewController: UITableViewController {
         dataTableView.dataSource = self
         dataTableView.register(UINib(nibName: ListTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseIdentifier)
     }
+}
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension ListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath) as! ListTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath) as? ListTableViewCell else {
+            fatalError("Could not dequeue cell with identifier \(ListTableViewCell.reuseIdentifier)")
+        }
         
         cell.movie = data[indexPath.row]
 
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let movie = data[indexPath.row]
-        
-        let detailViewController = storyboard?.instantiateViewController(identifier: "detailViewController") as! DetailViewController
-        detailViewController.movie = movie
-        
-        navigationController?.pushViewController(detailViewController, animated: true)
-    }
-
+     
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         let movie = data[indexPath.row]
+         
+         let detailViewController = storyboard?.instantiateViewController(identifier: "detailViewController") as! DetailViewController
+         detailViewController.movie = movie
+         
+         navigationController?.pushViewController(detailViewController, animated: true)
+     }
 }
