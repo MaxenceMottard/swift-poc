@@ -84,6 +84,7 @@
 		87B0DD302524AD2900CC0DAC /* MovieDBApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBApi.swift; sourceTree = "<group>"; };
 		87CDBA6D25237579009D2FC6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		87CDBABD25246B4B009D2FC6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		87E87E2E252728480007F1D6 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +265,7 @@
 			children = (
 				87B0DD252524AA6A00CC0DAC /* Alamofire.framework */,
 				87B0DD262524AA6A00CC0DAC /* RxSwift.framework */,
+				87E87E2E252728480007F1D6 /* Swinject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -425,6 +427,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
 			);
 			name = "Carthage Script";
 			outputFileListPaths = (
