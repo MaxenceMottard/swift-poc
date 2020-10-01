@@ -7,8 +7,14 @@
 
 import Foundation
 
-protocol DetailViewModelling: MovieViewModelling {
+protocol DetailViewModelling {
+    var model: DetailModel { get }
 }
 
-final class DetailViewModel: MovieViewModel, DetailViewModelling {
+final class DetailViewModel: DetailViewModelling {
+    let model: DetailModel
+    
+    init(detailModel: DetailModel) {
+        self.model = detailModel
+    }
 }

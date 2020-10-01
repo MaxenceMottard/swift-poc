@@ -9,9 +9,8 @@ import UIKit
 import RxSwift
 
 class DetailViewController: UIViewController {
-    
-    let viewModel: DetailViewModelling = DetailViewModel()
-    let bag = DisposeBag()
+
+    let viewModel: DetailViewModelling
     
     @IBOutlet private weak var backgroundImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
@@ -19,30 +18,14 @@ class DetailViewController: UIViewController {
     @IBOutlet private weak var movieImageView: UIImageView!
     @IBOutlet private weak var descriptionLabel: UILabel!
     
-    var movie: Movie? {
-        didSet {
-            DispatchQueue.main.async {
-                guard let strongMovie = self.movie else { return }
-                
-                self.titleLabel.text = strongMovie.title
-                self.descriptionLabel.text = strongMovie.overview
-                self.dateLabel.text = strongMovie.releaseDate
-                
-                let imageUrl = MovieDBApi.getImageUrl(posterPath: strongMovie.posterPath, size: .w185)
-                
-                // Get image with different size according to device type
-                let backdropSize = UIDevice.current.userInterfaceIdiom == .pad ? MovieDBApi.BackdropSize.w780 : MovieDBApi.BackdropSize.w1280
-                let backgroundImageUrl = MovieDBApi.getImageUrl(backdropPath: strongMovie.backdropPath, size: backdropSize)
-                
-                if let url = imageUrl {
-                    self.movieImageView.load(url: url)
-                }
-                
-                if let url = backgroundImageUrl {
-                    self.backgroundImageView.load(url: url)
-                }
-            }
-        }
+    init?(viewModel: DetailViewModelling, coder: NSCoder) {
+        self.viewModel = viewModel
+        
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func viewDidLoad() {
@@ -51,29 +34,31 @@ class DetailViewController: UIViewController {
         movieImageView.layer.borderWidth = 1
         movieImageView.layer.borderColor = UIColor.white.cgColor
         
-        viewModel.movie.subscribe(onNext: { movie in
-            DispatchQueue.main.async { [weak self] in
-                guard let strongSelf = self, let strongMovie = movie else { return }
-                
-                strongSelf.titleLabel.text = strongMovie.title
-                strongSelf.descriptionLabel.text = strongMovie.overview
-                strongSelf.dateLabel.text = strongMovie.releaseDate
-                
-                let imageUrl = MovieDBApi.getImageUrl(posterPath: strongMovie.posterPath, size: .w185)
-                
-                // Get image with different size according to device type
-                let backdropSize = UIDevice.current.userInterfaceIdiom == .pad ? MovieDBApi.BackdropSize.w780 : MovieDBApi.BackdropSize.w1280
-                let backgroundImageUrl = MovieDBApi.getImageUrl(backdropPath: strongMovie.backdropPath, size: backdropSize)
-                
-                if let url = imageUrl {
-                    strongSelf.movieImageView.load(url: url)
-                }
-                
-                if let url = backgroundImageUrl {
-                    strongSelf.backgroundImageView.load(url: url)
-                }
+        setupView()
+    }
+    
+    func setupView() {
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.titleLabel.text = strongSelf.viewModel.model.title
+            strongSelf.descriptionLabel.text = strongSelf.viewModel.model.overview
+            strongSelf.dateLabel.text = strongSelf.viewModel.model.releaseDate
+            
+            let imageUrl = MovieDBApi.getImageUrl(posterPath: strongSelf.viewModel.model.posterPath, size: .w185)
+            
+            // Get image with different size according to device type
+            let backdropSize = UIDevice.current.userInterfaceIdiom == .pad ? MovieDBApi.BackdropSize.w780 : MovieDBApi.BackdropSize.w1280
+            let backgroundImageUrl = MovieDBApi.getImageUrl(backdropPath: strongSelf.viewModel.model.backdropPath, size: backdropSize)
+            
+            if let url = imageUrl {
+                strongSelf.movieImageView.load(url: url)
             }
-        }).disposed(by: bag)
+            
+            if let url = backgroundImageUrl {
+                strongSelf.backgroundImageView.load(url: url)
+            }
+        }
     }
 
 }

@@ -16,6 +16,7 @@ protocol ListViewModelling {
     func getNumberOfRows() -> Int
     func requestMovies() -> Void
     func getMovie(_ index: IndexPath) -> Movie?
+    func getDetailViewModel(_ index: IndexPath) -> DetailViewModelling?
 }
 
 final class ListViewModel: ListViewModelling {
@@ -44,6 +45,17 @@ final class ListViewModel: ListViewModelling {
     func getMovie(_ index: IndexPath) -> Movie? {
         do {
             return try self.movies.value()[index.row]
+        } catch {
+            return nil
+        }
+    }
+    
+    func getDetailViewModel(_ index: IndexPath) -> DetailViewModelling? {
+        do {
+            let movie = try self.movies.value()[index.row]
+            let model = DetailModel.from(movie)
+            
+            return DetailViewModel(detailModel: model)
         } catch {
             return nil
         }

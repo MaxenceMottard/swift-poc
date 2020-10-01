@@ -50,14 +50,11 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailViewController = storyboard?.instantiateViewController(identifier: "detailViewController") as? DetailViewController
+        guard let detailViewModel = self.viewModel.getDetailViewModel(indexPath),
+              let detailViewController = storyboard?.instantiateViewController(identifier: "detailViewController", creator: { coder in
+                return DetailViewController(viewModel: detailViewModel, coder: coder)
+        }) else { return }
         
-        guard let strongVC = detailViewController, let movie = self.viewModel.getMovie(indexPath) else {
-            fatalError("Could not instanciate view controller with identifier : detailViewController")
-        }
-        
-        strongVC.viewModel.setMovie(movie)
-        
-        navigationController?.pushViewController(strongVC, animated: true)
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
