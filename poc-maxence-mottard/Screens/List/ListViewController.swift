@@ -12,7 +12,7 @@ final class ListViewController: UIViewController {
     
     let viewModel: ListViewModelling = ListViewModel()
     
-    @IBOutlet var dataTableView: UITableView!
+    @IBOutlet weak var dataTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,7 @@ final class ListViewController: UIViewController {
         
         viewModel.movies.subscribe(onNext: { [weak self] _ in
             guard let strongSelf = self else { return }
+            
             strongSelf.dataTableView.reloadData()
         }).disposed(by: viewModel.bag)
         

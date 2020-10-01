@@ -8,9 +8,7 @@
 import Foundation
 
 protocol DetailViewModelling: MovieViewModelling {
-    
 }
 
 final class DetailViewModel: MovieViewModel, DetailViewModelling {
-    
 }

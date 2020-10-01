@@ -8,9 +8,7 @@
 import Foundation
 
 protocol ListCellViewModelling: MovieViewModelling {
-    
 }
 
 final class ListCellViewModel: MovieViewModel, ListCellViewModelling {
-    
 }

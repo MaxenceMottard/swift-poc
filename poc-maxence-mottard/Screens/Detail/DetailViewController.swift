@@ -11,11 +11,11 @@ class DetailViewController: UIViewController {
     
     let viewModel: DetailViewModelling = DetailViewModel()
     
-    @IBOutlet private var backgroundImageView: UIImageView!
-    @IBOutlet private var titleLabel: UILabel!
-    @IBOutlet private var dateLabel: UILabel!
-    @IBOutlet private var movieImageView: UIImageView!
-    @IBOutlet private var descriptionLabel: UILabel!
+    @IBOutlet private weak var backgroundImageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var movieImageView: UIImageView!
+    @IBOutlet private weak var descriptionLabel: UILabel!
     
     var movie: Movie? {
         didSet {
