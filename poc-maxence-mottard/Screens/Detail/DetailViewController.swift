@@ -21,11 +21,14 @@ class DetailViewController: UIViewController {
                 guard let strongMovie = self.movie else { return }
                 
                 self.titleLabel.text = strongMovie.title
-                self.descriptionLabel.text = strongMovie.description
-                self.dateLabel.text = strongMovie.date
+                self.descriptionLabel.text = strongMovie.overview
+                self.dateLabel.text = strongMovie.releaseDate
                 
-                let imageUrl = URL(string: strongMovie.imageUrl)
-                let backgroundImageUrl = URL(string: strongMovie.backgroundImageUrl)
+                let imageUrl = MovieDBApi.getImageUrl(posterPath: strongMovie.posterPath, size: .w185)
+                
+                // Get image with different size according to device type
+                let backdropSize = UIDevice.current.userInterfaceIdiom == .pad ? MovieDBApi.BackdropSize.w780 : MovieDBApi.BackdropSize.w1280
+                let backgroundImageUrl = MovieDBApi.getImageUrl(backdropPath: strongMovie.backdropPath, size: backdropSize)
                 
                 if let url = imageUrl {
                     self.movieImageView.load(url: url)
