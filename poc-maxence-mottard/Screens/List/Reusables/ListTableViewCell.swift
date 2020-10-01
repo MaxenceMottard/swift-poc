@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import RxSwift
 
 final class ListTableViewCell: UITableViewCell, ReusableView {
     
     let viewModel: ListCellViewModelling = ListCellViewModel()
+    let bag = DisposeBag()
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
@@ -34,7 +36,7 @@ final class ListTableViewCell: UITableViewCell, ReusableView {
                     strongSelf.movieImageView.load(url: url)
                 }
             }
-        }).disposed(by: viewModel.bag)
+        }).disposed(by: bag)
     }
     
 }

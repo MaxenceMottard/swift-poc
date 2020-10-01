@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import RxSwift
 
 class DetailViewController: UIViewController {
     
     let viewModel: DetailViewModelling = DetailViewModel()
+    let bag = DisposeBag()
     
     @IBOutlet private weak var backgroundImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
@@ -71,7 +73,7 @@ class DetailViewController: UIViewController {
                     strongSelf.backgroundImageView.load(url: url)
                 }
             }
-        }).disposed(by: viewModel.bag)
+        }).disposed(by: bag)
     }
 
 }

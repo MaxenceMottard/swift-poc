@@ -11,6 +11,7 @@ import RxSwift
 final class ListViewController: UIViewController {
     
     let viewModel: ListViewModelling = ListViewModel()
+    let bag: DisposeBag = DisposeBag()
     
     @IBOutlet weak var dataTableView: UITableView!
     
@@ -27,7 +28,7 @@ final class ListViewController: UIViewController {
             guard let strongSelf = self else { return }
             
             strongSelf.dataTableView.reloadData()
-        }).disposed(by: viewModel.bag)
+        }).disposed(by: bag)
         
         viewModel.requestMovies()
     }

@@ -21,7 +21,7 @@ protocol ListViewModelling {
 final class ListViewModel: ListViewModelling {
     internal var numberOfRows: Int = 0
     internal let movies: BehaviorSubject<[Movie]> = BehaviorSubject<[Movie]>.init(value: [])
-    let bag = DisposeBag()
+    internal let bag = DisposeBag()
     
     init() {
         movies.subscribe(onNext: { [weak self] movies in
