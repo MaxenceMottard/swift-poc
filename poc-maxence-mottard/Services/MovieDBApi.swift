@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import RxSwift
 
 class MovieDBApi {
     
@@ -18,20 +19,28 @@ class MovieDBApi {
         case w300, w780, w1280, original
     }
     
-    static func getMovies(completion: @escaping (Result<[Movie], Error>) -> Void) -> Void {
-        let language = Locale.current.languageCode == "fr" ? "fr-FR" : "en-US"
-        AF.request("\(Constant.TMDBBaseUrl.rawValue)/movie/popular?language=\(language)&api_key=\(Constant.TMDBApiKey.rawValue)").response { response in
-            
-            do {
-                if let data = response.value {
-                    let decoder = JSONDecoder()
-                    let decodedData = try decoder.decode(MoviesRequest.self, from: data!)
-                    completion(.success(decodedData.results))
-                } else if let error = response.error {
-                    completion(.failure(error))
+    static func getMovies() -> Observable<[Movie]> {
+        return Observable<[Movie]>.create { (observer) -> Disposable in
+            let language = Locale.current.languageCode == "fr" ? "fr-FR" : "en-US"
+            let requestReference = AF.request("\(Constant.TMDBBaseUrl.rawValue)/movie/popular?language=\(language)&api_key=\(Constant.TMDBApiKey.rawValue)").response { response in
+                
+                do {
+                    if let data = response.value {
+                        let decoder = JSONDecoder()
+                        let decodedData = try decoder.decode(MoviesRequest.self, from: data!)
+                        
+                        observer.onNext(decodedData.results)
+                        observer.onCompleted()
+                    } else if let error = response.error {
+                        observer.onError(error)
+                    }
+                } catch let error {
+                    observer.onError(error)
                 }
-            } catch let error {
-                completion(.failure(error))
+            }
+            
+            return Disposables.create {
+                requestReference.cancel()
             }
         }
     }

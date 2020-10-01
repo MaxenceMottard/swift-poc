@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RxSwift
 
 class ListViewController: UIViewController {
+    
+    let bag = DisposeBag()
     
     var data: [Movie] = [] {
         didSet {
@@ -26,17 +29,11 @@ class ListViewController: UIViewController {
         
         navigationController?.navigationBar.topItem?.title = "listViewTitle".localize()
         
-        MovieDBApi.getMovies { [weak self] in
-            guard let strongSelf = self else { return }
-            
-            switch $0 {
-            case .success(let movies):
-                strongSelf.data = movies
-                
-            case .failure(let error):
-                print(error)
-            }
-        }
+        MovieDBApi.getMovies().subscribe { movies in
+            self.data = movies
+        } onError: { error in
+            print(error)
+        }.disposed(by: bag)
     }
 }
 
