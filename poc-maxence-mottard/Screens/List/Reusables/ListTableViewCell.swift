@@ -7,27 +7,13 @@
 
 import UIKit
 
-class ListTableViewCell: UITableViewCell, ReusableView {
+final class ListTableViewCell: UITableViewCell, ReusableView {
     
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var movieImageView : UIImageView!
+    let viewModel: ListCellViewModelling = ListCellViewModel()
     
-    var movie: Movie? {
-        didSet {
-            DispatchQueue.main.async {
-                guard let strongMovie = self.movie else { return }
-                self.titleLabel.text = strongMovie.title
-                self.descriptionLabel.text = strongMovie.overview
-                
-                let imageUrl = MovieDBApi.getImageUrl(posterPath: strongMovie.posterPath, size: .w185)
-                
-                if let url = imageUrl {
-                    self.movieImageView.load(url: url)
-                }
-            }
-        }
-    }
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var descriptionLabel: UILabel!
+    @IBOutlet private var movieImageView : UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,6 +22,19 @@ class ListTableViewCell: UITableViewCell, ReusableView {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
+        viewModel.movie.subscribe(onNext: { movie in
+            DispatchQueue.main.async { [weak self] in
+                guard let strongSelf = self, let strongMovie = strongSelf.viewModel.getMovie() else { return }
+                strongSelf.titleLabel.text = strongMovie.title
+                strongSelf.descriptionLabel.text = strongMovie.overview
+                
+                let imageUrl = MovieDBApi.getImageUrl(posterPath: strongMovie.posterPath, size: .w185)
+                
+                if let url = imageUrl {
+                    strongSelf.movieImageView.load(url: url)
+                }
+            }
+        }).disposed(by: viewModel.bag)
         // Configure the view for the selected state
     }
     

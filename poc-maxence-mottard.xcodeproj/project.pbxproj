@@ -11,6 +11,7 @@
 		872760C72524C37F00596273 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 872760C92524C37F00596273 /* Localizable.strings */; };
 		872760D92524D59A00596273 /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872760D82524D59A00596273 /* constant.swift */; };
 		877F17B02525C72200CE3EBE /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17AF2525C72200CE3EBE /* ListViewModel.swift */; };
+		877F17CD2525FC8800CE3EBE /* ListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17CC2525FC8800CE3EBE /* ListCellViewModel.swift */; };
 		8795792D25246EEB0000A99D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8795792C25246EEB0000A99D /* DetailViewController.swift */; };
 		87A6E48925234F370037566C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48825234F370037566C /* AppDelegate.swift */; };
 		87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48A25234F370037566C /* SceneDelegate.swift */; };
@@ -54,6 +55,7 @@
 		872760CE2524C39800596273 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		872760D82524D59A00596273 /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
 		877F17AF2525C72200CE3EBE /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		877F17CC2525FC8800CE3EBE /* ListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellViewModel.swift; sourceTree = "<group>"; };
 		8795792C25246EEB0000A99D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		87A6E48525234F370037566C /* poc-maxence-mottard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poc-maxence-mottard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A6E48825234F370037566C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -206,8 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				87A6E4D8252359FC0037566C /* Reusables */,
-				877F17AF2525C72200CE3EBE /* ListViewModel.swift */,
 				87A6E4CD252358610037566C /* ListViewController.swift */,
+				877F17AF2525C72200CE3EBE /* ListViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -224,6 +226,7 @@
 		87A6E4D8252359FC0037566C /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				877F17CC2525FC8800CE3EBE /* ListCellViewModel.swift */,
 				87A6E4D925235A200037566C /* ListTableViewCell.swift */,
 				87A6E4DA25235A200037566C /* ListTableViewCell.xib */,
 			);
@@ -430,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				877F17CD2525FC8800CE3EBE /* ListCellViewModel.swift in Sources */,
 				872760B32524BC1F00596273 /* MoviesRequest.swift in Sources */,
 				87A6E48925234F370037566C /* AppDelegate.swift in Sources */,
 				87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */,

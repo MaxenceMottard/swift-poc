@@ -42,7 +42,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("Could not dequeue cell with identifier : \(ListTableViewCell.reuseIdentifier)")
         }
         
-        cell.movie = movie
+        cell.viewModel.setMovie(movie)
         
         return cell
     }
