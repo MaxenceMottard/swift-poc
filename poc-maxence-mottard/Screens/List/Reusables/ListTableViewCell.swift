@@ -24,7 +24,7 @@ final class ListTableViewCell: UITableViewCell, ReusableView {
         
         viewModel.movie.subscribe(onNext: { movie in
             DispatchQueue.main.async { [weak self] in
-                guard let strongSelf = self, let strongMovie = strongSelf.viewModel.getMovie() else { return }
+                guard let strongSelf = self, let strongMovie = movie else { return }
                 strongSelf.titleLabel.text = strongMovie.title
                 strongSelf.descriptionLabel.text = strongMovie.overview
                 
@@ -35,7 +35,6 @@ final class ListTableViewCell: UITableViewCell, ReusableView {
                 }
             }
         }).disposed(by: viewModel.bag)
-        // Configure the view for the selected state
     }
     
 }

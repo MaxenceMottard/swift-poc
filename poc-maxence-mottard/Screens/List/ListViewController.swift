@@ -54,7 +54,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("Could not instanciate view controller with identifier : detailViewController")
         }
         
-        strongVC.movie = movie
+        strongVC.viewModel.setMovie(movie)
         
         navigationController?.pushViewController(strongVC, animated: true)
     }

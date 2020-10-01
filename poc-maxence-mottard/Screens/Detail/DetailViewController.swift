@@ -9,11 +9,13 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet var backgroundImageView: UIImageView!
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var movieImageView: UIImageView!
-    @IBOutlet var descriptionLabel: UILabel!
+    let viewModel: DetailViewModelling = DetailViewModel()
+    
+    @IBOutlet private var backgroundImageView: UIImageView!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var dateLabel: UILabel!
+    @IBOutlet private var movieImageView: UIImageView!
+    @IBOutlet private var descriptionLabel: UILabel!
     
     var movie: Movie? {
         didSet {
@@ -46,6 +48,30 @@ class DetailViewController: UIViewController {
 
         movieImageView.layer.borderWidth = 1
         movieImageView.layer.borderColor = UIColor.white.cgColor
+        
+        viewModel.movie.subscribe(onNext: { movie in
+            DispatchQueue.main.async { [weak self] in
+                guard let strongSelf = self, let strongMovie = movie else { return }
+                
+                strongSelf.titleLabel.text = strongMovie.title
+                strongSelf.descriptionLabel.text = strongMovie.overview
+                strongSelf.dateLabel.text = strongMovie.releaseDate
+                
+                let imageUrl = MovieDBApi.getImageUrl(posterPath: strongMovie.posterPath, size: .w185)
+                
+                // Get image with different size according to device type
+                let backdropSize = UIDevice.current.userInterfaceIdiom == .pad ? MovieDBApi.BackdropSize.w780 : MovieDBApi.BackdropSize.w1280
+                let backgroundImageUrl = MovieDBApi.getImageUrl(backdropPath: strongMovie.backdropPath, size: backdropSize)
+                
+                if let url = imageUrl {
+                    strongSelf.movieImageView.load(url: url)
+                }
+                
+                if let url = backgroundImageUrl {
+                    strongSelf.backgroundImageView.load(url: url)
+                }
+            }
+        }).disposed(by: viewModel.bag)
     }
 
 }

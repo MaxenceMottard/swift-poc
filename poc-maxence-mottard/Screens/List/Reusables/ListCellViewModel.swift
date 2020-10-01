@@ -6,29 +6,11 @@
 //
 
 import Foundation
-import RxSwift
 
-protocol ListCellViewModelling {
-    var bag: DisposeBag { get }
-    var movie: BehaviorSubject<Movie?> { get }
+protocol ListCellViewModelling: MovieViewModelling {
     
-    func setMovie(_ movie: Movie) -> Void
-    func getMovie() -> Movie?
 }
 
-final class ListCellViewModel: ListCellViewModelling {
-    let bag: DisposeBag = DisposeBag()
-    let movie: BehaviorSubject<Movie?> = BehaviorSubject<Movie?>(value: nil)
+final class ListCellViewModel: MovieViewModel, ListCellViewModelling {
     
-    func setMovie(_ movie: Movie) {
-        self.movie.onNext(movie)
-    }
-    
-    func getMovie() -> Movie? {
-        do {
-            return try movie.value()
-        } catch {
-            return nil
-        }
-    }
 }
