@@ -8,15 +8,9 @@
 import UIKit
 import RxSwift
 
-class ListViewController: UIViewController {
+final class ListViewController: UIViewController {
     
-    let bag = DisposeBag()
-    
-    var data: [Movie] = [] {
-        didSet {
-            dataTableView.reloadData()
-        }
-    }
+    let viewModel: ListViewModelling = ListViewModel()
     
     @IBOutlet var dataTableView: UITableView!
     
@@ -29,35 +23,34 @@ class ListViewController: UIViewController {
         
         navigationController?.navigationBar.topItem?.title = "listViewTitle".localize()
         
-        MovieDBApi.getMovies().subscribe { movies in
-            self.data = movies
-        } onError: { error in
-            print(error)
-        }.disposed(by: bag)
+        viewModel.movies.subscribe(onNext: { [weak self] _ in
+            guard let strongSelf = self else { return }
+            strongSelf.dataTableView.reloadData()
+        }).disposed(by: viewModel.bag)
+        
+        viewModel.requestMovies()
     }
 }
 
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return viewModel.getNumberOfRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath) as? ListTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath) as? ListTableViewCell, let movie = self.viewModel.getMovie(indexPath) else {
             fatalError("Could not dequeue cell with identifier : \(ListTableViewCell.reuseIdentifier)")
         }
         
-        cell.movie = data[indexPath.row]
+        cell.movie = movie
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let movie = data[indexPath.row]
-        
         let detailViewController = storyboard?.instantiateViewController(identifier: "detailViewController") as? DetailViewController
         
-        guard let strongVC = detailViewController else {
+        guard let strongVC = detailViewController, let movie = self.viewModel.getMovie(indexPath) else {
             fatalError("Could not instanciate view controller with identifier : detailViewController")
         }
         
