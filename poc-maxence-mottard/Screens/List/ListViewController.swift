@@ -8,17 +8,12 @@
 import UIKit
 import RxSwift
 
-class ListViewController: UIViewController {
+final class ListViewController: UIViewController {
     
-    let bag = DisposeBag()
+    let viewModel: ListViewModelling = ListViewModel()
+    let bag: DisposeBag = DisposeBag()
     
-    var data: [Movie] = [] {
-        didSet {
-            dataTableView.reloadData()
-        }
-    }
-    
-    @IBOutlet var dataTableView: UITableView!
+    @IBOutlet weak var dataTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,40 +24,38 @@ class ListViewController: UIViewController {
         
         navigationController?.navigationBar.topItem?.title = "listViewTitle".localize()
         
-        MovieDBApi.getMovies().subscribe { movies in
-            self.data = movies
-        } onError: { error in
-            print(error)
-        }.disposed(by: bag)
+        viewModel.movies.subscribe(onNext: { [weak self] _ in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.dataTableView.reloadData()
+        }).disposed(by: bag)
+        
+        viewModel.requestMovies()
     }
 }
 
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return viewModel.getNumberOfRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath) as? ListTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath) as? ListTableViewCell,
+              let cellViewModel = viewModel.getCellViewModel(indexPath) else {
             fatalError("Could not dequeue cell with identifier : \(ListTableViewCell.reuseIdentifier)")
         }
         
-        cell.movie = data[indexPath.row]
+        cell.setViewModel(cellViewModel)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let movie = data[indexPath.row]
+        guard let detailViewModel = self.viewModel.getDetailViewModel(indexPath),
+              let detailViewController = storyboard?.instantiateViewController(identifier: "detailViewController", creator: { coder in
+                return DetailViewController(viewModel: detailViewModel, coder: coder)
+        }) else { return }
         
-        let detailViewController = storyboard?.instantiateViewController(identifier: "detailViewController") as? DetailViewController
-        
-        guard let strongVC = detailViewController else {
-            fatalError("Could not instanciate view controller with identifier : detailViewController")
-        }
-        
-        strongVC.movie = movie
-        
-        navigationController?.pushViewController(strongVC, animated: true)
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

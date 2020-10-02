@@ -1,0 +1,66 @@
+//
+//  ListViewModel.swift
+//  poc-maxence-mottard
+//
+//  Created by Maxence on 01/10/2020.
+//
+
+import Foundation
+import RxSwift
+
+protocol ListViewModelling {
+    var bag: DisposeBag { get }
+    var movies: BehaviorSubject<[Movie]> { get }
+    var numberOfRows: Int { get set }
+    
+    func getNumberOfRows() -> Int
+    func requestMovies() -> Void
+    func getDetailViewModel(_ index: IndexPath) -> DetailViewModelling?
+    func getCellViewModel(_ index: IndexPath) -> ListCellViewModelling?
+}
+
+final class ListViewModel: ListViewModelling {
+    internal var numberOfRows: Int = 0
+    internal let movies: BehaviorSubject<[Movie]> = BehaviorSubject<[Movie]>.init(value: [])
+    internal let bag = DisposeBag()
+    
+    init() {
+        movies.subscribe(onNext: { [weak self] movies in
+            guard let strongSelf = self else { return }
+            strongSelf.numberOfRows = movies.count
+        }).disposed(by: bag)
+    }
+    
+    func getNumberOfRows() -> Int {
+        return numberOfRows
+    }
+    
+    func requestMovies() {
+        MovieDBApi.getMovies().subscribe(onNext: { [weak self] movies in
+            guard let strongSelf = self else { return }
+            strongSelf.movies.onNext(movies)
+        }).disposed(by: bag)
+    }
+    
+    func getDetailViewModel(_ index: IndexPath) -> DetailViewModelling? {
+        do {
+            let movie = try self.movies.value()[index.row]
+            let model = DetailModel.from(movie)
+            
+            return DetailViewModel(detailModel: model)
+        } catch {
+            return nil
+        }
+    }
+    
+    func getCellViewModel(_ index: IndexPath) -> ListCellViewModelling? {
+        do {
+            let movie = try self.movies.value()[index.row]
+            let model = ListCellModel.from(movie);
+            
+            return ListCellViewModel(model: model)
+        } catch {
+            return nil
+        }
+    }
+}

@@ -6,28 +6,15 @@
 //
 
 import UIKit
+import RxSwift
 
-class ListTableViewCell: UITableViewCell, ReusableView {
+final class ListTableViewCell: UITableViewCell, ReusableView {
     
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var movieImageView : UIImageView!
+    var viewModel: ListCellViewModelling?
     
-    var movie: Movie? {
-        didSet {
-            DispatchQueue.main.async {
-                guard let strongMovie = self.movie else { return }
-                self.titleLabel.text = strongMovie.title
-                self.descriptionLabel.text = strongMovie.overview
-                
-                let imageUrl = MovieDBApi.getImageUrl(posterPath: strongMovie.posterPath, size: .w185)
-                
-                if let url = imageUrl {
-                    self.movieImageView.load(url: url)
-                }
-            }
-        }
-    }
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var movieImageView : UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,8 +22,24 @@ class ListTableViewCell: UITableViewCell, ReusableView {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func setViewModel(_ viewModel: ListCellViewModelling) {
+        self.viewModel = viewModel
+        setupView()
+    }
+    
+    func setupView() {
+        guard let vModel = viewModel else { return }
         
-        // Configure the view for the selected state
+        titleLabel.text = vModel.model.title
+        descriptionLabel.text = vModel.model.overview
+        
+        let imageUrl = MovieDBApi.getImageUrl(posterPath: vModel.model.posterPath, size: .w185)
+        
+        if let url = imageUrl {
+            movieImageView.load(url: url)
+        }
     }
     
 }
