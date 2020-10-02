@@ -10,8 +10,7 @@ import RxSwift
 
 final class ListTableViewCell: UITableViewCell, ReusableView {
     
-    let viewModel: ListCellViewModelling = ListCellViewModel()
-    let bag = DisposeBag()
+    var viewModel: ListCellViewModelling?
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
@@ -23,20 +22,24 @@ final class ListTableViewCell: UITableViewCell, ReusableView {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func setViewModel(_ viewModel: ListCellViewModelling) {
+        self.viewModel = viewModel
+        setupView()
+    }
+    
+    func setupView() {
+        guard let vModel = viewModel else { return }
         
-        viewModel.movie.subscribe(onNext: { movie in
-            DispatchQueue.main.async { [weak self] in
-                guard let strongSelf = self, let strongMovie = movie else { return }
-                strongSelf.titleLabel.text = strongMovie.title
-                strongSelf.descriptionLabel.text = strongMovie.overview
-                
-                let imageUrl = MovieDBApi.getImageUrl(posterPath: strongMovie.posterPath, size: .w185)
-                
-                if let url = imageUrl {
-                    strongSelf.movieImageView.load(url: url)
-                }
-            }
-        }).disposed(by: bag)
+        titleLabel.text = vModel.model.title
+        descriptionLabel.text = vModel.model.overview
+        
+        let imageUrl = MovieDBApi.getImageUrl(posterPath: vModel.model.posterPath, size: .w185)
+        
+        if let url = imageUrl {
+            movieImageView.load(url: url)
+        }
     }
     
 }

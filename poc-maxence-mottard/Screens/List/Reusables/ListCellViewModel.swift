@@ -7,8 +7,14 @@
 
 import Foundation
 
-protocol ListCellViewModelling: MovieViewModelling {
+protocol ListCellViewModelling {
+    var model: ListCellModel { get }
 }
 
-final class ListCellViewModel: MovieViewModel, ListCellViewModelling {
+final class ListCellViewModel: ListCellViewModelling {
+    let model: ListCellModel
+    
+    init(model: ListCellModel) {
+        self.model = model
+    }
 }

@@ -40,11 +40,12 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath) as? ListTableViewCell, let movie = self.viewModel.getMovie(indexPath) else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath) as? ListTableViewCell,
+              let cellViewModel = viewModel.getCellViewModel(indexPath) else {
             fatalError("Could not dequeue cell with identifier : \(ListTableViewCell.reuseIdentifier)")
         }
         
-        cell.viewModel.setMovie(movie)
+        cell.setViewModel(cellViewModel)
         
         return cell
     }
