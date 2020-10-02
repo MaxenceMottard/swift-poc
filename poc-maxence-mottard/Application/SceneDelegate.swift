@@ -22,8 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
         window?.windowScene = windowScene
         
-        let dependencyProvider = DependencyProvider()
-        let rootView = dependencyProvider.container.resolve(ListViewController.self)!
+        let rootView = DependencyProvider.shared.container.resolve(ListViewController.self)!
         let navigationController = UINavigationController(rootViewController: rootView)
         
         window?.rootViewController = navigationController

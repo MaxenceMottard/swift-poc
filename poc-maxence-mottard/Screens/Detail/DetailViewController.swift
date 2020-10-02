@@ -52,15 +52,3 @@ class DetailViewController: UIViewController {
     }
 
 }
-
-extension DetailViewController {
-    static func makeViewController(viewModel: ListViewModelling) -> ListViewController {
-        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "detailViewController") as? ListViewController else {
-            preconditionFailure()
-        }
-        
-        vc.viewModel = viewModel
-        
-        return vc
-    }
-}
