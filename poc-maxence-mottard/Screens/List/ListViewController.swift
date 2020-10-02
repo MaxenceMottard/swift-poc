@@ -10,7 +10,8 @@ import RxSwift
 
 final class ListViewController: UIViewController {
     
-    let viewModel: ListViewModelling = ListViewModel()
+    var viewModel: ListViewModelling!
+    var dependencyProvider: DependencyProvider!
     let bag: DisposeBag = DisposeBag()
     
     @IBOutlet weak var dataTableView: UITableView!
@@ -24,6 +25,10 @@ final class ListViewController: UIViewController {
         
         navigationController?.navigationBar.topItem?.title = "listViewTitle".localize()
         
+        bindingViewModel()
+    }
+    
+    func bindingViewModel() {
         viewModel.movies.subscribe(onNext: { [weak self] _ in
             guard let strongSelf = self else { return }
             
@@ -40,21 +45,18 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath) as? ListTableViewCell,
-              let cellViewModel = viewModel.getCellViewModel(indexPath) else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath) as? ListTableViewCell else {
             fatalError("Could not dequeue cell with identifier : \(ListTableViewCell.reuseIdentifier)")
         }
         
-        cell.setViewModel(cellViewModel)
+        cell.setViewModel(viewModel.getCellViewModel(indexPath))
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let detailViewModel = self.viewModel.getDetailViewModel(indexPath),
-              let detailViewController = storyboard?.instantiateViewController(identifier: "detailViewController", creator: { coder in
-                return DetailViewController(viewModel: detailViewModel, coder: coder)
-        }) else { return }
+        let detailModel = viewModel.getDetailModel(indexPath)
+        let detailViewController = dependencyProvider.container.resolve(DetailViewController.self, argument: detailModel)!
         
         navigationController?.pushViewController(detailViewController, animated: true)
     }

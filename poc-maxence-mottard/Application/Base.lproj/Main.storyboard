@@ -11,7 +11,7 @@
         <!--List View Controller-->
         <scene sceneID="9Bh-9z-KMn">
             <objects>
-                <tableViewController id="5or-Ie-ugQ" customClass="ListViewController" customModule="poc_maxence_mottard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="listViewController" id="5or-Ie-ugQ" customClass="ListViewController" customModule="poc_maxence_mottard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sNQ-XB-5sN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,7 +116,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Wjk-V2-saZ">
             <objects>
-                <navigationController id="SJH-zF-eRp" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigationControlelr" id="SJH-zF-eRp" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YuZ-9H-cFf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
