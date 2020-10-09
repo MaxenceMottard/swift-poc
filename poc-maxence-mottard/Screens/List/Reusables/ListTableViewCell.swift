@@ -36,9 +36,7 @@ final class ListTableViewCell: UITableViewCell, ReusableView, Setupable {
         titleLabel.text = vModel.model.title
         descriptionLabel.text = vModel.model.overview
         
-        let imageUrl = MovieDBApi.getImageUrl(posterPath: vModel.model.posterPath, size: .w185)
-        
-        if let url = imageUrl {
+        if let url = vModel.model.posterUrl {
             movieImageView.load(url: url)
         }
     }

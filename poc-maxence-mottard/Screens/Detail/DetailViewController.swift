@@ -8,9 +8,10 @@
 import UIKit
 import RxSwift
 
-class DetailViewController: UIViewController {
+final class DetailViewController: UIViewController {
 
     var viewModel: DetailViewModelling!
+    var movieDBApi: MovieDBApi!
     
     @IBOutlet private weak var backgroundImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
@@ -46,11 +47,11 @@ class DetailViewController: UIViewController {
             strongSelf.descriptionLabel.text = strongSelf.viewModel.model.overview
             strongSelf.dateLabel.text = strongSelf.viewModel.model.releaseDate
             
-            let imageUrl = MovieDBApi.getImageUrl(posterPath: strongSelf.viewModel.model.posterPath, size: .w185)
+            let imageUrl = strongSelf.movieDBApi.getImageUrl(posterPath: strongSelf.viewModel.model.posterPath, size: .w185)
             
             // Get image with different size according to device type
             let backdropSize = UIDevice.current.userInterfaceIdiom == .pad ? MovieDBApi.BackdropSize.w780 : MovieDBApi.BackdropSize.w1280
-            let backgroundImageUrl = MovieDBApi.getImageUrl(backdropPath: strongSelf.viewModel.model.backdropPath, size: backdropSize)
+            let backgroundImageUrl = strongSelf.movieDBApi.getImageUrl(backdropPath: strongSelf.viewModel.model.backdropPath, size: backdropSize)
             
             if let url = imageUrl {
                 strongSelf.movieImageView.load(url: url)

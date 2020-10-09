@@ -45,11 +45,11 @@ class MovieDBApi {
         }
     }
     
-    static func getImageUrl(posterPath: String, size: PosterSizes = .original) -> URL? {
+    func getImageUrl(posterPath: String, size: PosterSizes = .original) -> URL? {
         return URL(string: "\(Constant.TMDBImageBaseUrl.rawValue)\(size)\(posterPath)")
     }
     
-    static func getImageUrl(backdropPath: String, size: BackdropSize = .original) -> URL? {
+    func getImageUrl(backdropPath: String, size: BackdropSize = .original) -> URL? {
         return URL(string: "\(Constant.TMDBImageBaseUrl.rawValue)\(size)\(backdropPath)")
     }
     
