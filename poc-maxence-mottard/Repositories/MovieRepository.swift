@@ -14,12 +14,17 @@ final class MovieRepository: Repository {
     
     var data = BehaviorSubject<[Movie]>.init(value: [])
     var service: MovieDBApi!
+    var mockingService: MockingService!
     let bag = DisposeBag()
     
     func getData() {
-        service.getMovies().subscribe(onNext: { [weak self] movies in
-            guard let strongSelf = self else { return }
-            strongSelf.data.onNext(movies)
-        }).disposed(by: bag)
+        if mockingService.getIsMocked() {
+            data.onNext([])
+        } else {
+            service.getMovies().subscribe(onNext: { [weak self] movies in
+                guard let strongSelf = self else { return }
+                strongSelf.data.onNext(movies)
+            }).disposed(by: bag)
+        }
     }
 }
