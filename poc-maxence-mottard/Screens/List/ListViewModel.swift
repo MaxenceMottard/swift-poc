@@ -15,11 +15,10 @@ protocol ListViewModelling {
     var numberOfRows: Int { get set }
     var detailModels: [DetailModel] { get set }
     var listCellViewModels: [ListCellViewModel] { get set }
-    var movieDBService: MovieDBApi! { get }
+    var movieRepository: MovieRepository! { get }
     var mockingService: MockingService! { get }
     
     func getNumberOfRows() -> Int
-    func requestMovies() -> Void
     func toggleDataIsMocked() -> Void
     func getDetailModel(_ index: IndexPath) -> DetailModel
     func getCellViewModel(_ index: IndexPath) -> ListCellViewModelling
@@ -32,13 +31,22 @@ final class ListViewModel: ListViewModelling {
     internal let dataIsMocked = BehaviorSubject<Bool>.init(value: false)
     internal var detailModels: [DetailModel] = []
     internal var listCellViewModels: [ListCellViewModel] = []
-    internal var movieDBService: MovieDBApi!
+    internal var movieRepository: MovieRepository! {
+        didSet {
+            movieRepository.data.subscribe(onNext: { [weak self] movies in
+                guard let strongSelf = self else { return }
+                strongSelf.movies.onNext(movies)
+            }).disposed(by: bag)
+            
+            movieRepository.getData()
+        }
+    }
     internal var mockingService: MockingService! {
         didSet {
             mockingService.getIsMockedSubject().subscribe(onNext: { [weak self] isMocked in
                 guard let strongSelf = self else { return }
                 
-                strongSelf.requestMovies()
+                strongSelf.movieRepository.getData()
                 strongSelf.dataIsMocked.onNext(isMocked)
             }).disposed(by: bag)
         }
@@ -68,13 +76,6 @@ final class ListViewModel: ListViewModelling {
     
     func getNumberOfRows() -> Int {
         return numberOfRows
-    }
-    
-    func requestMovies() {
-        movieDBService.getMovies().subscribe(onNext: { [weak self] movies in
-            guard let strongSelf = self else { return }
-            strongSelf.movies.onNext(movies)
-        }).disposed(by: bag)
     }
     
     func getDetailModel(_ index: IndexPath) -> DetailModel {

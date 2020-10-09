@@ -49,8 +49,6 @@ final class ListViewController: UIViewController {
             
             strongSelf.mockButton.tintColor = isMocked ? UIColor.red : UIColor.green
         }).disposed(by: bag)
-        
-        viewModel.requestMovies()
     }
 }
 

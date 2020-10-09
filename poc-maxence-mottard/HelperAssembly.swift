@@ -20,5 +20,12 @@ class HelperAssembly: Assembly {
         }
         
         container.autoregister(MovieDBApi.self, initializer: MovieDBApi.init)
+        
+        container.register(MovieRepository.self) { resolver -> MovieRepository in
+            let repository = MovieRepository()
+            repository.service = resolver.resolve(MovieDBApi.self)
+            
+            return repository
+        }
     }
 }
