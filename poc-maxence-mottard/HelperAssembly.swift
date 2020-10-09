@@ -15,7 +15,7 @@ class HelperAssembly: Assembly {
         }
         
         container.register(DependencyProvider.self) { _ in
-            return DependencyProvider.shared
+            return DependencyProvider()
         }
     }
 }
