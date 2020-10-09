@@ -8,10 +8,7 @@
 import Foundation
 import Swinject
 
-class DependencyProvider {
-    
-    static var shared = DependencyProvider()
-    
+class DependencyProvider {    
     let container: Container
     let assembler: Assembler
     
