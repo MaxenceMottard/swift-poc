@@ -17,6 +17,13 @@ class DetailViewController: UIViewController {
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var movieImageView: UIImageView!
     @IBOutlet private weak var descriptionLabel: UILabel!
+    
+    private let backButton: UIBarButtonItem = {
+        let button = UIBarButtonItem()
+        button.title = "backButtonTitle".localize()
+        
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +31,16 @@ class DetailViewController: UIViewController {
         movieImageView.layer.borderWidth = 1
         movieImageView.layer.borderColor = UIColor.white.cgColor
         
+        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        
         setupView()
     }
     
     func setupView() {
         DispatchQueue.main.async { [weak self] in
             guard let strongSelf = self else { return }
+            
+            strongSelf.navigationController?.navigationBar.topItem?.title = strongSelf.viewModel.model.title
             
             strongSelf.titleLabel.text = strongSelf.viewModel.model.title
             strongSelf.descriptionLabel.text = strongSelf.viewModel.model.overview
