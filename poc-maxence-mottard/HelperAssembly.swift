@@ -14,6 +14,9 @@ class HelperAssembly: Assembly {
         container.register(UIStoryboard.self) { _ -> UIStoryboard in
             return UIStoryboard(name: "Main", bundle: nil)
         }
+        container.register(MockingService.self) { _ in
+            return MockingService()
+        }
         
         container.autoregister(MovieDBApi.self, initializer: MovieDBApi.init)
     }

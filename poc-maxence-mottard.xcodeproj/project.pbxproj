@@ -35,6 +35,7 @@
 		87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBA6D25237579009D2FC6 /* UIImageView.swift */; };
 		87CDBABE25246B4B009D2FC6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBABD25246B4B009D2FC6 /* String.swift */; };
 		87E87E30252728560007F1D6 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E87E2F252728560007F1D6 /* DependencyProvider.swift */; };
+		87F62E2125305E88006705CF /* MockingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E2025305E88006705CF /* MockingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		87CDBABD25246B4B009D2FC6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		87E87E2E252728480007F1D6 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		87E87E2F252728560007F1D6 /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
+		87F62E2025305E88006705CF /* MockingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				87B0DD302524AD2900CC0DAC /* MovieDBApi.swift */,
+				87F62E2025305E88006705CF /* MockingService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				87A6E4DB25235A200037566C /* ListTableViewCell.swift in Sources */,
 				87B0DD312524AD2900CC0DAC /* MovieDBApi.swift in Sources */,
 				877F17EC2526313900CE3EBE /* DetailModel.swift in Sources */,
+				87F62E2125305E88006705CF /* MockingService.swift in Sources */,
 				873C09D9252759F900F6C2FC /* DetailViewAssembly.swift in Sources */,
 				877F17D52525FF8800CE3EBE /* DetailViewModel.swift in Sources */,
 				8795792D25246EEB0000A99D /* DetailViewController.swift in Sources */,
