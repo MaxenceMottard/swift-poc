@@ -9,22 +9,10 @@ import Foundation
 import RxSwift
 
 final class MockingService {
-    private var isMocked = BehaviorSubject<Bool>.init(value: false)
-    
-    func mockData() {
-        isMocked.onNext(true)
-    }
-    
-    func unmockData() {
-        isMocked.onNext(false)
-    }
+    private let isMocked = BehaviorSubject<Bool>.init(value: false)
     
     func toggleIsMocked() {
-        if (getIsMocked()) {
-            unmockData()
-        } else {
-            mockData()
-        }
+        isMocked.onNext(!getIsMocked())
     }
     
     func getIsMockedSubject() -> BehaviorSubject<Bool> {
