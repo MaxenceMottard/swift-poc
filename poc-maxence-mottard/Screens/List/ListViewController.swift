@@ -64,7 +64,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("Could not dequeue cell with identifier : \(ListTableViewCell.reuseIdentifier)")
         }
         
-        cell.setViewModel(viewModel.getCellViewModel(indexPath))
+        cell.setup(with: viewModel.getCellViewModel(indexPath))
         
         return cell
     }

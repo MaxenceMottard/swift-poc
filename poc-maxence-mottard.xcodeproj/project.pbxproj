@@ -36,6 +36,7 @@
 		87CDBABE25246B4B009D2FC6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBABD25246B4B009D2FC6 /* String.swift */; };
 		87E87E30252728560007F1D6 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E87E2F252728560007F1D6 /* DependencyProvider.swift */; };
 		87F62E2125305E88006705CF /* MockingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E2025305E88006705CF /* MockingService.swift */; };
+		87F62E5B2530B8CB006705CF /* Setupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E5A2530B8CB006705CF /* Setupable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		87E87E2E252728480007F1D6 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		87E87E2F252728560007F1D6 /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
 		87F62E2025305E88006705CF /* MockingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingService.swift; sourceTree = "<group>"; };
+		87F62E5A2530B8CB006705CF /* Setupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setupable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				87A6E4E525235DEA0037566C /* ReusableView.swift */,
+				87F62E5A2530B8CB006705CF /* Setupable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 			files = (
 				872760B32524BC1F00596273 /* MoviesRequest.swift in Sources */,
 				87A6E48925234F370037566C /* AppDelegate.swift in Sources */,
+				87F62E5B2530B8CB006705CF /* Setupable.swift in Sources */,
 				87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */,
 				873C09D12527597A00F6C2FC /* ListViewAssembly.swift in Sources */,
 				87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */,

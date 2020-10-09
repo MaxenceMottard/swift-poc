@@ -8,7 +8,8 @@
 import UIKit
 import RxSwift
 
-final class ListTableViewCell: UITableViewCell, ReusableView {
+final class ListTableViewCell: UITableViewCell, ReusableView, Setupable {
+    typealias Model = ListCellViewModelling
     
     var viewModel: ListCellViewModelling?
     
@@ -24,8 +25,8 @@ final class ListTableViewCell: UITableViewCell, ReusableView {
         super.setSelected(selected, animated: animated)
     }
     
-    func setViewModel(_ viewModel: ListCellViewModelling) {
-        self.viewModel = viewModel
+    func setup(with model: ListCellViewModelling) {
+        self.viewModel = model
         setupView()
     }
     
