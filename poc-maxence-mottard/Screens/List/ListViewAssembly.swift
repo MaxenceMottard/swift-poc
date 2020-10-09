@@ -11,8 +11,11 @@ import UIKit
 final class ListViewAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(ListViewModel.self) { _ in
-            ListViewModel()
+        container.register(ListViewModel.self) { (resolver: Resolver) -> ListViewModel in
+            let viewModel = ListViewModel()
+            viewModel.movieDBService = resolver.resolve(MovieDBApi.self)!
+            
+            return viewModel
         }
         
         container.register(ListViewController.self) { (resolver: Resolver) -> ListViewController in

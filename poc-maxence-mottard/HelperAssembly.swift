@@ -17,5 +17,9 @@ class HelperAssembly: Assembly {
         container.register(DependencyProvider.self) { _ in
             return DependencyProvider()
         }
+        
+        container.register(MovieDBApi.self) { _ in
+            return MovieDBApi()
+        }
     }
 }
