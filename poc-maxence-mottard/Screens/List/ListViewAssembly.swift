@@ -14,6 +14,7 @@ final class ListViewAssembly: Assembly {
         container.register(ListViewModel.self) { (resolver: Resolver) -> ListViewModel in
             let viewModel = ListViewModel()
             viewModel.movieDBService = resolver.resolve(MovieDBApi.self)!
+            viewModel.mockingService = resolver.resolve(MockingService.self)!
             
             return viewModel
         }

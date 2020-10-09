@@ -11,24 +11,38 @@ import RxSwift
 protocol ListViewModelling {
     var bag: DisposeBag { get }
     var movies: BehaviorSubject<[Movie]> { get }
+    var dataIsMocked: BehaviorSubject<Bool> { get }
     var numberOfRows: Int { get set }
     var detailModels: [DetailModel] { get set }
     var listCellViewModels: [ListCellViewModel] { get set }
     var movieDBService: MovieDBApi! { get }
+    var mockingService: MockingService! { get }
     
     func getNumberOfRows() -> Int
     func requestMovies() -> Void
+    func toggleDataIsMocked() -> Void
     func getDetailModel(_ index: IndexPath) -> DetailModel
     func getCellViewModel(_ index: IndexPath) -> ListCellViewModelling
 }
 
 final class ListViewModel: ListViewModelling {
-    let bag = DisposeBag()
-    var numberOfRows: Int = 0
-    let movies: BehaviorSubject<[Movie]> = BehaviorSubject<[Movie]>.init(value: [])
-    var detailModels: [DetailModel] = []
-    var listCellViewModels: [ListCellViewModel] = []
-    var movieDBService: MovieDBApi!
+    internal let bag = DisposeBag()
+    internal var numberOfRows: Int = 0
+    internal let movies = BehaviorSubject<[Movie]>.init(value: [])
+    internal let dataIsMocked = BehaviorSubject<Bool>.init(value: false)
+    internal var detailModels: [DetailModel] = []
+    internal var listCellViewModels: [ListCellViewModel] = []
+    internal var movieDBService: MovieDBApi!
+    internal var mockingService: MockingService! {
+        didSet {
+            mockingService.getIsMockedSubject().subscribe(onNext: { [weak self] isMocked in
+                guard let strongSelf = self else { return }
+                
+                strongSelf.requestMovies()
+                strongSelf.dataIsMocked.onNext(isMocked)
+            }).disposed(by: bag)
+        }
+    }
     
     init() {
         movies.subscribe(onNext: { [weak self] movies in
@@ -60,5 +74,9 @@ final class ListViewModel: ListViewModelling {
     
     func getCellViewModel(_ index: IndexPath) -> ListCellViewModelling {
         return listCellViewModels[index.row]
+    }
+    
+    func toggleDataIsMocked() {
+        mockingService.toggleIsMocked()
     }
 }
