@@ -47,17 +47,11 @@ final class DetailViewController: UIViewController {
             strongSelf.descriptionLabel.text = strongSelf.viewModel.model.overview
             strongSelf.dateLabel.text = strongSelf.viewModel.model.releaseDate
             
-            let imageUrl = strongSelf.movieDBApi.getImageUrl(posterPath: strongSelf.viewModel.model.posterPath, size: .w185)
-            
-            // Get image with different size according to device type
-            let backdropSize = UIDevice.current.userInterfaceIdiom == .pad ? MovieDBApi.BackdropSize.w780 : MovieDBApi.BackdropSize.w1280
-            let backgroundImageUrl = strongSelf.movieDBApi.getImageUrl(backdropPath: strongSelf.viewModel.model.backdropPath, size: backdropSize)
-            
-            if let url = imageUrl {
+            if let url = strongSelf.viewModel.model.posterUrl {
                 strongSelf.movieImageView.load(url: url)
             }
             
-            if let url = backgroundImageUrl {
+            if let url = strongSelf.viewModel.model.backdropUrl {
                 strongSelf.backgroundImageView.load(url: url)
             }
         }

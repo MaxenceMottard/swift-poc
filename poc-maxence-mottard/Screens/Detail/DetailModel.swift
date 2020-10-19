@@ -6,15 +6,21 @@
 //
 
 import Foundation
+import UIKit
 
 struct DetailModel {
     let title: String
     let overview: String
     let releaseDate: String
-    let posterPath: String
-    let backdropPath: String
+    let posterUrl: URL?
+    let backdropUrl: URL?
     
     static func from(_ movie: Movie) -> DetailModel {
-        return DetailModel(title: movie.title, overview: movie.overview, releaseDate: movie.releaseDate, posterPath: movie.posterPath, backdropPath: movie.backdropPath)
+        return DetailModel(
+            title: movie.title,
+            overview: movie.overview,
+            releaseDate: movie.releaseDate,
+            posterUrl: movie.getImageUrl(size: .w185),
+            backdropUrl: movie.getImageUrl(size: UIDevice.current.userInterfaceIdiom == .pad ? .w780 : .w1280))
     }
 }

@@ -57,16 +57,7 @@ final class ListViewModel: ListViewModelling {
             guard let strongSelf = self else { return }
             
             let detailModels = movies.map { DetailModel.from($0) }
-            let listCellViewModels = movies.map { movie -> ListCellViewModel in
-                //guard let strongSelf = self else { return }
-                
-                var model = ListCellModel.from(movie)
-                //model.posterUrl = movieDBService.getImageUrl(posterPath: movie.posterPath, size: .w185)
-                
-                let viewModel = ListCellViewModel(model: model)
-                
-                return viewModel
-            }
+            let listCellViewModels = movies.map { ListCellViewModel(model: ListCellModel.from($0)) }
             
             strongSelf.numberOfRows = movies.count
             strongSelf.detailModels = detailModels

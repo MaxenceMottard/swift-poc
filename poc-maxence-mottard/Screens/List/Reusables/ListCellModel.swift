@@ -13,6 +13,9 @@ struct ListCellModel {
     var posterUrl: URL?
     
     static func from(_ movie: Movie) -> ListCellModel {
-        return ListCellModel(title: movie.title, overview: movie.overview)
+        return ListCellModel(
+            title: movie.title,
+            overview: movie.overview,
+            posterUrl: movie.getImageUrl(size: MovieDBApi.PosterSizes.w185))
     }
 }

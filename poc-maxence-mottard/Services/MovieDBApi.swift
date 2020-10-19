@@ -45,12 +45,6 @@ class MovieDBApi {
         }
     }
     
-    func getImageUrl(posterPath: String, size: PosterSizes = .original) -> URL? {
-        return URL(string: "\(Constant.TMDBImageBaseUrl.rawValue)\(size)\(posterPath)")
-    }
-    
-    func getImageUrl(backdropPath: String, size: BackdropSize = .original) -> URL? {
-        return URL(string: "\(Constant.TMDBImageBaseUrl.rawValue)\(size)\(backdropPath)")
     func getMockingMovies() -> [Movie] {
         do {
             let path = Bundle.main.path(forResource: "data", ofType: "json")!
