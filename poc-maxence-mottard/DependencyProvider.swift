@@ -23,6 +23,10 @@ class DependencyProvider {
             ListViewAssembly(),
             DetailViewAssembly()
         ], container: container)
+        
+        container.register(DependencyProvider.self) { _ in
+            return self
+        }
     }
     
 }

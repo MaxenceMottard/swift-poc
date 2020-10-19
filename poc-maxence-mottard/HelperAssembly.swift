@@ -14,10 +14,6 @@ class HelperAssembly: Assembly {
             return UIStoryboard(name: "Main", bundle: nil)
         }
         
-        container.register(DependencyProvider.self) { _ in
-            return DependencyProvider()
-        }
-        
         container.register(MovieDBApi.self) { _ in
             return MovieDBApi()
         }
