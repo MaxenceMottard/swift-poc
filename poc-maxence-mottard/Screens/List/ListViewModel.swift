@@ -25,13 +25,13 @@ protocol ListViewModelling {
 }
 
 final class ListViewModel: ListViewModelling {
-    internal let bag = DisposeBag()
-    internal var numberOfRows: Int = 0
-    internal let movies = BehaviorSubject<[Movie]>.init(value: [])
-    internal let dataIsMocked = BehaviorSubject<Bool>.init(value: false)
-    internal var detailModels: [DetailModel] = []
-    internal var listCellViewModels: [ListCellViewModel] = []
-    internal var movieRepository: MovieRepository! {
+    let bag = DisposeBag()
+    var numberOfRows: Int = 0
+    let movies = BehaviorSubject<[Movie]>.init(value: [])
+    let dataIsMocked = BehaviorSubject<Bool>.init(value: false)
+    var detailModels: [DetailModel] = []
+    var listCellViewModels: [ListCellViewModel] = []
+    var movieRepository: MovieRepository! {
         didSet {
             movieRepository.data.subscribe(onNext: { [weak self] movies in
                 guard let strongSelf = self else { return }

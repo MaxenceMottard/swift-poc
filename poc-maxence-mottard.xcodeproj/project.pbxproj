@@ -41,7 +41,6 @@
 		87F62E482530B079006705CF /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E472530B079006705CF /* MovieRepository.swift */; };
 		87F62E532530B7FA006705CF /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E522530B7FA006705CF /* Repository.swift */; };
 		87F62E5B2530B8CB006705CF /* Setupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E5A2530B8CB006705CF /* Setupable.swift */; };
-		87F62E602530BBB9006705CF /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E5F2530BBB9006705CF /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +105,6 @@
 		87F62E472530B079006705CF /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
 		87F62E522530B7FA006705CF /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		87F62E5A2530B8CB006705CF /* Setupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setupable.swift; sourceTree = "<group>"; };
-		87F62E5F2530BBB9006705CF /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,7 +285,6 @@
 				87A6E4E525235DEA0037566C /* ReusableView.swift */,
 				87F62E522530B7FA006705CF /* Repository.swift */,
 				87F62E5A2530B8CB006705CF /* Setupable.swift */,
-				87F62E5F2530BBB9006705CF /* ApiService.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -509,7 +506,6 @@
 				87A6E4DB25235A200037566C /* ListTableViewCell.swift in Sources */,
 				87B0DD312524AD2900CC0DAC /* MovieDBApi.swift in Sources */,
 				877F17EC2526313900CE3EBE /* DetailModel.swift in Sources */,
-				87F62E602530BBB9006705CF /* ApiService.swift in Sources */,
 				87F62E532530B7FA006705CF /* Repository.swift in Sources */,
 				87F62E2125305E88006705CF /* MockingService.swift in Sources */,
 				873C09D9252759F900F6C2FC /* DetailViewAssembly.swift in Sources */,
