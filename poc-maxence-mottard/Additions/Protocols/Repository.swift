@@ -15,5 +15,5 @@ protocol Repository {
     var data: BehaviorSubject<[Entity]> { get }
     var service: Service! { get }
     
-    func getData()
+    func fetchData()
 }

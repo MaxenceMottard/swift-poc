@@ -17,9 +17,9 @@ final class MovieRepository: Repository {
     var mockingService: MockingService!
     let bag = DisposeBag()
     
-    func getData() {
+    func fetchData() {
         if mockingService.getIsMocked() {
-            data.onNext([])
+            data.onNext(service.getMockingMovies())
         } else {
             service.getMovies().subscribe(onNext: { [weak self] movies in
                 guard let strongSelf = self else { return }

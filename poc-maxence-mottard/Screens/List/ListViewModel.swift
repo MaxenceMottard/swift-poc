@@ -38,7 +38,7 @@ final class ListViewModel: ListViewModelling {
                 strongSelf.movies.onNext(movies)
             }).disposed(by: bag)
             
-            movieRepository.getData()
+            movieRepository.fetchData()
         }
     }
     internal var mockingService: MockingService! {
@@ -46,7 +46,7 @@ final class ListViewModel: ListViewModelling {
             mockingService.getIsMockedSubject().subscribe(onNext: { [weak self] isMocked in
                 guard let strongSelf = self else { return }
                 
-                strongSelf.movieRepository.getData()
+                strongSelf.movieRepository.fetchData()
                 strongSelf.dataIsMocked.onNext(isMocked)
             }).disposed(by: bag)
         }

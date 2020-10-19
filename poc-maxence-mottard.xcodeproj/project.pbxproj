@@ -18,6 +18,8 @@
 		877F17EC2526313900CE3EBE /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17EB2526313900CE3EBE /* DetailModel.swift */; };
 		877F17F1252633FE00CE3EBE /* ListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17F0252633FE00CE3EBE /* ListCellModel.swift */; };
 		8795792D25246EEB0000A99D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8795792C25246EEB0000A99D /* DetailViewController.swift */; };
+		8799078A253D78E900D388BF /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 87990789253D78E900D388BF /* data.json */; };
+		8799078F253D7FD500D388BF /* JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8799078E253D7FD500D388BF /* JSONFile.swift */; };
 		87A581F92527769300D1CD25 /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A581F82527769300D1CD25 /* HelperAssembly.swift */; };
 		87A6E48925234F370037566C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48825234F370037566C /* AppDelegate.swift */; };
 		87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48A25234F370037566C /* SceneDelegate.swift */; };
@@ -74,6 +76,8 @@
 		877F17EB2526313900CE3EBE /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		877F17F0252633FE00CE3EBE /* ListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellModel.swift; sourceTree = "<group>"; };
 		8795792C25246EEB0000A99D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		87990789253D78E900D388BF /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		8799078E253D7FD500D388BF /* JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFile.swift; sourceTree = "<group>"; };
 		87A581F82527769300D1CD25 /* HelperAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAssembly.swift; sourceTree = "<group>"; };
 		87A6E48525234F370037566C /* poc-maxence-mottard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poc-maxence-mottard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A6E48825234F370037566C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				872760B22524BC1F00596273 /* MoviesRequest.swift */,
+				8799078E253D7FD500D388BF /* JSONFile.swift */,
 			);
 			path = ApiReponse;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 				87A6E4BD252355EA0037566C /* Screens */,
 				87E87E2F252728560007F1D6 /* DependencyProvider.swift */,
 				87A581F82527769300D1CD25 /* HelperAssembly.swift */,
+				87990789253D78E900D388BF /* data.json */,
 			);
 			path = "poc-maxence-mottard";
 			sourceTree = "<group>";
@@ -428,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A6E49525234F380037566C /* LaunchScreen.storyboard in Resources */,
+				8799078A253D78E900D388BF /* data.json in Resources */,
 				87A6E4DC25235A200037566C /* ListTableViewCell.xib in Resources */,
 				87A6E49225234F380037566C /* Assets.xcassets in Resources */,
 				87A6E49025234F370037566C /* Main.storyboard in Resources */,
@@ -494,6 +501,7 @@
 				872760D92524D59A00596273 /* constant.swift in Sources */,
 				877F17F1252633FE00CE3EBE /* ListCellModel.swift in Sources */,
 				87CDBABE25246B4B009D2FC6 /* String.swift in Sources */,
+				8799078F253D7FD500D388BF /* JSONFile.swift in Sources */,
 				877F17E12526002100CE3EBE /* ListCellViewModel.swift in Sources */,
 				87E87E30252728560007F1D6 /* DependencyProvider.swift in Sources */,
 				877F17B02525C72200CE3EBE /* ListViewModel.swift in Sources */,
