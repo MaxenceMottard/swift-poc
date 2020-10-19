@@ -10,12 +10,15 @@
 		872760B32524BC1F00596273 /* MoviesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872760B22524BC1F00596273 /* MoviesRequest.swift */; };
 		872760C72524C37F00596273 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 872760C92524C37F00596273 /* Localizable.strings */; };
 		872760D92524D59A00596273 /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872760D82524D59A00596273 /* constant.swift */; };
+		873C09D12527597A00F6C2FC /* ListViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C09D02527597A00F6C2FC /* ListViewAssembly.swift */; };
+		873C09D9252759F900F6C2FC /* DetailViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C09D8252759F900F6C2FC /* DetailViewAssembly.swift */; };
 		877F17B02525C72200CE3EBE /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17AF2525C72200CE3EBE /* ListViewModel.swift */; };
 		877F17D52525FF8800CE3EBE /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17D42525FF8800CE3EBE /* DetailViewModel.swift */; };
 		877F17E12526002100CE3EBE /* ListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17E02526002100CE3EBE /* ListCellViewModel.swift */; };
 		877F17EC2526313900CE3EBE /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17EB2526313900CE3EBE /* DetailModel.swift */; };
 		877F17F1252633FE00CE3EBE /* ListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17F0252633FE00CE3EBE /* ListCellModel.swift */; };
 		8795792D25246EEB0000A99D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8795792C25246EEB0000A99D /* DetailViewController.swift */; };
+		87A581F92527769300D1CD25 /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A581F82527769300D1CD25 /* HelperAssembly.swift */; };
 		87A6E48925234F370037566C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48825234F370037566C /* AppDelegate.swift */; };
 		87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48A25234F370037566C /* SceneDelegate.swift */; };
 		87A6E49025234F370037566C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E48E25234F370037566C /* Main.storyboard */; };
@@ -31,6 +34,7 @@
 		87B0DD312524AD2900CC0DAC /* MovieDBApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B0DD302524AD2900CC0DAC /* MovieDBApi.swift */; };
 		87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBA6D25237579009D2FC6 /* UIImageView.swift */; };
 		87CDBABE25246B4B009D2FC6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBABD25246B4B009D2FC6 /* String.swift */; };
+		87E87E30252728560007F1D6 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E87E2F252728560007F1D6 /* DependencyProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,12 +61,15 @@
 		872760C82524C37F00596273 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		872760CE2524C39800596273 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		872760D82524D59A00596273 /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
+		873C09D02527597A00F6C2FC /* ListViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewAssembly.swift; sourceTree = "<group>"; };
+		873C09D8252759F900F6C2FC /* DetailViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewAssembly.swift; sourceTree = "<group>"; };
 		877F17AF2525C72200CE3EBE /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		877F17D42525FF8800CE3EBE /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		877F17E02526002100CE3EBE /* ListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellViewModel.swift; sourceTree = "<group>"; };
 		877F17EB2526313900CE3EBE /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		877F17F0252633FE00CE3EBE /* ListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellModel.swift; sourceTree = "<group>"; };
 		8795792C25246EEB0000A99D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		87A581F82527769300D1CD25 /* HelperAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAssembly.swift; sourceTree = "<group>"; };
 		87A6E48525234F370037566C /* poc-maxence-mottard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poc-maxence-mottard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A6E48825234F370037566C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87A6E48A25234F370037566C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +91,8 @@
 		87B0DD302524AD2900CC0DAC /* MovieDBApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBApi.swift; sourceTree = "<group>"; };
 		87CDBA6D25237579009D2FC6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		87CDBABD25246B4B009D2FC6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		87E87E2E252728480007F1D6 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		87E87E2F252728560007F1D6 /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +131,7 @@
 		8795792B25246EBE0000A99D /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				873C09D8252759F900F6C2FC /* DetailViewAssembly.swift */,
 				877F17EB2526313900CE3EBE /* DetailModel.swift */,
 				877F17D42525FF8800CE3EBE /* DetailViewModel.swift */,
 				8795792C25246EEB0000A99D /* DetailViewController.swift */,
@@ -158,6 +168,8 @@
 				87A6E4D2252358CD0037566C /* Models */,
 				87B0DD2F2524AB6500CC0DAC /* Services */,
 				87A6E4BD252355EA0037566C /* Screens */,
+				87E87E2F252728560007F1D6 /* DependencyProvider.swift */,
+				87A581F82527769300D1CD25 /* HelperAssembly.swift */,
 			);
 			path = "poc-maxence-mottard";
 			sourceTree = "<group>";
@@ -216,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				87A6E4D8252359FC0037566C /* Reusables */,
+				873C09D02527597A00F6C2FC /* ListViewAssembly.swift */,
 				87A6E4CD252358610037566C /* ListViewController.swift */,
 				877F17AF2525C72200CE3EBE /* ListViewModel.swift */,
 			);
@@ -264,6 +277,7 @@
 			children = (
 				87B0DD252524AA6A00CC0DAC /* Alamofire.framework */,
 				87B0DD262524AA6A00CC0DAC /* RxSwift.framework */,
+				87E87E2E252728480007F1D6 /* Swinject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -425,6 +439,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwinjectAutoregistration.framework",
 			);
 			name = "Carthage Script";
 			outputFileListPaths = (
@@ -445,6 +461,7 @@
 				872760B32524BC1F00596273 /* MoviesRequest.swift in Sources */,
 				87A6E48925234F370037566C /* AppDelegate.swift in Sources */,
 				87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */,
+				873C09D12527597A00F6C2FC /* ListViewAssembly.swift in Sources */,
 				87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */,
 				87A6E4D4252358DC0037566C /* Movie.swift in Sources */,
 				87A6E4E625235DEA0037566C /* ReusableView.swift in Sources */,
@@ -453,10 +470,13 @@
 				877F17F1252633FE00CE3EBE /* ListCellModel.swift in Sources */,
 				87CDBABE25246B4B009D2FC6 /* String.swift in Sources */,
 				877F17E12526002100CE3EBE /* ListCellViewModel.swift in Sources */,
+				87E87E30252728560007F1D6 /* DependencyProvider.swift in Sources */,
 				877F17B02525C72200CE3EBE /* ListViewModel.swift in Sources */,
+				87A581F92527769300D1CD25 /* HelperAssembly.swift in Sources */,
 				87A6E4DB25235A200037566C /* ListTableViewCell.swift in Sources */,
 				87B0DD312524AD2900CC0DAC /* MovieDBApi.swift in Sources */,
 				877F17EC2526313900CE3EBE /* DetailModel.swift in Sources */,
+				873C09D9252759F900F6C2FC /* DetailViewAssembly.swift in Sources */,
 				877F17D52525FF8800CE3EBE /* DetailViewModel.swift in Sources */,
 				8795792D25246EEB0000A99D /* DetailViewController.swift in Sources */,
 			);

@@ -19,7 +19,7 @@ class MovieDBApi {
         case w300, w780, w1280, original
     }
     
-    static func getMovies() -> Observable<[Movie]> {
+    func getMovies() -> Observable<[Movie]> {
         return Observable<[Movie]>.create { (observer) -> Disposable in
             let language = Locale.current.languageCode == "fr" ? "fr-FR" : "en-US"
             let requestReference = AF.request("\(Constant.TMDBBaseUrl.rawValue)/movie/popular?language=\(language)&api_key=\(Constant.TMDBApiKey.rawValue)").response { response in

@@ -8,13 +8,9 @@
 import Foundation
 
 protocol DetailViewModelling {
-    var model: DetailModel { get }
+    var model: DetailModel! { get }
 }
 
 final class DetailViewModel: DetailViewModelling {
-    let model: DetailModel
-    
-    init(detailModel: DetailModel) {
-        self.model = detailModel
-    }
+    var model: DetailModel!
 }

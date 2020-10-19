@@ -10,23 +10,13 @@ import RxSwift
 
 class DetailViewController: UIViewController {
 
-    let viewModel: DetailViewModelling
+    var viewModel: DetailViewModelling!
     
     @IBOutlet private weak var backgroundImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var movieImageView: UIImageView!
     @IBOutlet private weak var descriptionLabel: UILabel!
-    
-    init?(viewModel: DetailViewModelling, coder: NSCoder) {
-        self.viewModel = viewModel
-        
-        super.init(coder: coder)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
