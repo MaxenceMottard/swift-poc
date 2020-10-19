@@ -20,6 +20,8 @@
 		8795792D25246EEB0000A99D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8795792C25246EEB0000A99D /* DetailViewController.swift */; };
 		8799078A253D78E900D388BF /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 87990789253D78E900D388BF /* data.json */; };
 		8799078F253D7FD500D388BF /* JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8799078E253D7FD500D388BF /* JSONFile.swift */; };
+		879907BB253DAB8F00D388BF /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879907BA253DAB8F00D388BF /* DateService.swift */; };
+		879907C0253DADFE00D388BF /* LocaleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879907BF253DADFE00D388BF /* LocaleService.swift */; };
 		87A581F92527769300D1CD25 /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A581F82527769300D1CD25 /* HelperAssembly.swift */; };
 		87A6E48925234F370037566C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48825234F370037566C /* AppDelegate.swift */; };
 		87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48A25234F370037566C /* SceneDelegate.swift */; };
@@ -77,6 +79,8 @@
 		8795792C25246EEB0000A99D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		87990789253D78E900D388BF /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		8799078E253D7FD500D388BF /* JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFile.swift; sourceTree = "<group>"; };
+		879907BA253DAB8F00D388BF /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		879907BF253DADFE00D388BF /* LocaleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleService.swift; sourceTree = "<group>"; };
 		87A581F82527769300D1CD25 /* HelperAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAssembly.swift; sourceTree = "<group>"; };
 		87A6E48525234F370037566C /* poc-maxence-mottard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poc-maxence-mottard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A6E48825234F370037566C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -303,7 +307,9 @@
 			isa = PBXGroup;
 			children = (
 				87B0DD302524AD2900CC0DAC /* MovieDBApi.swift */,
+				879907BF253DADFE00D388BF /* LocaleService.swift */,
 				87F62E2025305E88006705CF /* MockingService.swift */,
+				879907BA253DAB8F00D388BF /* DateService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -494,6 +500,7 @@
 				87A6E4D4252358DC0037566C /* Movie.swift in Sources */,
 				87F62E482530B079006705CF /* MovieRepository.swift in Sources */,
 				87A6E4E625235DEA0037566C /* ReusableView.swift in Sources */,
+				879907BB253DAB8F00D388BF /* DateService.swift in Sources */,
 				87A6E4CE252358610037566C /* ListViewController.swift in Sources */,
 				872760D92524D59A00596273 /* constant.swift in Sources */,
 				877F17F1252633FE00CE3EBE /* ListCellModel.swift in Sources */,
@@ -511,6 +518,7 @@
 				873C09D9252759F900F6C2FC /* DetailViewAssembly.swift in Sources */,
 				877F17D52525FF8800CE3EBE /* DetailViewModel.swift in Sources */,
 				8795792D25246EEB0000A99D /* DetailViewController.swift in Sources */,
+				879907C0253DADFE00D388BF /* LocaleService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

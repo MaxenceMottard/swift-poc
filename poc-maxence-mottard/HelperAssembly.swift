@@ -17,7 +17,21 @@ class HelperAssembly: Assembly {
         
         container.autoregister(MockingService.self, initializer: MockingService.init)
         
-        container.autoregister(MovieDBApi.self, initializer: MovieDBApi.init)
+        container.autoregister(LocaleService.self, initializer: LocaleService.init)
+        
+        container.register(MovieDBApi.self) { resolver -> MovieDBApi in
+            let service = MovieDBApi()
+            service.localeService = resolver.resolve(LocaleService.self)
+            
+            return service
+        }
+        
+        container.register(DateService.self) { resolver -> DateService in
+            let service = DateService()
+            service.localeService = resolver.resolve(LocaleService.self)
+            
+            return service
+        }
         
         container.register(MovieRepository.self) { resolver -> MovieRepository in
             let repository = MovieRepository()
