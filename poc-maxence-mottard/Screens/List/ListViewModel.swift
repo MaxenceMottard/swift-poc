@@ -23,12 +23,12 @@ protocol ListViewModelling {
 }
 
 final class ListViewModel: ListViewModelling {
-    internal let bag = DisposeBag()
-    internal var numberOfRows: Int = 0
-    internal let movies: BehaviorSubject<[Movie]> = BehaviorSubject<[Movie]>.init(value: [])
-    internal var detailModels: [DetailModel] = []
-    internal var listCellViewModels: [ListCellViewModel] = []
-    internal var movieDBService: MovieDBApi!
+    let bag = DisposeBag()
+    var numberOfRows: Int = 0
+    let movies: BehaviorSubject<[Movie]> = BehaviorSubject<[Movie]>.init(value: [])
+    var detailModels: [DetailModel] = []
+    var listCellViewModels: [ListCellViewModel] = []
+    var movieDBService: MovieDBApi!
     
     init() {
         movies.subscribe(onNext: { [weak self] movies in

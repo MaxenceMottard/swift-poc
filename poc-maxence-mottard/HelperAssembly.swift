@@ -6,6 +6,7 @@
 //
 
 import Swinject
+import SwinjectAutoregistration
 import UIKit
 
 class HelperAssembly: Assembly {
@@ -14,8 +15,6 @@ class HelperAssembly: Assembly {
             return UIStoryboard(name: "Main", bundle: nil)
         }
         
-        container.register(MovieDBApi.self) { _ in
-            return MovieDBApi()
-        }
+        container.autoregister(MovieDBApi.self, initializer: MovieDBApi.init)
     }
 }

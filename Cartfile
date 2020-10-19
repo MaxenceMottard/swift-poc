@@ -2,3 +2,4 @@
 github "Alamofire/Alamofire"
 github "ReactiveX/RxSwift"
 github "Swinject/Swinject"
+github "Swinject/SwinjectAutoregistration"
