@@ -11,7 +11,8 @@ import Fakery
 
 class poc_maxence_mottardTests: XCTestCase {    
     func testDateConvertion() throws {
-        let dateService = DependencyProvider().container.resolve(DateService.self)!
+        let di = getDependencyProvider()
+        let dateService = di.resolve(DateService.self)!
         
         let stringDate = "2201-01-27"
         XCTAssertEqual(dateService.convertToReadableDate(stringDate), "27 janvier 2201")
