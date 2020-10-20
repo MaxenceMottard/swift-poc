@@ -22,7 +22,7 @@ class detailViewModelTests: XCTestCase {
             releaseDate: "2020-01-27")
         
         let detailModel = DetailModel.from(myMovie)
-        let detailViewModel = di.container.resolve(DetailViewModel.self, argument: detailModel)!
+        let detailViewModel = di.resolve(DetailViewModel.self, argument: detailModel)!
         
         XCTAssertEqual(detailViewModel.model.title, myMovie.title)
         XCTAssertEqual(detailViewModel.model.overview, myMovie.overview)
