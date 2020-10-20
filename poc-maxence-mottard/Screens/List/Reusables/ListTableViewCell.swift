@@ -8,7 +8,8 @@
 import UIKit
 import RxSwift
 
-final class ListTableViewCell: UITableViewCell, ReusableView {
+final class ListTableViewCell: UITableViewCell, ReusableView, Setupable {
+    typealias Model = ListCellViewModelling
     
     var viewModel: ListCellViewModelling?
     
@@ -24,8 +25,8 @@ final class ListTableViewCell: UITableViewCell, ReusableView {
         super.setSelected(selected, animated: animated)
     }
     
-    func setViewModel(_ viewModel: ListCellViewModelling) {
-        self.viewModel = viewModel
+    func setup(with model: ListCellViewModelling) {
+        self.viewModel = model
         setupView()
     }
     
@@ -35,9 +36,7 @@ final class ListTableViewCell: UITableViewCell, ReusableView {
         titleLabel.text = vModel.model.title
         descriptionLabel.text = vModel.model.overview
         
-        let imageUrl = MovieDBApi.getImageUrl(posterPath: vModel.model.posterPath, size: .w185)
-        
-        if let url = imageUrl {
+        if let url = vModel.model.posterUrl {
             movieImageView.load(url: url)
         }
     }

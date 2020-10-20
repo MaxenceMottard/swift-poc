@@ -18,6 +18,8 @@
 		877F17EC2526313900CE3EBE /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17EB2526313900CE3EBE /* DetailModel.swift */; };
 		877F17F1252633FE00CE3EBE /* ListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17F0252633FE00CE3EBE /* ListCellModel.swift */; };
 		8795792D25246EEB0000A99D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8795792C25246EEB0000A99D /* DetailViewController.swift */; };
+		8799078A253D78E900D388BF /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 87990789253D78E900D388BF /* data.json */; };
+		8799078F253D7FD500D388BF /* JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8799078E253D7FD500D388BF /* JSONFile.swift */; };
 		87A581F92527769300D1CD25 /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A581F82527769300D1CD25 /* HelperAssembly.swift */; };
 		87A6E48925234F370037566C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48825234F370037566C /* AppDelegate.swift */; };
 		87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48A25234F370037566C /* SceneDelegate.swift */; };
@@ -35,6 +37,10 @@
 		87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBA6D25237579009D2FC6 /* UIImageView.swift */; };
 		87CDBABE25246B4B009D2FC6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBABD25246B4B009D2FC6 /* String.swift */; };
 		87E87E30252728560007F1D6 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E87E2F252728560007F1D6 /* DependencyProvider.swift */; };
+		87F62E2125305E88006705CF /* MockingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E2025305E88006705CF /* MockingService.swift */; };
+		87F62E482530B079006705CF /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E472530B079006705CF /* MovieRepository.swift */; };
+		87F62E532530B7FA006705CF /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E522530B7FA006705CF /* Repository.swift */; };
+		87F62E5B2530B8CB006705CF /* Setupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E5A2530B8CB006705CF /* Setupable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +75,8 @@
 		877F17EB2526313900CE3EBE /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		877F17F0252633FE00CE3EBE /* ListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellModel.swift; sourceTree = "<group>"; };
 		8795792C25246EEB0000A99D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		87990789253D78E900D388BF /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		8799078E253D7FD500D388BF /* JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFile.swift; sourceTree = "<group>"; };
 		87A581F82527769300D1CD25 /* HelperAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAssembly.swift; sourceTree = "<group>"; };
 		87A6E48525234F370037566C /* poc-maxence-mottard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poc-maxence-mottard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A6E48825234F370037566C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +101,10 @@
 		87CDBABD25246B4B009D2FC6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		87E87E2E252728480007F1D6 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		87E87E2F252728560007F1D6 /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
+		87F62E2025305E88006705CF /* MockingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingService.swift; sourceTree = "<group>"; };
+		87F62E472530B079006705CF /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
+		87F62E522530B7FA006705CF /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		87F62E5A2530B8CB006705CF /* Setupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setupable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				872760B22524BC1F00596273 /* MoviesRequest.swift */,
+				8799078E253D7FD500D388BF /* JSONFile.swift */,
 			);
 			path = ApiReponse;
 			sourceTree = "<group>";
@@ -166,10 +179,12 @@
 				87A6E4E325235DD30037566C /* Additions */,
 				87A6E4BB252354EA0037566C /* Application */,
 				87A6E4D2252358CD0037566C /* Models */,
+				87F62E462530B059006705CF /* Repositories */,
 				87B0DD2F2524AB6500CC0DAC /* Services */,
 				87A6E4BD252355EA0037566C /* Screens */,
 				87E87E2F252728560007F1D6 /* DependencyProvider.swift */,
 				87A581F82527769300D1CD25 /* HelperAssembly.swift */,
+				87990789253D78E900D388BF /* data.json */,
 			);
 			path = "poc-maxence-mottard";
 			sourceTree = "<group>";
@@ -268,6 +283,8 @@
 			isa = PBXGroup;
 			children = (
 				87A6E4E525235DEA0037566C /* ReusableView.swift */,
+				87F62E522530B7FA006705CF /* Repository.swift */,
+				87F62E5A2530B8CB006705CF /* Setupable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -286,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				87B0DD302524AD2900CC0DAC /* MovieDBApi.swift */,
+				87F62E2025305E88006705CF /* MockingService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -297,6 +315,14 @@
 				87CDBABD25246B4B009D2FC6 /* String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		87F62E462530B059006705CF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				87F62E472530B079006705CF /* MovieRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A6E49525234F380037566C /* LaunchScreen.storyboard in Resources */,
+				8799078A253D78E900D388BF /* data.json in Resources */,
 				87A6E4DC25235A200037566C /* ListTableViewCell.xib in Resources */,
 				87A6E49225234F380037566C /* Assets.xcassets in Resources */,
 				87A6E49025234F370037566C /* Main.storyboard in Resources */,
@@ -460,15 +487,18 @@
 			files = (
 				872760B32524BC1F00596273 /* MoviesRequest.swift in Sources */,
 				87A6E48925234F370037566C /* AppDelegate.swift in Sources */,
+				87F62E5B2530B8CB006705CF /* Setupable.swift in Sources */,
 				87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */,
 				873C09D12527597A00F6C2FC /* ListViewAssembly.swift in Sources */,
 				87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */,
 				87A6E4D4252358DC0037566C /* Movie.swift in Sources */,
+				87F62E482530B079006705CF /* MovieRepository.swift in Sources */,
 				87A6E4E625235DEA0037566C /* ReusableView.swift in Sources */,
 				87A6E4CE252358610037566C /* ListViewController.swift in Sources */,
 				872760D92524D59A00596273 /* constant.swift in Sources */,
 				877F17F1252633FE00CE3EBE /* ListCellModel.swift in Sources */,
 				87CDBABE25246B4B009D2FC6 /* String.swift in Sources */,
+				8799078F253D7FD500D388BF /* JSONFile.swift in Sources */,
 				877F17E12526002100CE3EBE /* ListCellViewModel.swift in Sources */,
 				87E87E30252728560007F1D6 /* DependencyProvider.swift in Sources */,
 				877F17B02525C72200CE3EBE /* ListViewModel.swift in Sources */,
@@ -476,6 +506,8 @@
 				87A6E4DB25235A200037566C /* ListTableViewCell.swift in Sources */,
 				87B0DD312524AD2900CC0DAC /* MovieDBApi.swift in Sources */,
 				877F17EC2526313900CE3EBE /* DetailModel.swift in Sources */,
+				87F62E532530B7FA006705CF /* Repository.swift in Sources */,
+				87F62E2125305E88006705CF /* MockingService.swift in Sources */,
 				873C09D9252759F900F6C2FC /* DetailViewAssembly.swift in Sources */,
 				877F17D52525FF8800CE3EBE /* DetailViewModel.swift in Sources */,
 				8795792D25246EEB0000A99D /* DetailViewController.swift in Sources */,

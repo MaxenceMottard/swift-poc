@@ -15,6 +15,16 @@ class HelperAssembly: Assembly {
             return UIStoryboard(name: "Main", bundle: nil)
         }
         
+        container.autoregister(MockingService.self, initializer: MockingService.init)
+        
         container.autoregister(MovieDBApi.self, initializer: MovieDBApi.init)
+        
+        container.register(MovieRepository.self) { resolver -> MovieRepository in
+            let repository = MovieRepository()
+            repository.service = resolver.resolve(MovieDBApi.self)
+            repository.mockingService = resolver.resolve(MockingService.self)
+            
+            return repository
+        }
     }
 }

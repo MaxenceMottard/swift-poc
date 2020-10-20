@@ -11,13 +11,15 @@ import RxSwift
 protocol ListViewModelling {
     var bag: DisposeBag { get }
     var movies: BehaviorSubject<[Movie]> { get }
+    var dataIsMocked: BehaviorSubject<Bool> { get }
     var numberOfRows: Int { get set }
     var detailModels: [DetailModel] { get set }
     var listCellViewModels: [ListCellViewModel] { get set }
-    var movieDBService: MovieDBApi! { get }
+    var movieRepository: MovieRepository! { get }
+    var mockingService: MockingService! { get }
     
     func getNumberOfRows() -> Int
-    func requestMovies() -> Void
+    func toggleDataIsMocked() -> Void
     func getDetailModel(_ index: IndexPath) -> DetailModel
     func getCellViewModel(_ index: IndexPath) -> ListCellViewModelling
 }
@@ -25,10 +27,30 @@ protocol ListViewModelling {
 final class ListViewModel: ListViewModelling {
     let bag = DisposeBag()
     var numberOfRows: Int = 0
-    let movies: BehaviorSubject<[Movie]> = BehaviorSubject<[Movie]>.init(value: [])
+    let movies = BehaviorSubject<[Movie]>.init(value: [])
+    let dataIsMocked = BehaviorSubject<Bool>.init(value: false)
     var detailModels: [DetailModel] = []
     var listCellViewModels: [ListCellViewModel] = []
-    var movieDBService: MovieDBApi!
+    var movieRepository: MovieRepository! {
+        didSet {
+            movieRepository.data.subscribe(onNext: { [weak self] movies in
+                guard let strongSelf = self else { return }
+                strongSelf.movies.onNext(movies)
+            }).disposed(by: bag)
+            
+            movieRepository.fetchData()
+        }
+    }
+    internal var mockingService: MockingService! {
+        didSet {
+            mockingService.getIsMockedSubject().subscribe(onNext: { [weak self] isMocked in
+                guard let strongSelf = self else { return }
+                
+                strongSelf.movieRepository.fetchData()
+                strongSelf.dataIsMocked.onNext(isMocked)
+            }).disposed(by: bag)
+        }
+    }
     
     init() {
         movies.subscribe(onNext: { [weak self] movies in
@@ -47,18 +69,15 @@ final class ListViewModel: ListViewModelling {
         return numberOfRows
     }
     
-    func requestMovies() {
-        movieDBService.getMovies().subscribe(onNext: { [weak self] movies in
-            guard let strongSelf = self else { return }
-            strongSelf.movies.onNext(movies)
-        }).disposed(by: bag)
-    }
-    
     func getDetailModel(_ index: IndexPath) -> DetailModel {
         return detailModels[index.row]
     }
     
     func getCellViewModel(_ index: IndexPath) -> ListCellViewModelling {
         return listCellViewModels[index.row]
+    }
+    
+    func toggleDataIsMocked() {
+        mockingService.toggleIsMocked()
     }
 }

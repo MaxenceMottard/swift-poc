@@ -13,7 +13,8 @@ final class ListViewAssembly: Assembly {
     func assemble(container: Container) {
         container.register(ListViewModel.self) { (resolver: Resolver) -> ListViewModel in
             let viewModel = ListViewModel()
-            viewModel.movieDBService = resolver.resolve(MovieDBApi.self)!
+            viewModel.movieRepository = resolver.resolve(MovieRepository.self)!
+            viewModel.mockingService = resolver.resolve(MockingService.self)!
             
             return viewModel
         }

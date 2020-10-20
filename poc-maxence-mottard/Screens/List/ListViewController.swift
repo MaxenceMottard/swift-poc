@@ -16,6 +16,8 @@ final class ListViewController: UIViewController {
     
     @IBOutlet weak var dataTableView: UITableView!
     
+    private var mockButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,9 +25,16 @@ final class ListViewController: UIViewController {
         dataTableView.dataSource = self
         dataTableView.register(UINib(nibName: ListTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseIdentifier)
         
+        mockButton = UIBarButtonItem(image: UIImage(systemName: "antenna.radiowaves.left.and.right"), style: .done, target: self, action: #selector(handleMockData))
+        
         navigationController?.navigationBar.topItem?.title = "listViewTitle".localize()
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = mockButton
         
         bindingViewModel()
+    }
+    
+    @objc func handleMockData() {
+        viewModel.toggleDataIsMocked()
     }
     
     func bindingViewModel() {
@@ -35,7 +44,11 @@ final class ListViewController: UIViewController {
             strongSelf.dataTableView.reloadData()
         }).disposed(by: bag)
         
-        viewModel.requestMovies()
+        viewModel.dataIsMocked.subscribe(onNext: { [weak self] isMocked in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.mockButton.tintColor = isMocked ? UIColor.red : UIColor.green
+        }).disposed(by: bag)
     }
 }
 
@@ -49,7 +62,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("Could not dequeue cell with identifier : \(ListTableViewCell.reuseIdentifier)")
         }
         
-        cell.setViewModel(viewModel.getCellViewModel(indexPath))
+        cell.setup(with: viewModel.getCellViewModel(indexPath))
         
         return cell
     }
