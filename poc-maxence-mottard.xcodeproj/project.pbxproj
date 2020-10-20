@@ -29,6 +29,7 @@
 		879907E0253DDD3600D388BF /* Fakery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879907DF253DDD3600D388BF /* Fakery.framework */; };
 		879907E8253DE26D00D388BF /* detailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879907E7253DE26D00D388BF /* detailViewModelTests.swift */; };
 		879907EE253DE3CC00D388BF /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879907ED253DE3CC00D388BF /* XCTestCase.swift */; };
+		87A16B59253ECDD20073F5FD /* jsonFileDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A16B58253ECDD20073F5FD /* jsonFileDecodingTests.swift */; };
 		87A581F92527769300D1CD25 /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A581F82527769300D1CD25 /* HelperAssembly.swift */; };
 		87A6E48925234F370037566C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48825234F370037566C /* AppDelegate.swift */; };
 		87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48A25234F370037566C /* SceneDelegate.swift */; };
@@ -92,6 +93,7 @@
 		879907DF253DDD3600D388BF /* Fakery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fakery.framework; path = Carthage/Build/iOS/Fakery.framework; sourceTree = "<group>"; };
 		879907E7253DE26D00D388BF /* detailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewModelTests.swift; sourceTree = "<group>"; };
 		879907ED253DE3CC00D388BF /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		87A16B58253ECDD20073F5FD /* jsonFileDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonFileDecodingTests.swift; sourceTree = "<group>"; };
 		87A581F82527769300D1CD25 /* HelperAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAssembly.swift; sourceTree = "<group>"; };
 		87A6E48525234F370037566C /* poc-maxence-mottard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poc-maxence-mottard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A6E48825234F370037566C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			children = (
 				87A6E49F25234F390037566C /* poc_maxence_mottardTests.swift */,
 				879907E7253DE26D00D388BF /* detailViewModelTests.swift */,
+				87A16B58253ECDD20073F5FD /* jsonFileDecodingTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A16B59253ECDD20073F5FD /* jsonFileDecodingTests.swift in Sources */,
 				87A6E4A025234F390037566C /* poc_maxence_mottardTests.swift in Sources */,
 				879907EE253DE3CC00D388BF /* XCTestCase.swift in Sources */,
 				879907E8253DE26D00D388BF /* detailViewModelTests.swift in Sources */,
