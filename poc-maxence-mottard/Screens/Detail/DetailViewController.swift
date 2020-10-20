@@ -11,7 +11,7 @@ import RxSwift
 final class DetailViewController: UIViewController {
 
     var viewModel: DetailViewModelling!
-    var movieDBApi: MovieDBApi!
+    var movieDBApi: PopularMovieRequest!
     var dateFormatter: CustomDateFormater!
     
     @IBOutlet private weak var backgroundImageView: UIImageView!

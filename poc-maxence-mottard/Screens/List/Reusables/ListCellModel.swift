@@ -16,6 +16,6 @@ struct ListCellModel {
         return ListCellModel(
             title: movie.title,
             overview: movie.overview,
-            posterUrl: movie.getImageUrl(size: MovieDBApi.PosterSizes.w185))
+            posterUrl: movie.getImageUrl(size: PopularMovieRequest.PosterSizes.w185))
     }
 }

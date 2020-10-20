@@ -10,6 +10,7 @@
 		872760B32524BC1F00596273 /* MoviesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872760B22524BC1F00596273 /* MoviesRequest.swift */; };
 		872760C72524C37F00596273 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 872760C92524C37F00596273 /* Localizable.strings */; };
 		872760D92524D59A00596273 /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872760D82524D59A00596273 /* constant.swift */; };
+		87299D60253EEBBC007E17A5 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87299D5F253EEBBC007E17A5 /* ApiRequest.swift */; };
 		873C09D12527597A00F6C2FC /* ListViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C09D02527597A00F6C2FC /* ListViewAssembly.swift */; };
 		873C09D9252759F900F6C2FC /* DetailViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C09D8252759F900F6C2FC /* DetailViewAssembly.swift */; };
 		877F17B02525C72200CE3EBE /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17AF2525C72200CE3EBE /* ListViewModel.swift */; };
@@ -78,6 +79,7 @@
 		872760C82524C37F00596273 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		872760CE2524C39800596273 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		872760D82524D59A00596273 /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
+		87299D5F253EEBBC007E17A5 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		873C09D02527597A00F6C2FC /* ListViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewAssembly.swift; sourceTree = "<group>"; };
 		873C09D8252759F900F6C2FC /* DetailViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewAssembly.swift; sourceTree = "<group>"; };
 		877F17AF2525C72200CE3EBE /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				87A6E4E525235DEA0037566C /* ReusableView.swift */,
 				87F62E522530B7FA006705CF /* Repository.swift */,
 				87F62E5A2530B8CB006705CF /* Setupable.swift */,
+				87299D5F253EEBBC007E17A5 /* ApiRequest.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				87A6E4E625235DEA0037566C /* ReusableView.swift in Sources */,
 				879907BB253DAB8F00D388BF /* CustomDateFormater.swift in Sources */,
 				87A6E4CE252358610037566C /* ListViewController.swift in Sources */,
+				87299D60253EEBBC007E17A5 /* ApiRequest.swift in Sources */,
 				872760D92524D59A00596273 /* constant.swift in Sources */,
 				877F17F1252633FE00CE3EBE /* ListCellModel.swift in Sources */,
 				87CDBABE25246B4B009D2FC6 /* String.swift in Sources */,

@@ -9,7 +9,10 @@ import Foundation
 import Alamofire
 import RxSwift
 
-class MovieDBApi {
+class PopularMovieRequest: ApiRequest {
+    typealias ResultType = MoviesRequest
+    var jsonDecoder: JSONDecoder!
+    var localeService: LocaleService!
     
     enum PosterSizes {
         case w92, w154, w185, w342, w500, w780, original
@@ -21,40 +24,17 @@ class MovieDBApi {
     
     var localeService: LocaleFormatter!
     
-    func getMovies() -> Observable<[Movie]> {
-        return Observable<[Movie]>.create { [weak self] (observer) -> Disposable in
-            guard let strongSelf = self else { return Disposables.create() }
-            
-            let language = strongSelf.localeService.getTMDBLanguageCode()
-            let requestReference = AF.request("\(Constant.TMDBBaseUrl.rawValue)/movie/popular?language=\(language)&api_key=\(Constant.TMDBApiKey.rawValue)").response { response in
-                
-                do {
-                    if let data = response.value {
-                        let decoder = JSONDecoder()
-                        let decodedData = try decoder.decode(MoviesRequest.self, from: data!)
-                        
-                        observer.onNext(decodedData.results)
-                        observer.onCompleted()
-                    } else if let error = response.error {
-                        observer.onError(error)
-                    }
-                } catch let error {
-                    observer.onError(error)
-                }
-            }
-            
-            return Disposables.create {
-                requestReference.cancel()
-            }
-        }
+    func fetch() -> Observable<MoviesRequest> {
+        let language = localeService.getTMDBLanguageCode()
+        let url = "\(Constant.TMDBBaseUrl.rawValue)/movie/popular?language=\(language)&api_key=\(Constant.TMDBApiKey.rawValue)"
+        return request(url)
     }
     
-    func getMockingMovies() -> [Movie] {
+    func fetchMockingData() -> [Movie] {
         do {
             let path = Bundle.main.path(forResource: "data", ofType: "json")!
             let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-            let decoder = JSONDecoder()
-            let decodedData = try decoder.decode(JSONFile.self, from: data)
+            let decodedData = try jsonDecoder.decode(JSONFile.self, from: data)
             
             return decodedData.movies
         } catch {

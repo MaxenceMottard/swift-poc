@@ -22,11 +22,11 @@ struct Movie: Decodable {
         case releaseDate = "release_date"
     }
     
-    func getImageUrl(size: MovieDBApi.PosterSizes) -> URL? {
+    func getImageUrl(size: PopularMovieRequest.PosterSizes) -> URL? {
         return URL(string: "\(Constant.TMDBImageBaseUrl.rawValue)\(size)\(posterPath)")
     }
     
-    func getImageUrl(size: MovieDBApi.BackdropSize) -> URL? {
+    func getImageUrl(size: PopularMovieRequest.BackdropSize) -> URL? {
         return URL(string: "\(Constant.TMDBImageBaseUrl.rawValue)\(size)\(backdropPath)")
     }
 }
