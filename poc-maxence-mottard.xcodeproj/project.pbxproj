@@ -22,6 +22,13 @@
 		8799078F253D7FD500D388BF /* JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8799078E253D7FD500D388BF /* JSONFile.swift */; };
 		879907BB253DAB8F00D388BF /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879907BA253DAB8F00D388BF /* DateService.swift */; };
 		879907C0253DADFE00D388BF /* LocaleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879907BF253DADFE00D388BF /* LocaleService.swift */; };
+		879907D1253DC07700D388BF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B0DD252524AA6A00CC0DAC /* Alamofire.framework */; };
+		879907D2253DC07700D388BF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B0DD262524AA6A00CC0DAC /* RxSwift.framework */; };
+		879907D3253DC07700D388BF /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E87E2E252728480007F1D6 /* Swinject.framework */; };
+		879907D8253DC07700D388BF /* SwinjectAutoregistration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879907D7253DC07700D388BF /* SwinjectAutoregistration.framework */; };
+		879907E0253DDD3600D388BF /* Fakery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879907DF253DDD3600D388BF /* Fakery.framework */; };
+		879907E8253DE26D00D388BF /* detailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879907E7253DE26D00D388BF /* detailViewModelTests.swift */; };
+		879907EE253DE3CC00D388BF /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879907ED253DE3CC00D388BF /* XCTestCase.swift */; };
 		87A581F92527769300D1CD25 /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A581F82527769300D1CD25 /* HelperAssembly.swift */; };
 		87A6E48925234F370037566C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48825234F370037566C /* AppDelegate.swift */; };
 		87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48A25234F370037566C /* SceneDelegate.swift */; };
@@ -81,6 +88,10 @@
 		8799078E253D7FD500D388BF /* JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFile.swift; sourceTree = "<group>"; };
 		879907BA253DAB8F00D388BF /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		879907BF253DADFE00D388BF /* LocaleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleService.swift; sourceTree = "<group>"; };
+		879907D7253DC07700D388BF /* SwinjectAutoregistration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectAutoregistration.framework; path = Carthage/Build/iOS/SwinjectAutoregistration.framework; sourceTree = "<group>"; };
+		879907DF253DDD3600D388BF /* Fakery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fakery.framework; path = Carthage/Build/iOS/Fakery.framework; sourceTree = "<group>"; };
+		879907E7253DE26D00D388BF /* detailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewModelTests.swift; sourceTree = "<group>"; };
+		879907ED253DE3CC00D388BF /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		87A581F82527769300D1CD25 /* HelperAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAssembly.swift; sourceTree = "<group>"; };
 		87A6E48525234F370037566C /* poc-maxence-mottard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poc-maxence-mottard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A6E48825234F370037566C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +134,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				879907E0253DDD3600D388BF /* Fakery.framework in Frameworks */,
+				879907D8253DC07700D388BF /* SwinjectAutoregistration.framework in Frameworks */,
+				879907D1253DC07700D388BF /* Alamofire.framework in Frameworks */,
+				879907D2253DC07700D388BF /* RxSwift.framework in Frameworks */,
+				879907D3253DC07700D388BF /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +170,23 @@
 				8795792C25246EEB0000A99D /* DetailViewController.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		879907EC253DE3BF00D388BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				879907ED253DE3CC00D388BF /* XCTestCase.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		879907F5253DE48A00D388BF /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				87A6E49F25234F390037566C /* poc_maxence_mottardTests.swift */,
+				879907E7253DE26D00D388BF /* detailViewModelTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		87A6E47C25234F370037566C = {
@@ -196,7 +229,8 @@
 		87A6E49E25234F390037566C /* poc-maxence-mottardTests */ = {
 			isa = PBXGroup;
 			children = (
-				87A6E49F25234F390037566C /* poc_maxence_mottardTests.swift */,
+				879907F5253DE48A00D388BF /* Tests */,
+				879907EC253DE3BF00D388BF /* Extensions */,
 				87A6E4A125234F390037566C /* Info.plist */,
 			);
 			path = "poc-maxence-mottardTests";
@@ -296,6 +330,8 @@
 		87B0DD242524AA6A00CC0DAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				879907DF253DDD3600D388BF /* Fakery.framework */,
+				879907D7253DC07700D388BF /* SwinjectAutoregistration.framework */,
 				87B0DD252524AA6A00CC0DAC /* Alamofire.framework */,
 				87B0DD262524AA6A00CC0DAC /* RxSwift.framework */,
 				87E87E2E252728480007F1D6 /* Swinject.framework */,
@@ -474,6 +510,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwinjectAutoregistration.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Fakery.framework",
 			);
 			name = "Carthage Script";
 			outputFileListPaths = (
@@ -527,6 +564,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A6E4A025234F390037566C /* poc_maxence_mottardTests.swift in Sources */,
+				879907EE253DE3CC00D388BF /* XCTestCase.swift in Sources */,
+				879907E8253DE26D00D388BF /* detailViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,6 +792,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S4J5D3N22R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "poc-maxence-mottardTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -775,6 +818,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S4J5D3N22R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "poc-maxence-mottardTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

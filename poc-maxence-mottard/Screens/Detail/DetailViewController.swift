@@ -52,7 +52,11 @@ final class DetailViewController: UIViewController {
                 strongSelf.movieImageView.load(url: url)
             }
             
-            if let url = strongSelf.viewModel.model.backdropUrl {
+            let backdropUrl = UIDevice.current.userInterfaceIdiom == .pad
+                ? strongSelf.viewModel.model.backdropPadUrl
+                : strongSelf.viewModel.model.backdropPhoneUrl
+            
+            if let url = backdropUrl {
                 strongSelf.backgroundImageView.load(url: url)
             }
         }
