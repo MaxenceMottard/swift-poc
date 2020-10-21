@@ -12,9 +12,9 @@ import Fakery
 class CustomDateFormatter: XCTestCase {    
     func testDateConvertion() throws {
         let di = getDependencyProvider()
-        let dateService = di.resolve(DateService.self)!
+        let dateFormatter = di.resolve(CustomDateFormatter.self)!
         
         let stringDate = "2201-01-27"
-        XCTAssertEqual(dateService.convertToReadableDate(stringDate), "27 janvier 2201")
+        XCTAssertEqual(dateFormatter.convertToReadableDate(stringDate), "27 janvier 2201")
     }
 }

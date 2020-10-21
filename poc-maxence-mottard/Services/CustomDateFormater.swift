@@ -1,5 +1,5 @@
 //
-//  DateService.swift
+//  CustomDateFormater.swift
 //  poc-maxence-mottard
 //
 //  Created by Maxence on 19/10/2020.
@@ -9,7 +9,7 @@ import Foundation
 
 class CustomDateFormater {
     
-    var localeService: LocaleFormatter!
+    var localeFormatter: LocaleFormatter!
     
     func convertToReadableDate(_ dateString: String) -> String {
         let dateFormatter = DateFormatter()
@@ -24,7 +24,7 @@ class CustomDateFormater {
     }
     
     private func getFormat() -> String {
-        switch localeService.getCurrentLanguage() {
+        switch localeFormatter.getCurrentLanguage() {
         case .fr:
             return "d MMMM yyyy"
         case .en:

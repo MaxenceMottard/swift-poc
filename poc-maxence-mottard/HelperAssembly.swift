@@ -23,7 +23,7 @@ class HelperAssembly: Assembly {
         
         container.register(PopularMovieRequest.self) { resolver -> PopularMovieRequest in
             let service = PopularMovieRequest()
-            service.localeService = resolver.resolve(LocaleFormatter.self)
+            service.localeFormatter = resolver.resolve(LocaleFormatter.self)
             service.jsonDecoder = resolver.resolve(JSONDecoder.self)
             
             return service
@@ -31,7 +31,7 @@ class HelperAssembly: Assembly {
         
         container.register(CustomDateFormater.self) { resolver -> CustomDateFormater in
             let service = CustomDateFormater()
-            service.localeService = resolver.resolve(LocaleFormatter.self)
+            service.localeFormatter = resolver.resolve(LocaleFormatter.self)
             
             return service
         }

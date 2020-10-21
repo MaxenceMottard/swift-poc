@@ -12,7 +12,7 @@ import RxSwift
 class PopularMovieRequest: ApiRequest {
     typealias ResultType = MoviesRequest
     var jsonDecoder: JSONDecoder!
-    var localeService: LocaleService!
+    var localeFormatter: LocaleFormatter!
     
     enum PosterSizes {
         case w92, w154, w185, w342, w500, w780, original
@@ -22,10 +22,8 @@ class PopularMovieRequest: ApiRequest {
         case w300, w780, w1280, original
     }
     
-    var localeService: LocaleFormatter!
-    
     func fetch() -> Observable<MoviesRequest> {
-        let language = localeService.getTMDBLanguageCode()
+        let language = localeFormatter.getTMDBLanguageCode()
         let url = "\(Constant.TMDBBaseUrl.rawValue)/movie/popular?language=\(language)&api_key=\(Constant.TMDBApiKey.rawValue)"
         return request(url)
     }
