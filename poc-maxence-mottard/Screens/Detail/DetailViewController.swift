@@ -19,6 +19,8 @@ final class DetailViewController: UIViewController {
     @IBOutlet private weak var movieImageView: UIImageView!
     @IBOutlet private weak var descriptionLabel: UILabel!
 
+    private var shareButton: UIBarButtonItem!
+
     private let backButton: UIBarButtonItem = {
         let button = UIBarButtonItem()
         button.title = "backButtonTitle".localize()
@@ -32,6 +34,8 @@ final class DetailViewController: UIViewController {
         movieImageView.layer.borderWidth = 1
         movieImageView.layer.borderColor = UIColor.white.cgColor
 
+        shareButton = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .done, target: self, action: #selector(handleShareMovie))
+
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
 
         setupView()
@@ -42,6 +46,7 @@ final class DetailViewController: UIViewController {
             guard let strongSelf = self else { return }
 
             strongSelf.navigationController?.navigationBar.topItem?.title = strongSelf.viewModel.model.title
+            strongSelf.navigationController?.navigationBar.topItem?.rightBarButtonItem = strongSelf.shareButton
 
             strongSelf.titleLabel.text = strongSelf.viewModel.model.title
             strongSelf.descriptionLabel.text = strongSelf.viewModel.model.overview
@@ -59,6 +64,18 @@ final class DetailViewController: UIViewController {
                 strongSelf.backgroundImageView.load(url: url)
             }
         }
+    }
+
+    @objc func handleShareMovie() {
+        guard let data = try? Data(contentsOf: viewModel.model.posterOriginalUrl!),
+              let image = UIImage(data: data),
+              let shareUrl = viewModel.model.posterOriginalUrl else { return }
+
+        let items: [Any] = [viewModel.model.title, image, shareUrl.absoluteURL]
+        let vc = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+
+        present(vc, animated: true)
     }
 
 }
