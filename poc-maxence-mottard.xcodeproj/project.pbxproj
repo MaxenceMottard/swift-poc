@@ -45,7 +45,7 @@
 		87A6E4DB25235A200037566C /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4D925235A200037566C /* ListTableViewCell.swift */; };
 		87A6E4DC25235A200037566C /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E4DA25235A200037566C /* ListTableViewCell.xib */; };
 		87A6E4E625235DEA0037566C /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4E525235DEA0037566C /* ReusableView.swift */; };
-		87B0DD312524AD2900CC0DAC /* MovieDBApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B0DD302524AD2900CC0DAC /* MovieDBApi.swift */; };
+		87B0DD312524AD2900CC0DAC /* PopularMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B0DD302524AD2900CC0DAC /* PopularMovieRequest.swift */; };
 		87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBA6D25237579009D2FC6 /* UIImageView.swift */; };
 		87CDBABE25246B4B009D2FC6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBABD25246B4B009D2FC6 /* String.swift */; };
 		87E87E30252728560007F1D6 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E87E2F252728560007F1D6 /* DependencyProvider.swift */; };
@@ -117,7 +117,7 @@
 		87A6E4E525235DEA0037566C /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		87B0DD252524AA6A00CC0DAC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		87B0DD262524AA6A00CC0DAC /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		87B0DD302524AD2900CC0DAC /* MovieDBApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBApi.swift; sourceTree = "<group>"; };
+		87B0DD302524AD2900CC0DAC /* PopularMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieRequest.swift; sourceTree = "<group>"; };
 		87CDBA6D25237579009D2FC6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		87CDBABD25246B4B009D2FC6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		87E87E2E252728480007F1D6 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
@@ -351,7 +351,7 @@
 		87B0DD2F2524AB6500CC0DAC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				87B0DD302524AD2900CC0DAC /* MovieDBApi.swift */,
+				87B0DD302524AD2900CC0DAC /* PopularMovieRequest.swift */,
 				879907BF253DADFE00D388BF /* LocaleFormatter.swift */,
 				87F62E2025305E88006705CF /* MockingService.swift */,
 				879907BA253DAB8F00D388BF /* CustomDateFormater.swift */,
@@ -578,7 +578,7 @@
 				877F17B02525C72200CE3EBE /* ListViewModel.swift in Sources */,
 				87A581F92527769300D1CD25 /* HelperAssembly.swift in Sources */,
 				87A6E4DB25235A200037566C /* ListTableViewCell.swift in Sources */,
-				87B0DD312524AD2900CC0DAC /* MovieDBApi.swift in Sources */,
+				87B0DD312524AD2900CC0DAC /* PopularMovieRequest.swift in Sources */,
 				877F17EC2526313900CE3EBE /* DetailModel.swift in Sources */,
 				87F62E532530B7FA006705CF /* Repository.swift in Sources */,
 				87F62E2125305E88006705CF /* MockingService.swift in Sources */,
