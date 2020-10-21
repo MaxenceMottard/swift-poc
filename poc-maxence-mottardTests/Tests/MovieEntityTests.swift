@@ -15,7 +15,7 @@ class MovieEntityTests: XCTestCase {
         let faker = getFaker()
         let decoder = JSONDecoder()
         let encoder = JSONEncoder()
-        var object = Dictionary<String, String>()
+        var object = [String: String]()
         
         object["title"] = faker.lorem.words()
         object["overview"] = faker.lorem.paragraphs()

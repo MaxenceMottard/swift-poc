@@ -12,7 +12,7 @@ final class MovieRepository: Repository {
     typealias Service = PopularMovieRequest
     typealias Entity = Movie
     
-    var data = BehaviorSubject<[Movie]>.init(value: [])
+    var data = BehaviorSubject<[Movie]>(value: [])
     var service: PopularMovieRequest!
     var mockingService: MockingService!
     let bag = DisposeBag()
