@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LocaleService {
+class LocaleFormatter {
     enum TMDBLanguage: String {
         case fr = "fr-FR"
         case en = "en-US"

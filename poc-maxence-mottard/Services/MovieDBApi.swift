@@ -19,7 +19,7 @@ class MovieDBApi {
         case w300, w780, w1280, original
     }
     
-    var localeService: LocaleService!
+    var localeService: LocaleFormatter!
     
     func getMovies() -> Observable<[Movie]> {
         return Observable<[Movie]>.create { [weak self] (observer) -> Disposable in

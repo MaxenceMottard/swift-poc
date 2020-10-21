@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DateService {
+class CustomDateFormater {
     
     var localeService: LocaleService!
     

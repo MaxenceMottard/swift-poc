@@ -9,7 +9,7 @@ import XCTest
 import Foundation
 @testable import poc_maxence_mottard
 
-class jsonDecodingTests: XCTestCase {
+class MovieEntityTests: XCTestCase {
     
     func testMovieProperties() {
         let faker = getFaker()

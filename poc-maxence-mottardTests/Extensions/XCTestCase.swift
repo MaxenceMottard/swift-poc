@@ -11,7 +11,7 @@ import Fakery
 
 extension XCTestCase {
     func getFaker() -> Faker {
-        return Faker(locale: LocaleService.SupportedLanguage.en.rawValue)
+        return Faker(locale: LocaleFormatter.SupportedLanguage.en.rawValue)
     }
     
     func getDependencyProvider() -> DependencyProvider {
