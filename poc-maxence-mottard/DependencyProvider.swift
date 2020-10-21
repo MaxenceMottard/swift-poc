@@ -7,7 +7,6 @@
 
 import Foundation
 import Swinject
-import Swinject.Swift
 
 class DependencyProvider {    
     private let container: Container

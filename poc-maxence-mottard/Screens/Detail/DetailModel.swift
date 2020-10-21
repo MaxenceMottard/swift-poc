@@ -22,8 +22,8 @@ struct DetailModel {
             overview: movie.overview,
             releaseDate: movie.releaseDate,
             posterUrl: movie.getImageUrl(size: .w185),
-            backdropPadUrl: movie.getImageUrl(size: PopularMovieRequest.BackdropSize.w1280),
-            backdropPhoneUrl: movie.getImageUrl(size: PopularMovieRequest.BackdropSize.w780))
+            backdropPadUrl: movie.getImageUrl(size: TmdbImageSize.Backdrop.w1280),
+            backdropPhoneUrl: movie.getImageUrl(size: TmdbImageSize.Backdrop.w780))
 
     }
 }

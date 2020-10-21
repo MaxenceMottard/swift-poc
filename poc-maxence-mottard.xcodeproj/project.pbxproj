@@ -48,6 +48,7 @@
 		87B0DD312524AD2900CC0DAC /* PopularMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B0DD302524AD2900CC0DAC /* PopularMovieRequest.swift */; };
 		87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBA6D25237579009D2FC6 /* UIImageView.swift */; };
 		87CDBABE25246B4B009D2FC6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBABD25246B4B009D2FC6 /* String.swift */; };
+		87E7D2542540723300E3AD5A /* TmdbImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7D2532540723300E3AD5A /* TmdbImageSize.swift */; };
 		87E87E30252728560007F1D6 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E87E2F252728560007F1D6 /* DependencyProvider.swift */; };
 		87F62E2125305E88006705CF /* MockingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E2025305E88006705CF /* MockingService.swift */; };
 		87F62E482530B079006705CF /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E472530B079006705CF /* MovieRepository.swift */; };
@@ -120,6 +121,7 @@
 		87B0DD302524AD2900CC0DAC /* PopularMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieRequest.swift; sourceTree = "<group>"; };
 		87CDBA6D25237579009D2FC6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		87CDBABD25246B4B009D2FC6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		87E7D2532540723300E3AD5A /* TmdbImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmdbImageSize.swift; sourceTree = "<group>"; };
 		87E87E2E252728480007F1D6 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		87E87E2F252728560007F1D6 /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
 		87F62E2025305E88006705CF /* MockingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingService.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			children = (
 				87CDBA6C2523756D009D2FC6 /* Extensions */,
 				87A6E4E425235DDA0037566C /* Protocols */,
+				87E7D2532540723300E3AD5A /* TmdbImageSize.swift */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				877F17B02525C72200CE3EBE /* ListViewModel.swift in Sources */,
 				87A581F92527769300D1CD25 /* HelperAssembly.swift in Sources */,
 				87A6E4DB25235A200037566C /* ListTableViewCell.swift in Sources */,
+				87E7D2542540723300E3AD5A /* TmdbImageSize.swift in Sources */,
 				87B0DD312524AD2900CC0DAC /* PopularMovieRequest.swift in Sources */,
 				877F17EC2526313900CE3EBE /* DetailModel.swift in Sources */,
 				87F62E532530B7FA006705CF /* Repository.swift in Sources */,
