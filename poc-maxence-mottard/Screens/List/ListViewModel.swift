@@ -19,7 +19,7 @@ protocol ListViewModelling {
     var mockingService: MockingService! { get }
     
     func getNumberOfRows() -> Int
-    func toggleDataIsMocked() -> Void
+    func toggleDataIsMocked()
     func getDetailModel(_ index: IndexPath) -> DetailModel
     func getCellViewModel(_ index: IndexPath) -> ListCellViewModelling
 }
@@ -27,8 +27,8 @@ protocol ListViewModelling {
 final class ListViewModel: ListViewModelling {
     let bag = DisposeBag()
     var numberOfRows: Int = 0
-    let movies = BehaviorSubject<[Movie]>.init(value: [])
-    let dataIsMocked = BehaviorSubject<Bool>.init(value: false)
+    let movies = BehaviorSubject<[Movie]>(value: [])
+    let dataIsMocked = BehaviorSubject<Bool>(value: false)
     var detailModels: [DetailModel] = []
     var listCellViewModels: [ListCellViewModel] = []
     var movieRepository: MovieRepository! {

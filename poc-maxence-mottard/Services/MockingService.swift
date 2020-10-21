@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 
 final class MockingService {
-    private let isMocked = BehaviorSubject<Bool>.init(value: false)
+    private let isMocked = BehaviorSubject<Bool>(value: false)
     
     func toggleIsMocked() {
         isMocked.onNext(!getIsMocked())

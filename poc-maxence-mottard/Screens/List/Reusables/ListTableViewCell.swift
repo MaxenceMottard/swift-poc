@@ -15,7 +15,7 @@ final class ListTableViewCell: UITableViewCell, ReusableView, Setupable {
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var movieImageView : UIImageView!
+    @IBOutlet private weak var movieImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

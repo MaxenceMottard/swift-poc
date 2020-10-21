@@ -14,7 +14,7 @@ final class ListViewController: UIViewController {
     var dependencyProvider: DependencyProvider!
     let bag: DisposeBag = DisposeBag()
     
-    @IBOutlet weak var dataTableView: UITableView!
+    @IBOutlet private weak var dataTableView: UITableView!
     
     private var mockButton: UIBarButtonItem!
     

@@ -10,7 +10,7 @@ import UIKit
 
 final class DetailViewAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(DetailViewModelling.self) { (resolver: Resolver, model: DetailModel) -> DetailViewModelling in
+        container.register(DetailViewModelling.self) { (_: Resolver, model: DetailModel) -> DetailViewModelling in
             let viewModel = DetailViewModel()
             viewModel.model = model
             
