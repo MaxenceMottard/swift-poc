@@ -20,7 +20,6 @@ final class DetailViewAssembly: Assembly {
         container.register(DetailViewController.self) { (resolver: Resolver, model: DetailModel) -> DetailViewController in
             let viewController = resolver.resolve(UIStoryboard.self)!.instantiateViewController(identifier: "detailViewController") as DetailViewController
             viewController.viewModel = resolver.resolve(DetailViewModelling.self, argument: model)
-            viewController.movieDBApi = resolver.resolve(PopularMovieRequest.self)
             viewController.dateFormatter = resolver.resolve(CustomDateFormater.self)
             
             return viewController
