@@ -9,7 +9,7 @@ import XCTest
 import Fakery
 @testable import poc_maxence_mottard
 
-class CustomDateFormatter: XCTestCase {    
+class CustomDateFormatterTests: XCTestCase {    
     func testDateConvertion() throws {
         let di = getDependencyProvider()
         let dateFormatter = di.resolve(CustomDateFormatter.self)!

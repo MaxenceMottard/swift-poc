@@ -38,7 +38,7 @@
 		87A6E49025234F370037566C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E48E25234F370037566C /* Main.storyboard */; };
 		87A6E49225234F380037566C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E49125234F380037566C /* Assets.xcassets */; };
 		87A6E49525234F380037566C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E49325234F380037566C /* LaunchScreen.storyboard */; };
-		87A6E4A025234F390037566C /* CustomDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E49F25234F390037566C /* CustomDateFormatter.swift */; };
+		87A6E4A025234F390037566C /* CustomDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E49F25234F390037566C /* CustomDateFormatterTests.swift */; };
 		87A6E4AB25234F390037566C /* poc_maxence_mottardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4AA25234F390037566C /* poc_maxence_mottardUITests.swift */; };
 		87A6E4CE252358610037566C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4CD252358610037566C /* ListViewController.swift */; };
 		87A6E4D4252358DC0037566C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4D3252358DC0037566C /* Movie.swift */; };
@@ -106,7 +106,7 @@
 		87A6E49125234F380037566C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87A6E49625234F380037566C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87A6E49B25234F390037566C /* poc-maxence-mottardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "poc-maxence-mottardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		87A6E49F25234F390037566C /* CustomDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateFormatter.swift; sourceTree = "<group>"; };
+		87A6E49F25234F390037566C /* CustomDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateFormatterTests.swift; sourceTree = "<group>"; };
 		87A6E4A125234F390037566C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87A6E4A625234F390037566C /* poc-maxence-mottardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "poc-maxence-mottardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A6E4AA25234F390037566C /* poc_maxence_mottardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_maxence_mottardUITests.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 		879907F5253DE48A00D388BF /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				87A6E49F25234F390037566C /* CustomDateFormatter.swift */,
+				87A6E49F25234F390037566C /* CustomDateFormatterTests.swift */,
 				87A16B58253ECDD20073F5FD /* MovieEntityTests.swift */,
 				87A16B5D253ED2660073F5FD /* TmdbApiTests.swift */,
 			);
@@ -598,7 +598,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A16B59253ECDD20073F5FD /* MovieEntityTests.swift in Sources */,
-				87A6E4A025234F390037566C /* CustomDateFormatter.swift in Sources */,
+				87A6E4A025234F390037566C /* CustomDateFormatterTests.swift in Sources */,
 				879907EE253DE3CC00D388BF /* XCTestCase.swift in Sources */,
 				87A16B5E253ED2660073F5FD /* TmdbApiTests.swift in Sources */,
 			);
