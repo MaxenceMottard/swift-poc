@@ -14,7 +14,6 @@ disabled_rules:
     - identifier_name
     - type_name
     - force_unwrapping
-    - trailing_whitespace
 
 opt_in_rules:
     - anyobject_protocol
@@ -56,7 +55,6 @@ opt_in_rules:
     - unneeded_parentheses_in_closure_argument
     - unowned_variable_capture
     - yoda_condition
-    - trailing_whitespace
 
 
 first_where: error
