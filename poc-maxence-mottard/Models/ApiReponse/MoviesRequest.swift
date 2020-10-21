@@ -12,7 +12,7 @@ struct MoviesRequest: Decodable {
     let totalResults: Int
     let totalPages: Int
     let page: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case results = "results"
         case totalResults = "total_results"

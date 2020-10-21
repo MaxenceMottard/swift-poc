@@ -12,18 +12,18 @@ class LocaleFormatter {
         case fr = "fr-FR"
         case en = "en-US"
     }
-    
+
     enum SupportedLanguage: String {
         case fr, en
     }
-    
+
     private let currentLocale = Locale.current
     private var currentLanguage = SupportedLanguage.en
-    
+
     init() {
         self.currentLanguage = self.getCurrentLanguage()
     }
-    
+
     func getTMDBLanguageCode() -> TMDBLanguage {
         switch currentLanguage {
         case .fr:
@@ -32,7 +32,7 @@ class LocaleFormatter {
             return .en
         }
     }
-    
+
     func getCurrentLanguage() -> SupportedLanguage {
         switch currentLocale.languageCode {
         case "fr":
@@ -41,5 +41,5 @@ class LocaleFormatter {
             return .en
         }
     }
-    
+
 }

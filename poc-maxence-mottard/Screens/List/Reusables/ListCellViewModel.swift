@@ -13,7 +13,7 @@ protocol ListCellViewModelling {
 
 final class ListCellViewModel: ListCellViewModelling {
     let model: ListCellModel
-    
+
     init(model: ListCellModel) {
         self.model = model
     }

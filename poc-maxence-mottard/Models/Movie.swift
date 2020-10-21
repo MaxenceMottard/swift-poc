@@ -13,7 +13,7 @@ struct Movie: Decodable {
     let posterPath: String
     let backdropPath: String
     let releaseDate: String
-    
+
     enum CodingKeys: String, CodingKey {
         case title = "title"
         case overview = "overview"
@@ -21,11 +21,11 @@ struct Movie: Decodable {
         case backdropPath = "backdrop_path"
         case releaseDate = "release_date"
     }
-    
+
     func getImageUrl(size: TmdbImageSize.Poster) -> URL? {
         return URL(string: "\(Constant.TMDBImageBaseUrl.rawValue)\(size)\(posterPath)")
     }
-    
+
     func getImageUrl(size: TmdbImageSize.Backdrop) -> URL? {
         return URL(string: "\(Constant.TMDBImageBaseUrl.rawValue)\(size)\(backdropPath)")
     }

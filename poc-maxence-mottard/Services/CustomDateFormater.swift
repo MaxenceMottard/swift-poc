@@ -8,21 +8,21 @@
 import Foundation
 
 class CustomDateFormater {
-    
+
     var localeFormatter: LocaleFormatter!
-    
+
     func convertToReadableDate(_ dateString: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
-        
+
         if let date = dateFormatter.date(from: dateString) {
             dateFormatter.dateFormat = getFormat()
             return dateFormatter.string(from: date)
         }
-        
+
         return dateString
     }
-    
+
     private func getFormat() -> String {
         switch localeFormatter.getCurrentLanguage() {
         case .fr:
@@ -31,5 +31,5 @@ class CustomDateFormater {
             return "MMMM d, yyyy"
         }
     }
-    
+
 }

@@ -15,7 +15,7 @@ struct DetailModel {
     let posterUrl: URL?
     let backdropPadUrl: URL?
     let backdropPhoneUrl: URL?
-    
+
     static func from(_ movie: Movie) -> DetailModel {
         return DetailModel(
             title: movie.title,

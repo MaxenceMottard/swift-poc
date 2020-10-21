@@ -11,9 +11,9 @@ import RxSwift
 protocol Repository {
     associatedtype Entity
     associatedtype Service
-    
+
     var data: BehaviorSubject<[Entity]> { get }
     var service: Service! { get }
-    
+
     func fetchData()
 }

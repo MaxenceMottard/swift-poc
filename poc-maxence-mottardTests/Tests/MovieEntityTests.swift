@@ -10,23 +10,23 @@ import Foundation
 @testable import poc_maxence_mottard
 
 class MovieEntityTests: XCTestCase {
-    
+
     func testMovieProperties() {
         let faker = getFaker()
         let decoder = JSONDecoder()
         let encoder = JSONEncoder()
         var object = [String: String]()
-        
+
         object["title"] = faker.lorem.words()
         object["overview"] = faker.lorem.paragraphs()
         object["poster_path"] = faker.lorem.characters()
         object["backdrop_path"] = faker.lorem.characters()
         object["release_date"] = faker.business.creditCardNumber()
-        
+
         do {
             let data = try encoder.encode(object)
             let movie = try decoder.decode(Movie.self, from: data)
-            
+
             XCTAssertEqual(movie.title, object["title"])
             XCTAssertEqual(movie.overview, object["overview"])
             XCTAssertEqual(movie.posterPath, object["poster_path"])
@@ -35,7 +35,7 @@ class MovieEntityTests: XCTestCase {
         } catch let error {
             XCTFail("ERROR: \(error.localizedDescription)")
         }
-        
+
     }
-    
+
 }

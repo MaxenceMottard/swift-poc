@@ -11,9 +11,9 @@ import Alamofire
 
 protocol ApiRequest {
     associatedtype ResultType: Decodable
-    
+
     var jsonDecoder: JSONDecoder! { get set }
-    
+
     func fetch() -> Observable<ResultType>
     func request(_ url: String) -> Observable<ResultType>
 }
@@ -32,7 +32,7 @@ extension ApiRequest {
                     observer.onError(error)
                 }
             }
-            
+
             return Disposables.create {
                 requestReference.cancel()
             }

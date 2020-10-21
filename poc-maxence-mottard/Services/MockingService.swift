@@ -10,15 +10,15 @@ import RxSwift
 
 final class MockingService {
     private let isMocked = BehaviorSubject<Bool>(value: false)
-    
+
     func toggleIsMocked() {
         isMocked.onNext(!getIsMocked())
     }
-    
+
     func getIsMockedSubject() -> BehaviorSubject<Bool> {
         return self.isMocked
     }
-    
+
     func getIsMocked() -> Bool {
         do {
             return try isMocked.value()

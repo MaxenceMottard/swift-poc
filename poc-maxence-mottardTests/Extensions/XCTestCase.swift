@@ -13,7 +13,7 @@ extension XCTestCase {
     func getFaker() -> Faker {
         return Faker(locale: LocaleFormatter.SupportedLanguage.en.rawValue)
     }
-    
+
     func getDependencyProvider() -> DependencyProvider {
         return DependencyProvider()
     }

@@ -9,6 +9,6 @@ import Foundation
 
 protocol Setupable {
     associatedtype Model
-    
+
     func setup(with model: Model)
 }
