@@ -69,7 +69,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailModel = viewModel.getDetailModel(indexPath)
-        let detailViewController = dependencyProvider.container.resolve(DetailViewController.self, argument: detailModel)!
+        let detailViewController = dependencyProvider.resolve(DetailViewController.self, argument: detailModel)!
         
         navigationController?.pushViewController(detailViewController, animated: true)
     }

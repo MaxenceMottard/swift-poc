@@ -7,10 +7,11 @@
 
 import Foundation
 import Swinject
+import Swinject.Swift
 
 class DependencyProvider {    
-    let container: Container
-    let assembler: Assembler
+    private let container: Container
+    private let assembler: Assembler
     
     init() {
         container = Container()
@@ -26,4 +27,11 @@ class DependencyProvider {
         }
     }
     
+    func resolve<Service>(_ serviceType: Service.Type) -> Service? {
+        return self.container.resolve(serviceType)
+    }
+    
+    func resolve<Service, Argument>(_ serviceType: Service.Type, argument: Argument) -> Service? {
+        return self.container.resolve(serviceType, argument: argument)
+    }
 }

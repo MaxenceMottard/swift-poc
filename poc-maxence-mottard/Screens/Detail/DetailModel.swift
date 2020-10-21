@@ -13,7 +13,8 @@ struct DetailModel {
     let overview: String
     let releaseDate: String
     let posterUrl: URL?
-    let backdropUrl: URL?
+    let backdropPadUrl: URL?
+    let backdropPhoneUrl: URL?
     
     static func from(_ movie: Movie) -> DetailModel {
         return DetailModel(
@@ -21,6 +22,8 @@ struct DetailModel {
             overview: movie.overview,
             releaseDate: movie.releaseDate,
             posterUrl: movie.getImageUrl(size: .w185),
-            backdropUrl: movie.getImageUrl(size: UIDevice.current.userInterfaceIdiom == .pad ? .w780 : .w1280))
+            backdropPadUrl: movie.getImageUrl(size: MovieDBApi.BackdropSize.w1280),
+            backdropPhoneUrl: movie.getImageUrl(size: MovieDBApi.BackdropSize.w780))
+
     }
 }

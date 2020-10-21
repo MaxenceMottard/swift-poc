@@ -12,6 +12,7 @@ final class DetailViewController: UIViewController {
 
     var viewModel: DetailViewModelling!
     var movieDBApi: MovieDBApi!
+    var dateFormatter: CustomDateFormater!
     
     @IBOutlet private weak var backgroundImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
@@ -45,13 +46,17 @@ final class DetailViewController: UIViewController {
             
             strongSelf.titleLabel.text = strongSelf.viewModel.model.title
             strongSelf.descriptionLabel.text = strongSelf.viewModel.model.overview
-            strongSelf.dateLabel.text = strongSelf.viewModel.model.releaseDate
+            strongSelf.dateLabel.text = strongSelf.dateFormatter.convertToReadableDate(strongSelf.viewModel.model.releaseDate)
             
             if let url = strongSelf.viewModel.model.posterUrl {
                 strongSelf.movieImageView.load(url: url)
             }
             
-            if let url = strongSelf.viewModel.model.backdropUrl {
+            let backdropUrl = UIDevice.current.userInterfaceIdiom == .pad
+                ? strongSelf.viewModel.model.backdropPadUrl
+                : strongSelf.viewModel.model.backdropPhoneUrl
+            
+            if let url = backdropUrl {
                 strongSelf.backgroundImageView.load(url: url)
             }
         }
