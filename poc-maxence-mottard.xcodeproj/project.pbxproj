@@ -28,9 +28,9 @@
 		879907D8253DC07700D388BF /* SwinjectAutoregistration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879907D7253DC07700D388BF /* SwinjectAutoregistration.framework */; };
 		879907E0253DDD3600D388BF /* Fakery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879907DF253DDD3600D388BF /* Fakery.framework */; };
 		879907EE253DE3CC00D388BF /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879907ED253DE3CC00D388BF /* XCTestCase.swift */; };
+		879FFA01254021F800CC13F6 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 879FFA00254021F800CC13F6 /* .swiftlint.yml */; };
 		87A16B59253ECDD20073F5FD /* MovieEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A16B58253ECDD20073F5FD /* MovieEntityTests.swift */; };
 		87A16B5E253ED2660073F5FD /* TmdbApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A16B5D253ED2660073F5FD /* TmdbApiTests.swift */; };
-		879FFA01254021F800CC13F6 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 879FFA00254021F800CC13F6 /* .swiftlint.yml */; };
 		87A581F92527769300D1CD25 /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A581F82527769300D1CD25 /* HelperAssembly.swift */; };
 		87A6E48925234F370037566C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48825234F370037566C /* AppDelegate.swift */; };
 		87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E48A25234F370037566C /* SceneDelegate.swift */; };
@@ -93,9 +93,9 @@
 		879907D7253DC07700D388BF /* SwinjectAutoregistration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectAutoregistration.framework; path = Carthage/Build/iOS/SwinjectAutoregistration.framework; sourceTree = "<group>"; };
 		879907DF253DDD3600D388BF /* Fakery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fakery.framework; path = Carthage/Build/iOS/Fakery.framework; sourceTree = "<group>"; };
 		879907ED253DE3CC00D388BF /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		879FFA00254021F800CC13F6 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		87A16B58253ECDD20073F5FD /* MovieEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntityTests.swift; sourceTree = "<group>"; };
 		87A16B5D253ED2660073F5FD /* TmdbApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmdbApiTests.swift; sourceTree = "<group>"; };
-		879FFA00254021F800CC13F6 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		87A581F82527769300D1CD25 /* HelperAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAssembly.swift; sourceTree = "<group>"; };
 		87A6E48525234F370037566C /* poc-maxence-mottard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poc-maxence-mottard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A6E48825234F370037566C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -545,7 +545,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -rf ${TMPDIR}/TemporaryItems/*carthage*\n/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

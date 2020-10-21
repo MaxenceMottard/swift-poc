@@ -28,7 +28,6 @@ class HelperAssembly: Assembly {
         
         container.register(CustomDateFormater.self) { resolver -> CustomDateFormater in
             let service = CustomDateFormater()
-            service.localeService = resolver.resolve(LocaleService.self)
             service.localeService = resolver.resolve(LocaleFormatter.self)
             
             return service

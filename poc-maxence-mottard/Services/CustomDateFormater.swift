@@ -9,7 +9,7 @@ import Foundation
 
 class CustomDateFormater {
     
-    var localeService: LocaleService!
+    var localeService: LocaleFormatter!
     
     func convertToReadableDate(_ dateString: String) -> String {
         let dateFormatter = DateFormatter()
