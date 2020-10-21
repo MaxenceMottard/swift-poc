@@ -1,5 +1,5 @@
 //
-//  LocaleService.swift
+//  LocaleFormatter.swift
 //  poc-maxence-mottard
 //
 //  Created by Maxence on 19/10/2020.

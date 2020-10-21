@@ -9,21 +9,21 @@ import Foundation
 import RxSwift
 
 final class MovieRepository: Repository {
-    typealias Service = MovieDBApi
+    typealias Service = PopularMovieRequest
     typealias Entity = Movie
     
     var data = BehaviorSubject<[Movie]>.init(value: [])
-    var service: MovieDBApi!
+    var service: PopularMovieRequest!
     var mockingService: MockingService!
     let bag = DisposeBag()
     
     func fetchData() {
         if mockingService.getIsMocked() {
-            data.onNext(service.getMockingMovies())
+            data.onNext(service.fetchMockingData())
         } else {
-            service.getMovies().subscribe(onNext: { [weak self] movies in
+            service.fetch().subscribe(onNext: { [weak self] requestResponse in
                 guard let strongSelf = self else { return }
-                strongSelf.data.onNext(movies)
+                strongSelf.data.onNext(requestResponse.results)
             }).disposed(by: bag)
         }
     }

@@ -10,6 +10,7 @@
 		872760B32524BC1F00596273 /* MoviesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872760B22524BC1F00596273 /* MoviesRequest.swift */; };
 		872760C72524C37F00596273 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 872760C92524C37F00596273 /* Localizable.strings */; };
 		872760D92524D59A00596273 /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872760D82524D59A00596273 /* constant.swift */; };
+		87299D60253EEBBC007E17A5 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87299D5F253EEBBC007E17A5 /* ApiRequest.swift */; };
 		873C09D12527597A00F6C2FC /* ListViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C09D02527597A00F6C2FC /* ListViewAssembly.swift */; };
 		873C09D9252759F900F6C2FC /* DetailViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C09D8252759F900F6C2FC /* DetailViewAssembly.swift */; };
 		877F17B02525C72200CE3EBE /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17AF2525C72200CE3EBE /* ListViewModel.swift */; };
@@ -37,16 +38,17 @@
 		87A6E49025234F370037566C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E48E25234F370037566C /* Main.storyboard */; };
 		87A6E49225234F380037566C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E49125234F380037566C /* Assets.xcassets */; };
 		87A6E49525234F380037566C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E49325234F380037566C /* LaunchScreen.storyboard */; };
-		87A6E4A025234F390037566C /* CustomDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E49F25234F390037566C /* CustomDateFormatter.swift */; };
+		87A6E4A025234F390037566C /* CustomDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E49F25234F390037566C /* CustomDateFormatterTests.swift */; };
 		87A6E4AB25234F390037566C /* poc_maxence_mottardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4AA25234F390037566C /* poc_maxence_mottardUITests.swift */; };
 		87A6E4CE252358610037566C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4CD252358610037566C /* ListViewController.swift */; };
 		87A6E4D4252358DC0037566C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4D3252358DC0037566C /* Movie.swift */; };
 		87A6E4DB25235A200037566C /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4D925235A200037566C /* ListTableViewCell.swift */; };
 		87A6E4DC25235A200037566C /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87A6E4DA25235A200037566C /* ListTableViewCell.xib */; };
 		87A6E4E625235DEA0037566C /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6E4E525235DEA0037566C /* ReusableView.swift */; };
-		87B0DD312524AD2900CC0DAC /* MovieDBApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B0DD302524AD2900CC0DAC /* MovieDBApi.swift */; };
+		87B0DD312524AD2900CC0DAC /* PopularMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B0DD302524AD2900CC0DAC /* PopularMovieRequest.swift */; };
 		87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBA6D25237579009D2FC6 /* UIImageView.swift */; };
 		87CDBABE25246B4B009D2FC6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBABD25246B4B009D2FC6 /* String.swift */; };
+		87E7D2542540723300E3AD5A /* TmdbImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7D2532540723300E3AD5A /* TmdbImageSize.swift */; };
 		87E87E30252728560007F1D6 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E87E2F252728560007F1D6 /* DependencyProvider.swift */; };
 		87F62E2125305E88006705CF /* MockingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E2025305E88006705CF /* MockingService.swift */; };
 		87F62E482530B079006705CF /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E472530B079006705CF /* MovieRepository.swift */; };
@@ -78,6 +80,7 @@
 		872760C82524C37F00596273 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		872760CE2524C39800596273 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		872760D82524D59A00596273 /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
+		87299D5F253EEBBC007E17A5 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		873C09D02527597A00F6C2FC /* ListViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewAssembly.swift; sourceTree = "<group>"; };
 		873C09D8252759F900F6C2FC /* DetailViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewAssembly.swift; sourceTree = "<group>"; };
 		877F17AF2525C72200CE3EBE /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
@@ -103,7 +106,7 @@
 		87A6E49125234F380037566C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87A6E49625234F380037566C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87A6E49B25234F390037566C /* poc-maxence-mottardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "poc-maxence-mottardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		87A6E49F25234F390037566C /* CustomDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateFormatter.swift; sourceTree = "<group>"; };
+		87A6E49F25234F390037566C /* CustomDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateFormatterTests.swift; sourceTree = "<group>"; };
 		87A6E4A125234F390037566C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87A6E4A625234F390037566C /* poc-maxence-mottardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "poc-maxence-mottardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A6E4AA25234F390037566C /* poc_maxence_mottardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_maxence_mottardUITests.swift; sourceTree = "<group>"; };
@@ -115,9 +118,10 @@
 		87A6E4E525235DEA0037566C /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		87B0DD252524AA6A00CC0DAC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		87B0DD262524AA6A00CC0DAC /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		87B0DD302524AD2900CC0DAC /* MovieDBApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBApi.swift; sourceTree = "<group>"; };
+		87B0DD302524AD2900CC0DAC /* PopularMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieRequest.swift; sourceTree = "<group>"; };
 		87CDBA6D25237579009D2FC6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		87CDBABD25246B4B009D2FC6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		87E7D2532540723300E3AD5A /* TmdbImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmdbImageSize.swift; sourceTree = "<group>"; };
 		87E87E2E252728480007F1D6 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		87E87E2F252728560007F1D6 /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
 		87F62E2025305E88006705CF /* MockingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingService.swift; sourceTree = "<group>"; };
@@ -187,7 +191,7 @@
 		879907F5253DE48A00D388BF /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				87A6E49F25234F390037566C /* CustomDateFormatter.swift */,
+				87A6E49F25234F390037566C /* CustomDateFormatterTests.swift */,
 				87A16B58253ECDD20073F5FD /* MovieEntityTests.swift */,
 				87A16B5D253ED2660073F5FD /* TmdbApiTests.swift */,
 			);
@@ -319,6 +323,7 @@
 			children = (
 				87CDBA6C2523756D009D2FC6 /* Extensions */,
 				87A6E4E425235DDA0037566C /* Protocols */,
+				87E7D2532540723300E3AD5A /* TmdbImageSize.swift */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				87A6E4E525235DEA0037566C /* ReusableView.swift */,
 				87F62E522530B7FA006705CF /* Repository.swift */,
 				87F62E5A2530B8CB006705CF /* Setupable.swift */,
+				87299D5F253EEBBC007E17A5 /* ApiRequest.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -348,7 +354,7 @@
 		87B0DD2F2524AB6500CC0DAC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				87B0DD302524AD2900CC0DAC /* MovieDBApi.swift */,
+				87B0DD302524AD2900CC0DAC /* PopularMovieRequest.swift */,
 				879907BF253DADFE00D388BF /* LocaleFormatter.swift */,
 				87F62E2025305E88006705CF /* MockingService.swift */,
 				879907BA253DAB8F00D388BF /* CustomDateFormater.swift */,
@@ -565,6 +571,7 @@
 				87A6E4E625235DEA0037566C /* ReusableView.swift in Sources */,
 				879907BB253DAB8F00D388BF /* CustomDateFormater.swift in Sources */,
 				87A6E4CE252358610037566C /* ListViewController.swift in Sources */,
+				87299D60253EEBBC007E17A5 /* ApiRequest.swift in Sources */,
 				872760D92524D59A00596273 /* constant.swift in Sources */,
 				877F17F1252633FE00CE3EBE /* ListCellModel.swift in Sources */,
 				87CDBABE25246B4B009D2FC6 /* String.swift in Sources */,
@@ -574,7 +581,8 @@
 				877F17B02525C72200CE3EBE /* ListViewModel.swift in Sources */,
 				87A581F92527769300D1CD25 /* HelperAssembly.swift in Sources */,
 				87A6E4DB25235A200037566C /* ListTableViewCell.swift in Sources */,
-				87B0DD312524AD2900CC0DAC /* MovieDBApi.swift in Sources */,
+				87E7D2542540723300E3AD5A /* TmdbImageSize.swift in Sources */,
+				87B0DD312524AD2900CC0DAC /* PopularMovieRequest.swift in Sources */,
 				877F17EC2526313900CE3EBE /* DetailModel.swift in Sources */,
 				87F62E532530B7FA006705CF /* Repository.swift in Sources */,
 				87F62E2125305E88006705CF /* MockingService.swift in Sources */,
@@ -590,7 +598,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A16B59253ECDD20073F5FD /* MovieEntityTests.swift in Sources */,
-				87A6E4A025234F390037566C /* CustomDateFormatter.swift in Sources */,
+				87A6E4A025234F390037566C /* CustomDateFormatterTests.swift in Sources */,
 				879907EE253DE3CC00D388BF /* XCTestCase.swift in Sources */,
 				87A16B5E253ED2660073F5FD /* TmdbApiTests.swift in Sources */,
 			);
