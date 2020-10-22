@@ -50,6 +50,7 @@
 		87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBA6D25237579009D2FC6 /* UIImageView.swift */; };
 		87CDBABE25246B4B009D2FC6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBABD25246B4B009D2FC6 /* String.swift */; };
 		87E7D2542540723300E3AD5A /* TmdbImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7D2532540723300E3AD5A /* TmdbImageSize.swift */; };
+		87E7D2862540867B00E3AD5A /* SearchMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7D2852540867B00E3AD5A /* SearchMovieRequest.swift */; };
 		87E87E30252728560007F1D6 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E87E2F252728560007F1D6 /* DependencyProvider.swift */; };
 		87F62E2125305E88006705CF /* MockingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E2025305E88006705CF /* MockingService.swift */; };
 		87F62E482530B079006705CF /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E472530B079006705CF /* MovieRepository.swift */; };
@@ -124,6 +125,7 @@
 		87CDBA6D25237579009D2FC6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		87CDBABD25246B4B009D2FC6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		87E7D2532540723300E3AD5A /* TmdbImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmdbImageSize.swift; sourceTree = "<group>"; };
+		87E7D2852540867B00E3AD5A /* SearchMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieRequest.swift; sourceTree = "<group>"; };
 		87E87E2E252728480007F1D6 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		87E87E2F252728560007F1D6 /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
 		87F62E2025305E88006705CF /* MockingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingService.swift; sourceTree = "<group>"; };
@@ -378,6 +380,8 @@
 			isa = PBXGroup;
 			children = (
 				87B0DD302524AD2900CC0DAC /* PopularMovieRequest.swift */,
+				87E7D2852540867B00E3AD5A /* SearchMovieRequest.swift */,
+			);
 			path = requests;
 			sourceTree = "<group>";
 		};
@@ -574,6 +578,7 @@
 				87A6E48925234F370037566C /* AppDelegate.swift in Sources */,
 				87F62E5B2530B8CB006705CF /* Setupable.swift in Sources */,
 				87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */,
+				87E7D2862540867B00E3AD5A /* SearchMovieRequest.swift in Sources */,
 				873C09D12527597A00F6C2FC /* ListViewAssembly.swift in Sources */,
 				87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */,
 				875ACCAC25416CFE00ACBD37 /* URLComponents.swift in Sources */,

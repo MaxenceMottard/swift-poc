@@ -29,6 +29,14 @@ class HelperAssembly: Assembly {
             return service
         }
 
+        container.register(SearchMovieRequest.self) { resolver -> SearchMovieRequest in
+            let service = SearchMovieRequest()
+            service.localeFormatter = resolver.resolve(LocaleFormatter.self)
+            service.jsonDecoder = resolver.resolve(JSONDecoder.self)
+
+            return service
+        }
+
         container.register(CustomDateFormater.self) { resolver -> CustomDateFormater in
             let service = CustomDateFormater()
             service.localeFormatter = resolver.resolve(LocaleFormatter.self)

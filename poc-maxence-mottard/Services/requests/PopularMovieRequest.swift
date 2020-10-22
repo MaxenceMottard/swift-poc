@@ -16,8 +16,22 @@ class PopularMovieRequest: ApiRequest {
 
     func fetch() -> Observable<MoviesRequest> {
         let language = localeFormatter.getTMDBLanguageCode()
-        let url = "\(Constant.TMDBBaseUrl.rawValue)/movie/popular?language=\(language)&api_key=\(Constant.TMDBApiKey.rawValue)"
-        return request(url)
+
+        let urlComponents = URLComponents(
+            host: Constant.TMDBBaseUrl.rawValue,
+            path: "/3/movie/popular",
+            queryItems: [
+                URLQueryItem(name: "language", value: language.rawValue),
+                URLQueryItem(name: "api_key", value: Constant.TMDBApiKey.rawValue)
+            ]
+        )
+
+        guard let url = urlComponents.url else {
+            return Observable.empty()
+        }
+
+        print(url.absoluteString)
+        return request(url.absoluteString)
     }
 
     func fetchMockingData() -> [Movie] {
