@@ -13,6 +13,7 @@ struct DetailModel {
     let overview: String
     let releaseDate: String
     let posterUrl: URL?
+    let posterOriginalUrl: URL?
     let backdropPadUrl: URL?
     let backdropPhoneUrl: URL?
 
@@ -22,6 +23,7 @@ struct DetailModel {
             overview: movie.overview,
             releaseDate: movie.releaseDate,
             posterUrl: movie.getImageUrl(size: .w185),
+            posterOriginalUrl: movie.getImageUrl(size: TmdbImageSize.Poster.original),
             backdropPadUrl: movie.getImageUrl(size: TmdbImageSize.Backdrop.w1280),
             backdropPhoneUrl: movie.getImageUrl(size: TmdbImageSize.Backdrop.w780))
 
