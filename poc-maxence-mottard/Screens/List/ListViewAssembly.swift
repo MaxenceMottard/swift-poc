@@ -15,6 +15,7 @@ final class ListViewAssembly: Assembly {
             let viewModel = ListViewModel()
             viewModel.movieRepository = resolver.resolve(MovieRepository.self)!
             viewModel.mockingService = resolver.resolve(MockingService.self)!
+            viewModel.bindingAfterSetup()
 
             return viewModel
         }

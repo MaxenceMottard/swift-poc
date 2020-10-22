@@ -7,6 +7,7 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
 protocol ListViewModelling {
     var bag: DisposeBag { get }
@@ -17,6 +18,7 @@ protocol ListViewModelling {
     var listCellViewModels: [ListCellViewModel] { get set }
     var movieRepository: MovieRepository! { get }
     var mockingService: MockingService! { get }
+    var searchBarText: BehaviorRelay<String> { get }
 
     func getNumberOfRows() -> Int
     func toggleDataIsMocked()
@@ -25,32 +27,15 @@ protocol ListViewModelling {
 }
 
 final class ListViewModel: ListViewModelling {
+    var searchBarText = BehaviorRelay<String>(value: "")
     let bag = DisposeBag()
     var numberOfRows: Int = 0
     let movies = BehaviorSubject<[Movie]>(value: [])
     let dataIsMocked = BehaviorSubject<Bool>(value: false)
     var detailModels: [DetailModel] = []
     var listCellViewModels: [ListCellViewModel] = []
-    var movieRepository: MovieRepository! {
-        didSet {
-            movieRepository.data.subscribe(onNext: { [weak self] movies in
-                guard let strongSelf = self else { return }
-                strongSelf.movies.onNext(movies)
-            }).disposed(by: bag)
-
-            movieRepository.fetchData()
-        }
-    }
-    internal var mockingService: MockingService! {
-        didSet {
-            mockingService.getIsMockedSubject().subscribe(onNext: { [weak self] isMocked in
-                guard let strongSelf = self else { return }
-
-                strongSelf.movieRepository.fetchData()
-                strongSelf.dataIsMocked.onNext(isMocked)
-            }).disposed(by: bag)
-        }
-    }
+    var movieRepository: MovieRepository!
+    var mockingService: MockingService!
 
     init() {
         movies.subscribe(onNext: { [weak self] movies in
@@ -63,6 +48,22 @@ final class ListViewModel: ListViewModelling {
             strongSelf.detailModels = detailModels
             strongSelf.listCellViewModels = listCellViewModels
         }).disposed(by: bag)
+    }
+
+    func bindingAfterSetup() {
+        movieRepository.data.subscribe(onNext: { [weak self] movies in
+            guard let strongSelf = self else { return }
+            strongSelf.movies.onNext(movies)
+        }).disposed(by: bag)
+
+        mockingService.getIsMockedSubject().subscribe(onNext: { [weak self] isMocked in
+            guard let strongSelf = self else { return }
+
+            strongSelf.movieRepository.fetchData()
+            strongSelf.dataIsMocked.onNext(isMocked)
+        }).disposed(by: bag)
+
+        movieRepository.fetchData()
     }
 
     func getNumberOfRows() -> Int {

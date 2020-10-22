@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 final class ListViewController: UIViewController {
 
@@ -14,16 +15,20 @@ final class ListViewController: UIViewController {
     var dependencyProvider: DependencyProvider!
     let bag: DisposeBag = DisposeBag()
 
+    @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var dataTableView: UITableView!
 
     private var mockButton: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
 
         dataTableView.delegate = self
         dataTableView.dataSource = self
         dataTableView.register(UINib(nibName: ListTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseIdentifier)
+
+        searchBar.placeholder = "search".localize()
 
         mockButton = UIBarButtonItem(image: UIImage(systemName: "antenna.radiowaves.left.and.right"), style: .done, target: self, action: #selector(handleMockData))
 
@@ -49,6 +54,15 @@ final class ListViewController: UIViewController {
 
             strongSelf.mockButton.tintColor = isMocked ? UIColor.red : UIColor.green
         }).disposed(by: bag)
+
+        searchBar
+            .rx
+            .text
+            .skip(1)
+            .map({ $0.unsafelyUnwrapped })
+            .asObservable()
+            .bind(to: viewModel.searchBarText)
+            .disposed(by: bag)
     }
 }
 
