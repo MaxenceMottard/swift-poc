@@ -13,6 +13,8 @@
 		87299D60253EEBBC007E17A5 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87299D5F253EEBBC007E17A5 /* ApiRequest.swift */; };
 		873C09D12527597A00F6C2FC /* ListViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C09D02527597A00F6C2FC /* ListViewAssembly.swift */; };
 		873C09D9252759F900F6C2FC /* DetailViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C09D8252759F900F6C2FC /* DetailViewAssembly.swift */; };
+		875ACCAC25416CFE00ACBD37 /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875ACCAB25416CFE00ACBD37 /* URLComponents.swift */; };
+		875ACCC0254177C800ACBD37 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875ACCBF254177C800ACBD37 /* UIViewController.swift */; };
 		877F17B02525C72200CE3EBE /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17AF2525C72200CE3EBE /* ListViewModel.swift */; };
 		877F17D52525FF8800CE3EBE /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17D42525FF8800CE3EBE /* DetailViewModel.swift */; };
 		877F17E12526002100CE3EBE /* ListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F17E02526002100CE3EBE /* ListCellViewModel.swift */; };
@@ -49,6 +51,7 @@
 		87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBA6D25237579009D2FC6 /* UIImageView.swift */; };
 		87CDBABE25246B4B009D2FC6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CDBABD25246B4B009D2FC6 /* String.swift */; };
 		87E7D2542540723300E3AD5A /* TmdbImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7D2532540723300E3AD5A /* TmdbImageSize.swift */; };
+		87E7D2862540867B00E3AD5A /* SearchMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E7D2852540867B00E3AD5A /* SearchMovieRequest.swift */; };
 		87E87E30252728560007F1D6 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E87E2F252728560007F1D6 /* DependencyProvider.swift */; };
 		87F62E2125305E88006705CF /* MockingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E2025305E88006705CF /* MockingService.swift */; };
 		87F62E482530B079006705CF /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F62E472530B079006705CF /* MovieRepository.swift */; };
@@ -83,6 +86,8 @@
 		87299D5F253EEBBC007E17A5 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		873C09D02527597A00F6C2FC /* ListViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewAssembly.swift; sourceTree = "<group>"; };
 		873C09D8252759F900F6C2FC /* DetailViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewAssembly.swift; sourceTree = "<group>"; };
+		875ACCAB25416CFE00ACBD37 /* URLComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponents.swift; sourceTree = "<group>"; };
+		875ACCBF254177C800ACBD37 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		877F17AF2525C72200CE3EBE /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		877F17D42525FF8800CE3EBE /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		877F17E02526002100CE3EBE /* ListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellViewModel.swift; sourceTree = "<group>"; };
@@ -122,6 +127,7 @@
 		87CDBA6D25237579009D2FC6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		87CDBABD25246B4B009D2FC6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		87E7D2532540723300E3AD5A /* TmdbImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmdbImageSize.swift; sourceTree = "<group>"; };
+		87E7D2852540867B00E3AD5A /* SearchMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieRequest.swift; sourceTree = "<group>"; };
 		87E87E2E252728480007F1D6 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		87E87E2F252728560007F1D6 /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
 		87F62E2025305E88006705CF /* MockingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingService.swift; sourceTree = "<group>"; };
@@ -354,7 +360,7 @@
 		87B0DD2F2524AB6500CC0DAC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				87B0DD302524AD2900CC0DAC /* PopularMovieRequest.swift */,
+				87E7D28A25408C0700E3AD5A /* requests */,
 				879907BF253DADFE00D388BF /* LocaleFormatter.swift */,
 				87F62E2025305E88006705CF /* MockingService.swift */,
 				879907BA253DAB8F00D388BF /* CustomDateFormater.swift */,
@@ -366,9 +372,20 @@
 			isa = PBXGroup;
 			children = (
 				87CDBA6D25237579009D2FC6 /* UIImageView.swift */,
+				875ACCBF254177C800ACBD37 /* UIViewController.swift */,
 				87CDBABD25246B4B009D2FC6 /* String.swift */,
+				875ACCAB25416CFE00ACBD37 /* URLComponents.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		87E7D28A25408C0700E3AD5A /* requests */ = {
+			isa = PBXGroup;
+			children = (
+				87B0DD302524AD2900CC0DAC /* PopularMovieRequest.swift */,
+				87E7D2852540867B00E3AD5A /* SearchMovieRequest.swift */,
+			);
+			path = requests;
 			sourceTree = "<group>";
 		};
 		87F62E462530B059006705CF /* Repositories */ = {
@@ -543,6 +560,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwinjectAutoregistration.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Fakery.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 			);
 			name = "Carthage Script";
 			outputFileListPaths = (
@@ -564,14 +583,17 @@
 				87A6E48925234F370037566C /* AppDelegate.swift in Sources */,
 				87F62E5B2530B8CB006705CF /* Setupable.swift in Sources */,
 				87A6E48B25234F370037566C /* SceneDelegate.swift in Sources */,
+				87E7D2862540867B00E3AD5A /* SearchMovieRequest.swift in Sources */,
 				873C09D12527597A00F6C2FC /* ListViewAssembly.swift in Sources */,
 				87CDBA6E25237579009D2FC6 /* UIImageView.swift in Sources */,
+				875ACCAC25416CFE00ACBD37 /* URLComponents.swift in Sources */,
 				87A6E4D4252358DC0037566C /* Movie.swift in Sources */,
 				87F62E482530B079006705CF /* MovieRepository.swift in Sources */,
 				87A6E4E625235DEA0037566C /* ReusableView.swift in Sources */,
 				879907BB253DAB8F00D388BF /* CustomDateFormater.swift in Sources */,
 				87A6E4CE252358610037566C /* ListViewController.swift in Sources */,
 				87299D60253EEBBC007E17A5 /* ApiRequest.swift in Sources */,
+				875ACCC0254177C800ACBD37 /* UIViewController.swift in Sources */,
 				872760D92524D59A00596273 /* constant.swift in Sources */,
 				877F17F1252633FE00CE3EBE /* ListCellModel.swift in Sources */,
 				87CDBABE25246B4B009D2FC6 /* String.swift in Sources */,
