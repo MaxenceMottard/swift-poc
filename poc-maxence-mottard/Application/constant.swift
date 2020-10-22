@@ -10,5 +10,5 @@ import Foundation
 enum Constant: String {
     case TMDBApiKey = "c5e559ac2b3964e6b8ddcc8b60df9bee"
     case TMDBBaseUrl = "api.themoviedb.org"
-    case TMDBImageBaseUrl = "https://image.tmdb.org/t/p/"
+    case TMDBImageBaseUrl = "image.tmdb.org"
 }

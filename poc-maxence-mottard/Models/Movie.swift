@@ -24,11 +24,21 @@ struct Movie: Decodable {
 
     func getImageUrl(size: TmdbImageSize.Poster) -> URL? {
         guard let path = posterPath else { return nil }
-        return URL(string: "\(Constant.TMDBImageBaseUrl.rawValue)\(size)\(path)")
+
+        let urlComponents = URLComponents(
+            host: Constant.TMDBImageBaseUrl.rawValue,
+            path: "/t/p/\(size)\(path)"
+        )
+        return urlComponents.url
     }
 
     func getImageUrl(size: TmdbImageSize.Backdrop) -> URL? {
         guard let path = backdropPath else { return nil }
-        return URL(string: "\(Constant.TMDBImageBaseUrl.rawValue)\(size)\(path)")
+
+        let urlComponents = URLComponents(
+            host: Constant.TMDBImageBaseUrl.rawValue,
+            path: "/t/p/\(size)\(path)"
+        )
+        return urlComponents.url
     }
 }
