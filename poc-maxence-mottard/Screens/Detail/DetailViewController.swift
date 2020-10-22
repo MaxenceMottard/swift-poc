@@ -74,5 +74,7 @@ final class DetailViewController: UIViewController {
         let items: [Any] = [viewModel.model.title, image, posterOriginalUrl.absoluteURL]
         let vc = UIActivityViewController(activityItems: items, applicationActivities: nil)
         vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+
+        present(vc, animated: true)
     }
 }
