@@ -67,15 +67,12 @@ final class DetailViewController: UIViewController {
     }
 
     @objc func handleShareMovie() {
-        guard let data = try? Data(contentsOf: viewModel.model.posterOriginalUrl!),
-              let image = UIImage(data: data),
-              let shareUrl = viewModel.model.posterOriginalUrl else { return }
+        guard let posterOriginalUrl = viewModel.model.posterOriginalUrl,
+              let data = try? Data(contentsOf: posterOriginalUrl),
+              let image = UIImage(data: data)  else { return }
 
-        let items: [Any] = [viewModel.model.title, image, shareUrl.absoluteURL]
+        let items: [Any] = [viewModel.model.title, image, posterOriginalUrl.absoluteURL]
         let vc = UIActivityViewController(activityItems: items, applicationActivities: nil)
         vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
-
-        present(vc, animated: true)
     }
-
 }
