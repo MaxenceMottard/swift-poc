@@ -28,6 +28,7 @@ final class ListViewController: UIViewController {
         dataTableView.dataSource = self
         dataTableView.register(UINib(nibName: ListTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseIdentifier)
 
+        searchBar.delegate = self
         searchBar.placeholder = "search".localize()
 
         mockButton = UIBarButtonItem(image: UIImage(systemName: "antenna.radiowaves.left.and.right"), style: .done, target: self, action: #selector(handleMockData))
@@ -63,6 +64,25 @@ final class ListViewController: UIViewController {
             .asObservable()
             .bind(to: viewModel.searchBarText)
             .disposed(by: bag)
+    }
+}
+
+extension ListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
+    }
+
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        dataTableView.allowsSelection = false
+        dataTableView.isScrollEnabled = false
+    }
+
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.dataTableView.allowsSelection = true
+            strongSelf.dataTableView.isScrollEnabled = true
+        }
     }
 }
 

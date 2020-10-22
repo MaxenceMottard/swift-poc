@@ -27,6 +27,8 @@ final class ListTableViewCell: UITableViewCell, ReusableView, Setupable {
 
     func setup(with model: ListCellViewModelling) {
         self.viewModel = model
+        selectionStyle = .none
+
         setupView()
     }
 

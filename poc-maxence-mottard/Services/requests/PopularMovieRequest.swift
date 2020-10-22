@@ -30,7 +30,6 @@ class PopularMovieRequest: ApiRequest {
             return Observable.empty()
         }
 
-        print(url.absoluteString)
         return request(url.absoluteString)
     }
 

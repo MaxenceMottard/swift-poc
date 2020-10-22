@@ -59,11 +59,14 @@ final class ListViewModel: ListViewModelling {
         mockingService.getIsMockedSubject().subscribe(onNext: { [weak self] isMocked in
             guard let strongSelf = self else { return }
 
-            strongSelf.movieRepository.fetchData()
+            strongSelf.movieRepository.fetchData(query: strongSelf.searchBarText.value)
             strongSelf.dataIsMocked.onNext(isMocked)
         }).disposed(by: bag)
 
-        movieRepository.fetchData()
+        searchBarText.subscribe(onNext: { [weak self] text in
+            guard let strongSelf = self else { return }
+            strongSelf.movieRepository.fetchData(query: text)
+        }).disposed(by: bag)
     }
 
     func getNumberOfRows() -> Int {

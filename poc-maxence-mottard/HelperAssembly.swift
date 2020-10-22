@@ -47,6 +47,7 @@ class HelperAssembly: Assembly {
         container.register(MovieRepository.self) { resolver -> MovieRepository in
             let repository = MovieRepository()
             repository.service = resolver.resolve(PopularMovieRequest.self)
+            repository.searchService = resolver.resolve(SearchMovieRequest.self)
             repository.mockingService = resolver.resolve(MockingService.self)
 
             return repository
