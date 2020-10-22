@@ -356,7 +356,7 @@
 		87B0DD2F2524AB6500CC0DAC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				87B0DD302524AD2900CC0DAC /* PopularMovieRequest.swift */,
+				87E7D28A25408C0700E3AD5A /* requests */,
 				879907BF253DADFE00D388BF /* LocaleFormatter.swift */,
 				87F62E2025305E88006705CF /* MockingService.swift */,
 				879907BA253DAB8F00D388BF /* CustomDateFormater.swift */,
@@ -372,6 +372,13 @@
 				875ACCAB25416CFE00ACBD37 /* URLComponents.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		87E7D28A25408C0700E3AD5A /* requests */ = {
+			isa = PBXGroup;
+			children = (
+				87B0DD302524AD2900CC0DAC /* PopularMovieRequest.swift */,
+			path = requests;
 			sourceTree = "<group>";
 		};
 		87F62E462530B059006705CF /* Repositories */ = {
