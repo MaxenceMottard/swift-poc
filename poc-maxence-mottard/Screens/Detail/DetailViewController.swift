@@ -14,6 +14,7 @@ final class DetailViewController: UIViewController {
     var dateFormatter: CustomDateFormater!
 
     @IBOutlet private weak var backgroundImageView: UIImageView!
+    @IBOutlet private weak var gradientView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var movieImageView: UIImageView!
@@ -38,7 +39,23 @@ final class DetailViewController: UIViewController {
 
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
 
+        setGradient()
         setupView()
+    }
+
+    func setGradient() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [
+            UIColor.black.withAlphaComponent(1).cgColor,
+            UIColor.black.withAlphaComponent(0.0).cgColor
+        ]
+        gradientLayer.frame = gradientView.bounds
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
+        gradientView.layer.insertSublayer(gradientLayer, at: 0)
+
+        view.bringSubviewToFront(movieImageView)
+        view.bringSubviewToFront(dateLabel)
     }
 
     func setupView() {

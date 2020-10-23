@@ -89,6 +89,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dm6-ky-6EU">
+                                <rect key="frame" x="0.0" y="194" width="414" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HzJ-Lf-JaF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C5K-Lg-Dqb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -98,11 +105,14 @@
                             <constraint firstItem="fbY-ke-eUk" firstAttribute="leading" secondItem="qnU-ic-Lr8" secondAttribute="trailing" constant="25" id="5nk-7A-E8E"/>
                             <constraint firstItem="C5K-Lg-Dqb" firstAttribute="trailing" secondItem="5T6-vI-Y95" secondAttribute="trailing" constant="15" id="Ern-pc-9MB"/>
                             <constraint firstItem="C5K-Lg-Dqb" firstAttribute="trailing" secondItem="fbY-ke-eUk" secondAttribute="trailing" constant="15" id="TYw-D3-58L"/>
+                            <constraint firstItem="CHU-zf-ceW" firstAttribute="bottom" secondItem="dm6-ky-6EU" secondAttribute="bottom" id="XGn-G8-MiM"/>
+                            <constraint firstItem="C5K-Lg-Dqb" firstAttribute="trailing" secondItem="dm6-ky-6EU" secondAttribute="trailing" id="XGp-lP-wYm"/>
                             <constraint firstItem="C5K-Lg-Dqb" firstAttribute="trailing" secondItem="CHU-zf-ceW" secondAttribute="trailing" id="Xz0-kL-k3s"/>
                             <constraint firstItem="CHU-zf-ceW" firstAttribute="top" secondItem="C5K-Lg-Dqb" secondAttribute="top" id="cT2-nf-Y5W"/>
                             <constraint firstItem="CHU-zf-ceW" firstAttribute="bottom" secondItem="DpK-FB-k9X" secondAttribute="bottom" constant="15" id="g15-Fg-zzR"/>
                             <constraint firstItem="C5K-Lg-Dqb" firstAttribute="trailing" secondItem="DpK-FB-k9X" secondAttribute="trailing" constant="15" id="lZz-xj-9Q1"/>
                             <constraint firstItem="qnU-ic-Lr8" firstAttribute="leading" secondItem="C5K-Lg-Dqb" secondAttribute="leading" constant="25" id="lnA-0h-yas"/>
+                            <constraint firstItem="dm6-ky-6EU" firstAttribute="leading" secondItem="C5K-Lg-Dqb" secondAttribute="leading" id="npj-3i-HpM"/>
                             <constraint firstItem="CHU-zf-ceW" firstAttribute="leading" secondItem="C5K-Lg-Dqb" secondAttribute="leading" id="rL9-mI-0BM"/>
                             <constraint firstItem="DpK-FB-k9X" firstAttribute="leading" secondItem="qnU-ic-Lr8" secondAttribute="trailing" constant="25" id="syz-bE-NA6"/>
                             <constraint firstItem="5T6-vI-Y95" firstAttribute="top" secondItem="qnU-ic-Lr8" secondAttribute="bottom" constant="15" id="uCP-S1-hSW"/>
@@ -113,6 +123,7 @@
                         <outlet property="backgroundImageView" destination="CHU-zf-ceW" id="vRX-g9-HAe"/>
                         <outlet property="dateLabel" destination="DpK-FB-k9X" id="1rj-H6-s20"/>
                         <outlet property="descriptionLabel" destination="5T6-vI-Y95" id="odx-V6-SxH"/>
+                        <outlet property="gradientView" destination="dm6-ky-6EU" id="mtJ-En-fGe"/>
                         <outlet property="movieImageView" destination="qnU-ic-Lr8" id="3vy-r2-XbY"/>
                         <outlet property="titleLabel" destination="fbY-ke-eUk" id="qh2-8g-6Wc"/>
                     </connections>
